@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML 31 - Marquee</title>
+
+	</head>
+
+	<body>
+
+		<!--
+			marquee: Letreiro digital. Faz uma animação de deslocação de eixo sendo o X ou Y;
+				width = Largura; || heigth = Altura;
+
+				behavior: Comportamento da animação
+					scroll = Comportamento padrão, esquerda pra direita
+
+					slide = Sai da esquerda, e para na direita
+
+					alternate = Alternado, vai e vem
+
+				direction: Direção da animação
+					right = Sai da esquerda e vai na direita
+					left = Da direita para esquerda
+					up = De baixo pra cima
+					down = De cima pra baixo
+
+				loop: Controla a vezes a animação sera executada; com valor -1, fica infinito
+
+				scrollamount: Pega a posição atual, adiciona ou subtrai um número X de pixel. Quanto maior o número, mais rapido fica a animação;
+
+				scrolldelay: Tempo de um "salto" pra outro em milisegundos
+		-->
+
+		<marquee height="500" behavior="alternate" direction="down" loop="-1" scrollamount="10" scrolldelay="1">
+
+			<marquee width="500" behavior="alternate" direction="left" loop="-1" scrollamount="10" scrolldelay="1">
+				Canal Fessor Bruno
+			</marquee>
+
+		</marquee>
+		
+	</body>
+</html>

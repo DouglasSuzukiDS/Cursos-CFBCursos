@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML 35 - Menu DropDowm</title>
+
+		<style type="text/css">
+			.menu{
+				background-color: #CCC;
+				width: 95px;
+				height: 20px;
+				border-right-style: solid;
+				border-right-width: 1px;
+				border-right-color: #FFF;
+				padding-left: 5px; 
+			}
+
+			.sub{
+				background-color: #999;
+				width: 100px;
+				visibility: hidden;
+			}
+
+			#n1{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+
+			#n2{
+				position: absolute;
+				top: 0px;
+				left: 101px;
+			}
+
+			#s1{
+				position: absolute;
+				top: 20px;
+				left: 0px;
+			}
+
+			#s2{
+				position: absolute;
+				top: 20px;
+				left: 101px;
+			}
+			
+			
+		</style>
+
+		<script>
+
+			function mostraS1(){
+				document.getElementById("s1").style.visibility="visible";
+				document.getElementById("s2").style.visibility="hidden";
+			}
+			
+			function mostraS2(){
+				document.getElementById("s2").style.visibility="visible";
+				document.getElementById("s1").style.visibility="hidden";
+			}
+
+			function escondeSub(obj){
+				obj.style.visibility="hidden";
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div class="menu" id="n1" onmouseover="mostraS1()">
+			Google
+		</div>
+
+		<div class="sub" id="s1" onmouseout="escondeSub(this)">
+			YouTube<br>
+			Gmail<br>
+			Maps<br>
+		</div>
+
+		<div class="menu" id="n2" onmouseover="mostraS2()">
+			Transportes
+		</div>
+
+		<div class="sub" id="s2" onmouseout="escondeSub(this)">
+			Carro<br>
+			Avião<br>
+			Navio<br>
+		</div>
+		
+	</body>
+</html>

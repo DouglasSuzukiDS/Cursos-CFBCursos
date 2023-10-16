@@ -1,0 +1,29 @@
+# Para cliar a conexão de multiplas contas fdo Github no PC:
+
+# 1) Clie um arquivo chamado config SEM EXTENSÃO na pasta .ssh/ (ou remova o tutorial deste arquivo)
+
+# 2) Faça a criação das RSA Keys no PC e insira nas contas do GitHub
+
+# 3) Copie os comando abaixo substituindo o PATH pelo caminho até a pasta .ssh 
+
+# 4) Substituia o NAME pelo nome que preferir para saber qual rsa key usar
+
+# 5) Substitua rsaPUBLIC e otherRsaPublic pelos nomes das RSA Keys das contas
+
+# 6) Crie o repositório no Github e clone com o a opção SSH
+   # git clone git@github.com-NAME:NameAccountGitHub/RepoName.git
+   # Substitua o NAME pelo nome que escolheu no passo 4
+
+# 7) Feito isso basta colocar os arquivos que desejar upar na pasta do repositório normalmente
+
+# Personal Account
+Host github.com
+	HostName github.com
+	User git
+	IdentityFile C:PATH\.ssh\rsaPUBLIC
+
+# Nick Account
+Host github.com-NAME
+	HostName github.com
+	User git
+	IdentityFile C:PATH\.ssh\otherRsaPublic

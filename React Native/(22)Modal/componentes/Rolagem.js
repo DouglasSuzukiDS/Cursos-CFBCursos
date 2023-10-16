@@ -1,0 +1,15 @@
+import React from 'react'
+import {View, Text, ScrollView} from 'react-native'
+
+export default function(){
+    return (
+        <View style = {{flex: 1}}>
+            <ScrollView style = {{backgroundColor: '#333', padding: 15}}>
+                <Text style = {{color: '#EEE'}}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In enim est, malesuada vitae suscipit id, sollicitudin eu lectus. Etiam finibus, massa nec sodales laoreet, tortor augue pretium augue, congue tincidunt ipsum nulla eu arcu. Proin odio lacus, eleifend et arcu ut, dapibus laoreet tortor. Mauris non tincidunt neque. Phasellus auctor tortor nisl, et fermentum nibh tempor eget. Nulla eu malesuada turpis, nec sollicitudin magna. Fusce ut bibendum sem. Donec ac auctor enim. Ut justo eros, pulvinar vel placerat interdum, laoreet ut lorem. Maecenas ligula sem, maximus et pretium id, cursus nec neque. Nulla mattis risus ac nisl sollicitudin sollicitudin. Donec.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In enim est, malesuada vitae suscipit id, sollicitudin eu lectus. Etiam finibus, massa nec sodales laoreet, tortor augue pretium augue, congue tincidunt ipsum nulla eu arcu. Proin odio lacus, eleifend et arcu ut, dapibus laoreet tortor. Mauris non tincidunt neque. Phasellus auctor tortor nisl, et fermentum nibh tempor eget. Nulla eu malesuada turpis, nec sollicitudin magna. Fusce ut bibendum sem. Donec ac auctor enim. Ut justo eros, pulvinar vel placerat interdum, laoreet ut lorem. Maecenas ligula sem, maximus et pretium id, cursus nec neque. Nulla mattis risus ac nisl sollicitudin sollicitudin. Donec.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In enim est, malesuada vitae suscipit id, sollicitudin eu lectus. Etiam finibus, massa nec sodales laoreet, tortor augue pretium augue, congue tincidunt ipsum nulla eu arcu. Proin odio lacus, eleifend et arcu ut, dapibus laoreet tortor. Mauris non tincidunt neque. Phasellus auctor tortor nisl, et fermentum nibh tempor eget. Nulla eu malesuada turpis, nec sollicitudin magna. Fusce ut bibendum sem. Donec ac auctor enim. Ut justo eros, pulvinar vel placerat interdum, laoreet ut lorem. Maecenas ligula sem, maximus et pretium id, cursus nec neque. Nulla mattis risus ac nisl sollicitudin sollicitudin. Donec.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In enim est, malesuada vitae suscipit id, sollicitudin eu lectus. Etiam finibus, massa nec sodales laoreet, tortor augue pretium augue, congue tincidunt ipsum nulla eu arcu. Proin odio lacus, eleifend et arcu ut, dapibus laoreet tortor. Mauris non tincidunt neque. Phasellus auctor tortor nisl, et fermentum nibh tempor eget. Nulla eu malesuada turpis, nec sollicitudin magna. Fusce ut bibendum sem. Donec ac auctor enim. Ut justo eros, pulvinar vel placerat interdum, laoreet ut lorem. Maecenas ligula sem, maximus et pretium id, cursus nec neque. Nulla mattis risus ac nisl sollicitudin sollicitudin. Donec.
+                </Text>
+            </ScrollView>
+        </View>
+    )
+    
+}

@@ -1,0 +1,27 @@
+	/*transform: Move o objeto de um ponto pra outro de onde ele esta
+		translate(NUMpx, NUMpx) = Move para os eixos X e Y informados 
+		rotate(NUMdeg) = Rotaciona o elemento em graus 
+		scale(NUM) = Escala/tamanho do elemento
+		skewX(NUMdeg) = Inclina o elemento no X 
+		skewY(NUMdeg) = Inclina o elemento no 
+		skew(NUMdeg, NUMdeg) = Inclina o elemento no X e Y 
+		matrix(scaleX, skewX, skewY, scaleY, translateX, translateY) = Faz a função de todas as propriedades juntas
+		transform-origin = Define o ponto de origem da forma 
+	*/ 
+
+
+#dv1{
+	width: 200px;
+	height: 200px;
+	border: 1px solid #000;
+	/* transform: translate(0px, 200px); */
+	/* transform: rotate(45deg); */
+	/* transform: scale(2) translate(200px, 200px); */
+	/* transform: skewX(20deg); */
+	/* transform: skewY(45deg); */
+	/* transform: skew(-45deg, 5deg); */
+	/* transform: matrix(0.5, 0, 0, 0.5, 0, 0); */
+	transform-origin: 100% 0%;
+	transform: rotate(30deg);
+
+}

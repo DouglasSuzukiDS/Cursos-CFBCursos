@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - Javascript 68 - Objeto Location P1</title>
+		<style>
+			body{
+				background-color: #f00;
+				color: #fff;
+			}
+			a{color:#fff;}
+
+		</style>
+		<script>
+			// Location Contem informações sobre a URL
+			// # hash = Passagem de parametros de uma pagina pra outra em JS
+			// host = Nome do host;
+			// href = Obtem a URl ou setar a URL
+			// origin = Mostra o protocolo, hostname eo numero da porta; 
+			//pathname = Retorna o caminnho, apos o protocolo e o Hostname:
+			// port = // Numero da Porta;
+			// protocol = Protocolo;
+			//s earch;   //Igual ao hash, porem ele faz a ferificação apos a ?
+
+
+			var aux=location.hash;
+			//document.write(aux)
+			var dados=aux.split("#"); //Dados vira um Array
+			//document.write(dados[1]);
+			var v1=dados[1];
+			var v2=dados[2];
+			document.write(v1); 
+			document.write("<br>");
+
+			//var h=location.host; //hostname
+			var h=location.href;
+			//var h=location.href="https://www.youtube.com/cfbcursos";
+			document.write(h); 
+			document.write("<br>");
+
+			var o=location.origin; //Protocolo, HostName,Porta
+			document.write(o);
+			document.write("<br>");
+
+			/* Protocolo > http:// 
+			   Hostname  > youtube.com/
+			   Path      > cfbcuros
+			*/
+			var p=location.pathname;   // http://youtube.com/cfbcuros
+			document.write(p);
+			document.write("<br>");
+
+			var po=location.port;   // Numero da Porta 
+			document.write(po); 
+			document.write("<br>");
+
+			var pr=location.protocol;   // Protocolo
+			document.write(pr); 
+			document.write("<br>");
+
+			aux=location.search;   //Igual ao hash, porem ele faz a ferificação apos a ?;
+			dados=aux.split("?");
+			v1=dados[1].split("=")[0];
+			document.write(v1); 
+
+			document.write("<hr>");
+
+		</script>
+
+	</head>
+	<body>
+
+		<h1>Página 2 - (68)P2.html</h1>
+
+		<a href="(68)ObjetoLocationP1.html">Voltar</a>
+		
+	</body>
+</html>

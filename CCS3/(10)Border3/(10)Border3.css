@@ -1,0 +1,17 @@
+#d1,#d2{
+	width: 150px; /* Largura */
+	height: 150px;
+	border: #000 solid 20px;
+	padding: 100px; /* Espaçamento */
+}
+
+#d1{
+	border-radius: 40px; /* Borda Arredondadas */
+}
+
+#d2{ /* Valores em %, é a Porcentagem do atributo  */
+	border-radius: 100%;
+	/* border-radius: 0px 50px 0px 50px; /* Borda Arredondadas */
+	/* 1º Valor Superior Esquerda | 2º Valor Superior Direita  */
+	/* 3º Valor Inferior Direita | 4º Valor Inferior Esquerda */
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 99 - For In / For Of</title>
+
+    <script>
+        // For In: Usado para percorrer as propriedades de um objeto
+        // For Of: Usado para percorrer Array
+
+        /*const aluno = { nome: "Lilin", sobrenome: "Charlotte"}
+        const notas = { n1:80, n2: 75, n3: 92, n4: 85 }
+        const info = {...aluno, ...notas}
+
+        for(var dado in info){ // Pega a propriedade e insere
+            console.log(info[dado]) // Imprime o valor da propriedade
+        }*/
+
+        let notas = [100, 80, 75, 30, 64, 47, 98, 81, 60]
+
+        /*for(var n of notas){
+            console.log(n) // Imprime o valor das posições
+        }*/ 
+
+        let aprovados = 0
+        let reprovados = 0
+        for(var n of notas){
+            n >= 60 ? aprovados++ : reprovados++
+        }
+
+        console.log("Aprovados: " + aprovados)
+        console.log("Reprovados: " + reprovados)
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

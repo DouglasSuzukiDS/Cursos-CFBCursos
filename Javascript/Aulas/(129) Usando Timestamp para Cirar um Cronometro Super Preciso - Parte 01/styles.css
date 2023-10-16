@@ -1,0 +1,25 @@
+/* (129) Usando Timestamp para Cirar um Cronometro Super Preciso - Parte 01 */
+body {
+   background-color: #202225;
+}
+   
+* {
+   padding: 0;
+   margin: 0;
+   border: none;
+   box-sizing: border-box;
+}
+
+
+#timer {
+   background-color: #333;
+   color: #0F0;
+   display: flex;
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 40px;
+   padding: 10px 20px;
+   justify-content: center;
+   width: 250px;
+   border-radius: 10px;
+   border: 5px solid #888;
+}

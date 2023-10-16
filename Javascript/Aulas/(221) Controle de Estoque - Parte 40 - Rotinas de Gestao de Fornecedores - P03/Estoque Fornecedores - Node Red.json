@@ -1,0 +1,98 @@
+[
+    {
+        "id": "8c27bfcdc64a8aef",
+        "type": "tab",
+        "label": "Estoque - Fornecedores",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0ab74eac82402844",
+        "type": "http in",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "url": "/todosfornecedores",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 60,
+        "wires": [
+            [
+                "b72c63c01c007293"
+            ]
+        ]
+    },
+    {
+        "id": "9f0bcfb8b907f355",
+        "type": "http response",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b86c7f960bea796c",
+        "type": "debug",
+        "z": "8c27bfcdc64a8aef",
+        "name": "debug 24",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "b72c63c01c007293",
+        "type": "function",
+        "z": "8c27bfcdc64a8aef",
+        "name": "function 14",
+        "func": "msg.topic = `SELECT * FROM fornecedor`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 60,
+        "wires": [
+            [
+                "aca0b89f4dcad0c5"
+            ]
+        ]
+    },
+    {
+        "id": "aca0b89f4dcad0c5",
+        "type": "mysql",
+        "z": "8c27bfcdc64a8aef",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 560,
+        "y": 60,
+        "wires": [
+            [
+                "9f0bcfb8b907f355",
+                "b86c7f960bea796c"
+            ]
+        ]
+    },
+    {
+        "id": "8eb5ca5ddf10b0fd",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "estoque",
+        "tz": "",
+        "charset": "UTF8"
+    }
+]

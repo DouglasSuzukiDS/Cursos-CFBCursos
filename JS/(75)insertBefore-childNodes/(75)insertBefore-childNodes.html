@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CBF Cursos - Javascript 75 - insertBefore/childNodes - Inserindo elementos HTML pelo JS</title>
+
+		<script>
+
+			//insertBefore = Permite espeficicar um elemento para inserir antes desse elemento;
+			//childNodes = Serve pra controlar/contar os "nos" elementos filhos de um determinado elemento; É UM METODO
+
+			//CreateElement = Cria um elemento HTML no document;
+			//appendChild = Usado para inserir esse elemento; 
+
+			function inicia(){
+				document.getElementById("btnContar").addEventListener("click",function(){
+					var lista=document.getElementById("listaElementos");
+					var num=lista.childNodes.length; //Numero-elemento
+					alert(num);
+				});
+
+				document.getElementById("btnAdd").addEventListener("click",function(){
+					var lista=document.getElementById("listaElementos");
+					var texto=document.getElementById("fnovo");
+					var li=document.createElement("li");
+					li.textContent=texto.value;
+					lista.insertBefore(li,lista.childNodes[1]); //Adiciona antes do elemento estipulado;
+					texto.value="";
+					texto.focus();
+				});
+			}
+
+			window.addEventListener("load",inicia);
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<input type="text" id="fnovo">
+		<button id="btnAdd">Adicionar</button>
+		<button id="btnContar">Contar</button><br><br>
+
+		<ul id="listaElementos"></ul> <!-- Lista não ordenada -->
+
+	</body>
+</html>

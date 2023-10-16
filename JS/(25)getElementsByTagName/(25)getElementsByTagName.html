@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>CFB Cursos - Javascript 25 - getElementsByTagName</title>
+		<meta charset="UTF-8">
+
+		<script>
+
+			//getElementsByTagName = Retorna um conjunto de elementos da tag informada em forma de vetor;
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<h2>CFB Cursos</h2>
+		<p>Curso de Javascript</p>
+		<h2>Aula 25</h2>
+		<p>www.youtube.com/cfbcursos</p>
+		<h2>cfbcursos.com.br</h2>
+
+		<hr/>
+
+		<script>
+
+			var tagsP=document.getElementsByTagName("p"); 
+			//var tagsP=document.getElementsByTagName("*"); //Assim captura todos as tag da página
+			//document.write(tagsP[3].innerHTML);
+
+			/*for(var i=0;i<tagsP.length;i++){
+				tagsP[i].style.color="#f00";
+			}*/
+
+			var tags=document.getElementsByTagName("*");
+
+			tags[8].innerHTML="Novo Texto";
+			tags[8].style.color="#f00";
+
+		</script>
+	
+	</body>
+</html>

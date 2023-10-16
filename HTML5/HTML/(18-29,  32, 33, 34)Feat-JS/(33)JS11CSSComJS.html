@@ -1,0 +1,30 @@
+﻿<html>
+	<head>
+		<title>Aula 33 - Javascript aula 11 - Javascript com CSS</title>
+		<script language="Javascript">
+
+			//document.getElementById("elementoHTML").style.propriedadeCSS = "valor";
+			
+		function formatar(){
+			var opc=3;
+
+			if(opc == 1){
+				document.getElementById("aula").style.backgroundColor="#ff0000";
+			}else if(opc == 2){
+				document.getElementById("aula").style.backgroundColor="#00ff00";
+			}else if(opc == 3){
+				document.getElementById("aula").style.backgroundColor="#0000ff";
+			}
+		}
+
+		</script>
+	</head>
+
+	<body onLoad="formatar()">
+
+		<div id="aula">
+			CanalFessorBruno
+		</div>
+
+	</body>
+</html>

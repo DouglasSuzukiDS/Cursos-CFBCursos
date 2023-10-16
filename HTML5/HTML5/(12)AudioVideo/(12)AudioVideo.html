@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML5 12 - Audio e Video</title>
+
+	</head>
+
+	<body>
+
+		<!--
+			autoplay: Inicia automaticamente, no chrome não funciona;
+			controls: Mostra o controle de média;
+			loop: Loop para reprodução;
+			muted: Iniciação do arquivo mutado;
+			preload: Pre-carrega o arquivo no load da pagina;
+				none: Não carrega no load da pagina;
+				auto: Carrega no load da pagina;
+			poster: Permite inserir uma imagem de fundo quando o vídeo não estiver sendo reproduzido;
+		-->
+
+		<audio controls loop preload="auto">
+			<source src="Zeca Baleiro - Samba Do Approach.mp3">
+			<p>Seu Browser não é compatível a Tag Audio</p>
+		</audio>
+
+		<video width="450" controls muted loop poster="hardstyle.jpg">
+			<source src="TchalBrigado.mp4">
+			<p>Seu Browser não é compatível a Tag Video</p>
+		</video>
+		
+	</body>
+</html>

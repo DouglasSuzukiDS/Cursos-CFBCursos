@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="colaboradores.css">
+   <link rel="stylesheet" href="../../estoque_geral.css">
+   <title>Colaboradores - BackOffice</title>
+</head>
+
+<body>
+   <div id="topoJanela" class="topoJanela">
+      <div></div>
+      <div>Colaboradores</div>
+
+      <div>
+         <img src="../../imgs/Add.svg" alt="Adicionar" id="btn_add" class="btn_mainOper"
+            title="Adicionar novo operador">
+      </div>
+   </div>
+
+   <div id="filtragem" class="filtragem">
+      <div class="campoForm campoFiltragem">
+         <label for="f_filtragem">Filtar por nome</label>
+
+         <input type="text" id="f_filtragem" name="f_filtragem" class="inputFiltragem" />
+      </div>
+   </div>
+
+   <div id="novoColaborador" class="popUp ocultarPopUp">
+      <div class="janelaPopUp">
+         <div class="tituloPopUp">
+            <div id="tituloPopUp"> Novo Colaborador </div>
+            <img src="../../imgs/Close.svg" alt="Fechar" class='btn_janelaOpera' id="btn_fecharPopUp">
+         </div>
+
+         <div class="corpoPopUp">
+            <div class="campoForm">
+               <label for="f_nome">Nome do Colaborador</label>
+
+               <input type="text" id="f_nome" name="f_nome" />
+            </div>
+
+            <div class="campoForm">
+               <label for="f_tipoColab">Tipo do Colaborador</label>
+
+               <select id="f_tipoColab" name="f_tipoColab">
+                  <option value="">Teste</option>
+               </select>
+            </div>
+
+            <div class="campoForm">
+               <label for="f_status">Status do Colaborador</label>
+
+               <select type="text" id="f_status" name="f_status">
+                  <option value="A">Ativo</option>
+                  <option value="I">Inativo</option>
+               </select>
+            </div>
+
+            <div class="campoForm">
+               <label for="f_foto">Foto do Colaborador</label>
+
+               <input type="file" name="f_foto" id="f_foto" accept="image/png, image/jpeg, image/jpg">
+            </div>
+
+            <div class="campoForm2">
+               <img src="#" alt="Foto" id="img_foto" class="img_foto">
+            </div>
+
+            <div class="campoForm">
+               <label for="f_telefones">Telefones</label>
+
+               <input type="text" id="f_fone" name="f_fone" />
+
+               <div id="telefones" class="telefones">
+                  <!-- <div class="tel">
+                     <div class="numTel"> (11)911111111 </div>
+                     <img src="../../imgs/Delete.svg" alt=" Deletar Telefone" class="delTel">
+
+                  </div> -->
+               </div>
+            </div>
+
+         </div>
+
+         <div class="rodapePopUp">
+            <button id="btn_gravarPopUp" class="btn_comandoPopUp">
+               Gravar
+            </button>
+
+            <button id="btn_cancelarPopUp" class="btn_comandoPopUp">
+               Cancelar
+            </button>
+         </div>
+      </div>
+   </div>
+
+   <div id="areaGrid" class="areaGrid">
+      <div id="grid" class="grid">
+         <div id="tituloGrid" class="tituloGrid">
+            <div class="colunaTituloGrid c1">ID</div>
+            <div class="colunaTituloGrid c2">Nome</div>
+            <div class="colunaTituloGrid c3">Tipo</div>
+            <div class="colunaTituloGrid c4">Status</div>
+            <div class="colunaTituloGrid c5">Operações</div>
+         </div>
+
+         <div id="dadosGrid" class="dadosGrid">
+            <!-- <div class="linhaGrid">
+               <div class="colunaLinhaGrid c1">ID</div>
+               <div class="colunaLinhaGrid c2">Nome</div>
+               <div class="colunaLinhaGrid c3">Tipo</div>
+               <div class="colunaLinhaGrid c4">Status</div>
+               <div class="colunaLinhaGrid c5">Operações</div>
+            </div> -->
+         </div>
+      </div>
+   </div>
+
+   <script src="../../estoque_geral.js" type="module"></script>
+   <script src="colaboradores.js"></script>
+</body>
+
+</html>

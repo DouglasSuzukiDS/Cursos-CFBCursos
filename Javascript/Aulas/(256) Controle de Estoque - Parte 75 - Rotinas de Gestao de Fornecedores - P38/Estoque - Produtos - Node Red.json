@@ -1,0 +1,98 @@
+[
+    {
+        "id": "acdd75969ab4861e",
+        "type": "tab",
+        "label": "Estoque  - Produtos",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5c13f19d9130ef07",
+        "type": "http in",
+        "z": "acdd75969ab4861e",
+        "name": "",
+        "url": "/tiposprod",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 40,
+        "wires": [
+            [
+                "7fe9eeb2de3861dc"
+            ]
+        ]
+    },
+    {
+        "id": "3a5dc3847cfa2079",
+        "type": "http response",
+        "z": "acdd75969ab4861e",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "ba64c6bfcfcddf00",
+        "type": "debug",
+        "z": "acdd75969ab4861e",
+        "name": "debug 34",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "7fe9eeb2de3861dc",
+        "type": "function",
+        "z": "acdd75969ab4861e",
+        "name": "function 24",
+        "func": "msg.topic = `SELECT * FROM tipoproduto`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 40,
+        "wires": [
+            [
+                "187dcfa7c4747c2b"
+            ]
+        ]
+    },
+    {
+        "id": "187dcfa7c4747c2b",
+        "type": "mysql",
+        "z": "acdd75969ab4861e",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 500,
+        "y": 40,
+        "wires": [
+            [
+                "3a5dc3847cfa2079",
+                "ba64c6bfcfcddf00"
+            ]
+        ]
+    },
+    {
+        "id": "8eb5ca5ddf10b0fd",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "estoque",
+        "tz": "",
+        "charset": "UTF8"
+    }
+]

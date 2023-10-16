@@ -1,0 +1,22 @@
+#obMenu{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+a{
+	text-decoration: none;
+	background-color: #004;
+	color: #FFF;
+	padding: 0px;
+	margin: 0px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 200px;
+	height: 40px;
+	font-size: 18px;
+}
+a:hover{ /* Fortação direto ao elemento quando o mouse esta em cima */
+	background-color: #44D;
+}

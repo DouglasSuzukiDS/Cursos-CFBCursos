@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CFB Cursos - Javascript 121 - Método Reduce</title>
+   <script>
+      // Reduce: Retorna o que seria o resumo do array. 
+         // O resultado de uma função aplicada em um Array; 
+         // Opera o 1 e 2 elemento, retornando o valor para a função;
+         // O Retorno é passado como parametro para função, para operar com o 3 elemento
+
+      /*let num = [0, 1, 2, 3, 4, 5]
+      let soma = num.reduce((n1, n2) => { 
+         console.log(n1 + ' + ' + n2)
+         return n1 + n2
+         console.log('-------------')
+      })
+      console.log(soma)*/
+      
+      let pessoa = [
+         {nome: 'Queen', idade: 40},
+         {nome: 'King', idade: 30},
+         {nome: 'Jack', idade: 22},
+         {nome: 'Yamato', idade: 18}
+      ]
+
+      let nomes = pessoa.reduce((p1, p2) => {
+         p1.push(p2.nome)
+         return p1
+      }, [])
+      //console.log(nomes)
+
+      let idades = pessoa.reduce((p1, p2) => {
+         p1.push(p2.idade)
+         return p1
+      },[])
+      console.log(idades)
+   </script>
+</head>
+<body>
+   
+</body>
+</html>

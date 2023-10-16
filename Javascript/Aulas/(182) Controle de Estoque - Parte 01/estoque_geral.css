@@ -1,0 +1,22 @@
+/* (182) Controle de Estoque - Parte 01 */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: #202225;
+}
+
+.menuPrincipal {
+
+}
+
+.btn_menuPrincipal {
+   cursor: pointer
+}
+
+.btn_menuItem {
+   
+}

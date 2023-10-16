@@ -1,0 +1,57 @@
+/*
+	list-style-type: Tipo da marcação do item; Página 77
+		square = Quadrado;
+		circle = Circulo sem preenchimento;
+		disc = Circulo preenchido;
+
+	list-style-image: Usa uma imagem como marcador;
+
+	list-style-position: Coloca o marcados pra dentro da borda com o elemento;
+		inside = Marcador junto do elemento;
+		outside = Marcados fora do lemento;
+
+	list-style = Metapropriedade que se pode especificar o type image position na mesma linha
+		decimal-leading-zero outside = Marcador numerico fora da borda;
+		decimal-leading-zero inside = Marcador numerico dentro da borda;
+		none = Sem marcador;
+*/
+
+
+/* ul,ol{
+	/* list-style-type: square; 
+	font-size: 25px;
+	list-style-image: url(ma.jpg); 
+	list-style-position: outside; 
+
+	list-style: decimal-leading-zero outside;
+	font-size: 25px;
+}
+
+li{
+	border: 1px solid #000;
+}
+*/
+
+ol{
+	list-style: none; 
+	padding: 0px;
+}
+
+li{
+	width: 150px;
+	height: 40px;
+	background-color: #800;
+	display: table-cell; 
+	vertical-align: middle;
+	text-align: center;
+	border-right: 1px solid #FFF; /* Borda somente na direita */ 
+}
+
+li:hover{ /* :hover evento quando o mouse estiver em cima do elemento; */
+	background-color: #F00;
+}
+
+a{
+	text-decoration: none;
+	color: #FFF;
+}

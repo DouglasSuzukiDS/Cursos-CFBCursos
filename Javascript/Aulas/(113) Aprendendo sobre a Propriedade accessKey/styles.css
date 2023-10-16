@@ -1,0 +1,37 @@
+/* (113) Aprendendo sobre a Propriedade accessKey */
+body {
+   background-color: #202225;
+}
+   
+* {
+   padding: 0;
+   margin: 0;
+   border: none;
+   box-sizing: border-box;
+}
+
+.info {
+   display: flex;
+   justify-content: space-around;
+}
+
+.quadrado {
+   position: absolute;
+   display: flex;
+   width: 100px;
+   height: 100px;
+}
+
+#q1 {
+   background-color: #F00;
+   top: 120px;
+   left: 100px;
+   width: 150px;
+   height: 150px;
+}
+
+#q2 {
+   background-color: #00F;
+   top: 150px;
+   left: 300px;
+}

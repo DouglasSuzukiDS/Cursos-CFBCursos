@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFB Cursos - Javascript - Aula 104 - Função Geradora</title>
+    <script>
+        // Funções Geradoras retornam um Interator; Devolte o controle da função para quem fez a chamada para fazer outros comandos, e só é executada quando usamos o next(); 
+
+        /*function* cores(){
+            yield 'Vermelhos'
+            yield 'Verde'
+            yield 'Azul'
+            yield 'Amarelo'
+            yield 'Roxo'
+            yield 'Preto'
+            yield 'Branco'
+        }
+
+        //for(let c of cores()){
+        //    console.log(c)
+        //}
+        const c = cores()
+        console.log(c.next()) // Retorna um yield */
+
+        function* cont(n){
+            let c = 0
+            while(c < n){
+                yield console.log(c)
+                c++
+            }
+        }
+        const ct = cont(10)
+        console.log(ct.next())
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

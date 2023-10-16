@@ -1,0 +1,41 @@
+/*
+	font-family: Formata o tipo de Fonte especificada ou se não tiver, em fonte padrão
+ 		Arial, "Times New Roman", sans-serif
+
+	font-style: Itálico da fonte;
+		italic = Itálico
+		oblique = Mais tombado 
+
+	font-size: Tamanho da fonte;
+
+	font-weight: Controla o Negrito;
+		bold = Negrito ativo
+		lighter = Remove o Negrito
+
+	font-variant: Transforma o texto em Maiusculo;
+		small-caps = Transforma o texto em Maiusculo porem, a letras maiusculas ficam maiores
+		normal = Valor padrão do texto
+
+	@font-face: Permite enviar uma fonte direto pra página para ser usada quando quiser;
+*/
+
+/*@font-face{
+	font-family: fontCFB;
+	src: url(MAGNETOB.TTF);
+}*/
+
+p{
+	/*font-family: "Magneto Negrito";*/
+
+	/*font-family: fontCFB;*/
+	
+	/* Google Fontes dispolibiliza diversas fontes, basta selecionar a fonte desejada, baixar ou anexar o link da fonte no HTML
+	LINK: https://fonts.google.com/ */
+
+	font-family:'Hanalei', cursive;
+	font-style: italic;
+	font-weight: lighter;
+	font-size: 30px;
+	font-variant: normal;
+	
+}

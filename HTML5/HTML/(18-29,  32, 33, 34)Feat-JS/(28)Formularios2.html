@@ -1,0 +1,61 @@
+﻿<html>
+	<head>
+		<title>Aula 27 - Formulários</title>
+		<style type="text/css">
+		</style>
+	</head>
+
+	<body>
+
+		<form name="cad" action="" method="post">
+			<label>Nome:</label><br/>
+			<input type="text" name="fname" size="40" maxlength="35" value="Digite seu nome"/><br/><br/>
+	
+			<label>Senha:</label><br/>
+			<input type="password" name="fsenha" size="15" maxlength="10"/><br/><br/>
+
+			<label>Possui veículo próprio?</label><br/>
+			<input type="radio" name="fcarro" value="S" checked="checked"/>SIM<br/>
+			<input type="radio"name="fcarro" value="N"/>NÃO<br/><br/>
+
+			<label>Caso possu, qual a marca?</label><br/>
+			<input type="checkbox" name="fvw"/>VW<br/>
+			<input type="checkbox" name="fgm"/>GM<br/>
+			<input type="checkbox" name="ffiat"/>FIAT<br/>
+			<input type="checkbox" name="fford"/>FORD<br/>
+			<input type="checkbox" name="foutro"/>OUTRO<br/><br/>
+
+			<label>Selecione seu Estado</label><br/>
+			<select name="fuf">
+				<option value="MG">Minas Gerais</option>
+				<option value="SP" selected>São Paulo</option>
+				<option value="RJ">Rio de Janeiro</option>
+				<option value="ES">Espírito Santo</option>
+			</select><br/><br/>
+
+			<label>Deixe seu cometário:</label><br/>
+			<textarea name="fcomente" cols="40" rows="5"></textarea><br/><br/>
+
+			<input type="submit" value="Enviar">
+			<input type="reset" value="Limpar">
+			<input type="button" value="Não tem ação"/>
+
+
+ 		</form>
+
+	</body>
+</html>
+
+<!--//ACTION = Quem vai receber os dados
+//METHOD POST = Passagem não explicita, onde não faz passagem de dodos pela URL, passagem direta do arquivo via memória
+//METHOD GET = Passagem explicita onde manda os valores pela URL(action)
+//LABEL = Etiqueta, texto que define o campo
+//TYPE RADIO = Escolher apenas uma opção
+//VALUE = Valor do elemento, em várias opção devem ter o mesmo "name"
+//SELECT = Lista para abrir de opções para escolher
+//SELECTED = Opção primária na lista
+//TEXTAREA = Caixa de texto para comentários
+//SUBMIT = Envia o arquivo para o parametro escolhido pelo ACTION
+//RESET = Limpa os dados do formulário 
+
+-->

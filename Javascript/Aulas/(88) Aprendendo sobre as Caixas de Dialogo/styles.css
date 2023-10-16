@@ -1,0 +1,22 @@
+/* (88) Aprendendo sobre as Caixas de Dialogo */
+body {
+   background-color: #202225;
+}
+   
+* {
+   padding: 0;
+   margin: 0;
+   border: none;
+   box-sizing: border-box;
+}
+
+button {
+   background-color: #EEE;
+   padding: 10px 50px;
+   cursor: pointer;
+   border-radius: 10px;
+}
+
+button:hover {
+   outline: 3px solid #F00;
+}

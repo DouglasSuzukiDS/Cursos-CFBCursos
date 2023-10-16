@@ -1,0 +1,329 @@
+[
+    {
+        "id": "168960baad8c4d56",
+        "type": "tab",
+        "label": "Estoque - Token",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cd50e4a6a654579d",
+        "type": "function",
+        "z": "168960baad8c4d56",
+        "name": "function 84",
+        "func": "const n_pessoa_pessoa = msg.payload[0].n_pessoa_pessoa;\nconst t1=Math.random().toString(16).substring(2);\nconst t2 = Math.random().toString(16).substring(2);\nconst t3 = Math.random().toString(16).substring(2);\nconst t4 = Math.random().toString(16).substring(2);\nconst s_token_token=t1+t2+t3+t4;\nconst ts=new Date().getTime()+(60000*10);\n// const data=new Date(ts);\n// const ano=data.getFullYear();\n// const mes=data.getMonth();\n// const dia=data.getDate();\n// const hora=data.getHours();\n// const minuto=data.getMinutes();\n// const segundo=data.getSeconds();\n// console.log(`${dia}/${mes}/${ano} - ${hora}:${minuto}:${segundo}`);\nconst s_validade_token = ts;\nmsg.token = s_token_token;\n\nmsg.topic = `INSERT INTO token (n_pessoa_pessoa,s_token_token,s_validade_token) VALUES (${n_pessoa_pessoa},\"${s_token_token}\",\"${s_validade_token}\")`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 40,
+        "wires": [
+            [
+                "f4103d079b01f7c2"
+            ]
+        ]
+    },
+    {
+        "id": "f4103d079b01f7c2",
+        "type": "mysql",
+        "z": "168960baad8c4d56",
+        "mydb": "8d883f1845a63bb0",
+        "name": "",
+        "x": 430,
+        "y": 40,
+        "wires": [
+            [
+                "e4ebe17f554d32f9"
+            ]
+        ]
+    },
+    {
+        "id": "003cb75d1fa72ac4",
+        "type": "http response",
+        "z": "168960baad8c4d56",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 780,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "54ab25735234172b",
+        "type": "debug",
+        "z": "168960baad8c4d56",
+        "name": "debug 33",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "3fa2aa0afb36e444",
+        "type": "link in",
+        "z": "168960baad8c4d56",
+        "name": "Entrada Token",
+        "links": [
+            "4fb6b2834b57b03f"
+        ],
+        "x": 165,
+        "y": 40,
+        "wires": [
+            [
+                "cd50e4a6a654579d"
+            ]
+        ]
+    },
+    {
+        "id": "e4ebe17f554d32f9",
+        "type": "function",
+        "z": "168960baad8c4d56",
+        "name": "function 85",
+        "func": "msg.payload.retorno=200;\nmsg.payload.token = msg.token;\nmsg.payload.n_pessoa_pessoa = msg.n_pessoa_pessoa;\nmsg.payload.s_nome_pessoa = msg.s_nome_pessoa;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 40,
+        "wires": [
+            [
+                "54ab25735234172b",
+                "003cb75d1fa72ac4"
+            ]
+        ]
+    },
+    {
+        "id": "f62730eafeb089c2",
+        "type": "http in",
+        "z": "168960baad8c4d56",
+        "name": "",
+        "url": "/verificatoken/:token",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 270,
+        "y": 160,
+        "wires": [
+            [
+                "d0c4ee6cc003150b"
+            ]
+        ]
+    },
+    {
+        "id": "d0c4ee6cc003150b",
+        "type": "function",
+        "z": "168960baad8c4d56",
+        "name": "function 86",
+        "func": "const token = msg.req.params.token;\nmsg.topic = `SELECT * FROM token WHERE s_token_token=\"${token}\"`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 160,
+        "wires": [
+            [
+                "a749cebdf19cd610"
+            ]
+        ]
+    },
+    {
+        "id": "a749cebdf19cd610",
+        "type": "mysql",
+        "z": "168960baad8c4d56",
+        "mydb": "8d883f1845a63bb0",
+        "name": "",
+        "x": 620,
+        "y": 160,
+        "wires": [
+            [
+                "c6b43ef88eaf46f7"
+            ]
+        ]
+    },
+    {
+        "id": "5ece1a923d808809",
+        "type": "http response",
+        "z": "168960baad8c4d56",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 840,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "c6b43ef88eaf46f7",
+        "type": "function",
+        "z": "168960baad8c4d56",
+        "name": "function 87",
+        "func": "const tsatual=new Date().getTime();\nif (tsatual <= msg.payload[0].s_validade_token){\n    msg.payload[0].retorno = 200;\n    msg.retorno=200;\n}else{\n    msg.payload[0].retorno = 401;\n    msg.retorno = 401;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 160,
+        "wires": [
+            [
+                "2e3545dc17147707"
+            ]
+        ]
+    },
+    {
+        "id": "2e3545dc17147707",
+        "type": "switch",
+        "z": "168960baad8c4d56",
+        "name": "",
+        "property": "retorno",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "200",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "401",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 270,
+        "y": 300,
+        "wires": [
+            [
+                "59b490e0b5c7c73a"
+            ],
+            [
+                "bf6c8056e9ef3ccf",
+                "c8f418b751d8c59d"
+            ]
+        ]
+    },
+    {
+        "id": "bf6c8056e9ef3ccf",
+        "type": "http response",
+        "z": "168960baad8c4d56",
+        "name": "",
+        "statusCode": "401",
+        "headers": {},
+        "x": 440,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "d2fa5d663dc7b1a4",
+        "type": "debug",
+        "z": "168960baad8c4d56",
+        "name": "debug 36",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c8f418b751d8c59d",
+        "type": "debug",
+        "z": "168960baad8c4d56",
+        "name": "debug 37",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "59b490e0b5c7c73a",
+        "type": "function",
+        "z": "168960baad8c4d56",
+        "name": "function 88",
+        "func": "const n_token_token = msg.payload[0].n_token_token;\nconst ts = new Date().getTime() + (60000 * 10);\nmsg.topic = `UPDATE token set s_validade_token=${ts} WHERE n_token_token=\"${n_token_token}\"`;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 220,
+        "wires": [
+            [
+                "94338f2354675826"
+            ]
+        ]
+    },
+    {
+        "id": "94338f2354675826",
+        "type": "mysql",
+        "z": "168960baad8c4d56",
+        "mydb": "8d883f1845a63bb0",
+        "name": "",
+        "x": 620,
+        "y": 220,
+        "wires": [
+            [
+                "46e69450299a640e"
+            ]
+        ]
+    },
+    {
+        "id": "46e69450299a640e",
+        "type": "function",
+        "z": "168960baad8c4d56",
+        "name": "function 89",
+        "func": "//msg.payload[0].retorno = 200;\nmsg.payload.retorno=200;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 280,
+        "wires": [
+            [
+                "5ece1a923d808809",
+                "d2fa5d663dc7b1a4"
+            ]
+        ]
+    },
+    {
+        "id": "8d883f1845a63bb0",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "estoque",
+        "tz": "",
+        "charset": "UTF8"
+    }
+]

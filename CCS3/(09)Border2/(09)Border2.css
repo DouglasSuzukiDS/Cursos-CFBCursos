@@ -1,0 +1,27 @@
+h1{
+	border-top-width: 20px; /* Largura da Borda de Cima */
+	border-right-width: 20px; /* Largura da Borda da Direita */
+	border-bottom-width: 20px; /* Largura da Borda de Baixo */
+	border-left-width: 20px; /* Largura da Borda da Esquerda */
+	
+	border-top-style: solid; /* Estilo da Borda de Cima */
+	border-right-style: solid; /* Estilo da Borda da Direita */
+	border-bottom-style: solid; /* Estilo da Borda de Baixo */
+	border-left-style: solid; /* Estilo da Borda da Esquerda */
+
+	border-top-color: #000; /* Cor da Borda de Cima */
+	border-right-color: #F00; /* Cor da Borda da Direita */
+	border-bottom-color: #0F0; /* Cor da Borda de Baixo */
+	border-left-color: #00F; /* Cor da Borda da Esquerda */
+	/* Configurandoas Propriedades Separadamente */
+}
+
+p{	
+	width: 300px; /* Largura */ 
+	border-top: #000 solid 20px; /* Borda de Cima */
+	border-right: #00F double 20px; /* Borda Direita */
+	border-bottom: #F00 dotted 20px; /* Borda de baixo */
+	border-left: #0F0 groove 20px; /* Borda Esquerda */ 
+	/* Configurando Cor, Borda e Tamanho na mesma linha */
+
+}

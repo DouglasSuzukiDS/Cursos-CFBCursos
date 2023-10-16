@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - Javascript 66 - Objeto Screen</title>
+
+		<style>
+
+			#painel{
+				width: 400px;
+				height: 500px;
+				border: 1px solid #000;
+				border-radius: 10px;
+				padding: 10px;
+			}
+
+		</style>
+
+		<script>
+
+			// screen = informações sobre a tela de quem visitou o site;
+			// width = largura;
+			// height = altura;
+			// availWidth = Largura disponivel;
+			// availHeight = Altura disponevel;
+			// colorDepth = Retorna  a profundidade de BITS da palheta de cores para exibir imagens;
+			// pixeilDepth = Retora a iformação da resolução da imagens por pixel
+			
+			var painel;
+
+			function inicia(){
+				painel=document.getElementById("painel");
+				painel.innerHTML+="Resolução: " + screen.width + "px X " + screen.height + "px<hr>";
+				painel.innerHTML+="Resolução disponivel: " + screen.availWidth + "px X " + screen.availHeight + "px<hr>";
+				painel.innerHTML+="Profundidade de cores (iamages): " + screen.colorDepth + "bits<hr>";
+				painel.innerHTML+="Resolução cor da tela (pixel): " + screen.pixelDepth + "bits/pixel<hr>";
+			}
+
+			window.addEventListener("load",inicia);
+
+		</script>
+
+	</head>
+	<body>
+
+		<div id="painel"></div>
+		
+	</body>
+</html>

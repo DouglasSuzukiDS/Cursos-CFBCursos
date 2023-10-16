@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CFB Cursos - Javascript Aula 118 - Método MAP</title>
+   <script>
+      // Map: Interage encima de um elemento em um array já existente, gerando um novo array com os elementos interados
+
+      let num = [1, 4, 9, 16, 25]
+      let raiz = num.map(Math.sqrt)
+
+      for(let i = 0; i < 5; i++){
+         console.log('Número: ' + num[i] + ' - Raiz: ' + raiz[i])
+      }
+
+      /*function sobra(n){
+         return n * 2
+      }
+
+      const d = (n) =>{
+         return n * 2
+      }*/
+
+      let dobros = num.map((n) => {
+         return n * 2
+      })
+      console.log('-----------')
+
+      for(let i = 0; i < 5; i++){
+         console.log('Número: ' + num[i] + ' - Dobro: ' + dobros[i])
+      }
+   </script>
+</head>
+<body>
+   
+</body>
+</html>

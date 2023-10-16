@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML5 63 - Tag Output</title>
+	</head>
+
+	<body>
+		<!-- 
+			<output>: Recebe a saida do elemento, um exemplo o resultado de uma operação
+		 -->
+
+		<form oninput="res.value=parseInt(a.value)+parseInt(b.value)">
+			0<input type="range" id="a" value="50">100
+			<p>+</p>
+			<input type="number" id="b" value="0">
+			<p>=</p>
+			<output name="res" for="a b"></output>
+		</form>
+		
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - 09 - Imagens - Formatação CSS para Imagens</title>
+
+		<style type="text/css">
+
+			/*
+				width = Largura;
+				height = Altura;
+				cursor: pointer = cursor da mãozinha
+				zoom = Da um zoom na imagem;
+
+				background-repeat: Repete a imagem;
+					repeat-x = Repete a imagem no Eixo X;
+					repeat-y = Repete a imagem no Eixo Y;
+					repeat = Repete a imagem até completar a tela
+					no-repeat = Não repete a imagem
+
+				
+			*/
+
+			body{
+				background-image: url(imagens/barraFundo.jpg);
+				background-repeat: repeat-x;
+				background-color: #FFFFFF;
+			}
+
+			.fotos{
+				width: 200px;
+				height: 200px;
+				border: 5px solid #000;
+				cursor: pointer;
+			}
+
+			.fotos:hover{
+				border: 5px solid #F00;
+				zoom: 150%;
+			}
+
+			.logos{
+				width: 250px;
+			}
+			
+		</style>
+
+	</head>
+
+	<body>
+
+		<img class="logos" src="logos/VW.png">
+		<img class="logos" src="logos/Fiat.png">
+		<img class="logos" src="logos/Chevrolet.png">
+		<img class="logos" src="logos/Ford.png">
+
+		<br><br><br><br>
+
+		<img src="carros/gol.jpg">
+		<img src="carros/palio.jpg">
+		<img src="carros/onix.jpg">
+		<img src="carros/fiesta.jpg">
+				<br><br><br><br>
+
+		<img class="fotos" src="fotos/f1.jpg">
+		<img class="fotos" src="fotos/f2.jpg">
+		<img class="fotos" src="fotos/f3.jpg">
+		<br>
+		<img class="fotos" src="fotos/f4.jpg">
+		<img class="fotos" src="fotos/f5.jpg">
+		<img class="fotos" src="fotos/f6.jpg">
+		
+	</body>
+</html>

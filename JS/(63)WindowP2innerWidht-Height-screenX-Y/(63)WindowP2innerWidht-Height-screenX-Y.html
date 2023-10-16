@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - Javascript 63 - OBJ Window P2 - innerWidth, innerHeight, screenX, screenY</title>
+
+		<style>
+			#painel{
+				border: 1px solid #000;
+				border-radius: 10px;
+				padding: 15px;
+				width: 150px;
+				height: 100px;
+			}
+		</style>
+
+		<script>
+
+			/* // innerWight = Retorna a Largura da janela exibida;
+			// inerHeight = Retorna a Altura da janela exibida;
+			// outerWidth = Largura da janela COM AS BARRAR;
+			// outerHeight = Altura da janela COM AS BARRAS;
+			// screenX = Retorna o posicionamento horizontal;
+			// screenY = Retorna o posicionamento vertical; */
+
+			var l,a,px,py,painel;
+
+			function info(){
+
+				l=window.innerWidth; // Obtem a Largura interna da Janela;
+				a=window.innerHeight; // Obtem a Altura interna da Janela;
+				px=window.screenX;
+				py=window.screenY;
+				painel.innerHTML="L: "+l+" - A: "+a+"<br>X: " +px+" - Y: " +py;
+			}
+
+			function inicia(){
+
+				document. getElementById("btnTam").addEventListener("click",info); 
+				painel=document.getElementById("painel");
+			}
+
+			window.addEventListener("load", inicia);
+			
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<!-- <button onclick="info()">Tamanho</button> //Comando Pratico -->  
+		<button id="btnTam">Tamanho</button>
+
+		<div id="painel"></div>
+		
+	</body>
+</html>

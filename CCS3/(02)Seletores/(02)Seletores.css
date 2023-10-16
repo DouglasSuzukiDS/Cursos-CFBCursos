@@ -1,0 +1,23 @@
+p{
+	color: #f00;
+	font-size: 20pt;
+} /* Nome da TAG pra Formatação  */
+
+#p1{
+	color: #00f;	
+} /* ID que sera inserido aa formatação */ 
+
+.txt{
+	color: #080;
+	font-size: 30pt;
+
+} /* Classe que recebera a formatação */
+.titulo{
+	color: #00f;
+}
+
+h4,h5,h6{
+	color: #800;
+	font-size: 15pt;
+	font-weight: lighter; /* Atributo Negrito: Lighter = Sem Negrito || Bold = Negrito*/
+} /* Forma de inserir as formatações nas TAGS desejadas */

@@ -1,0 +1,36 @@
+	/*
+		font-size: 16px; Tamanho padrão da font dos browseres
+		EM: Unidade de medida em relação a fonte, conforme o elemento pai;
+	*/
+
+html{
+	font-size: 20px;
+}
+
+body{
+	font-size: 2em; /* 40px */
+}
+
+div{
+	display: inline-block;
+	width: 300px;
+}
+
+#d1{
+	border: 1px solid #F00;
+	height: 2em; /* 80px; */
+}
+
+#d2{
+	border: 1px solid #00F;
+	height: 80px;
+}
+
+p{
+	font-size: 2em; /* Tamanho da fonto do elemento pai x2 */
+}
+
+#p3{
+	font-size: 20px;
+	color: #F00;
+}

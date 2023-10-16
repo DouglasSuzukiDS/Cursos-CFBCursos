@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - Javascript 90 - Propriedades Personalizadas - dataset</title>
+
+		<style>
+			.carro{
+				width: 371px;
+				height: 750px;
+				display: inline;
+				cursor: pointer;
+			}
+			#painel{
+				border: solid 3px #000;
+				border-radius: 10px;
+				padding: 10px;
+				width: 500px;
+				height: 100px;
+			}
+		</style>
+
+		<script>
+
+			//dataset = Permite adicionar propriedade personalizada aos elementos, e com o JS é possivel ler e alterar seu valor; 
+
+			function definePainel(){
+				//var obj=event.target.dataset.CATEGORIA="NOVO NOME"; Define o nome valor para a categoria;
+
+				var obj=event.target; //Retorna o objeto clicado
+				var painel=document.getElementById("painel");
+				painel.innerHTML="Modelo: " + obj.dataset.modelo+"<br>";
+				painel.innerHTML+="Cor: " + obj.dataset.cor+"<br>";
+				painel.innerHTML+="Potência: " + obj.dataset.pot+" Cavalos<br>";
+				painel.innerHTML+="Velocidade: " + obj.dataset.vel+" KM/H";
+			}
+
+			function inicia(){
+				document.getElementById("c1").addEventListener("click",definePainel);
+				document.getElementById("c2").addEventListener("click",definePainel);
+				document.getElementById("c3").addEventListener("click",definePainel);
+				document.getElementById("c4").addEventListener("click",definePainel);
+			}
+			window.addEventListener("load",inicia);
+			
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id="painel"></div>
+
+		<div id="c1" class="carro"><img src="c1.png" data-modelo="Popular" data-cor="Preto" data-pot="80" data-vel="120"></div>
+
+		<div id="c2" class="carro"><img src="c2.png" data-modelo="Corrida" data-cor="Laranja" data-pot="80" data-vel="120"></div>
+
+		<div id="c3" class="carro"><img src="c3.png" data-modelo="Familia" data-cor="Cinza" data-pot="80" data-vel="120"></div>
+
+		<div id="c4" class="carro"><img src="c4.png" data-modelo="Esportivo" data-cor="Azul" data-pot="80" data-vel="120"></div>
+
+		
+	</body>
+</html>

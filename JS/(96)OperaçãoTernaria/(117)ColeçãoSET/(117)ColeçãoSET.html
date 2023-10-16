@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CFB Cursos - Javascript Aula 117 - Coleção SET</title>
+   <script>
+      let meuSet = new Set([1, 2, 3]) // Não permite valores duplicados
+      let meuMap = new Map() // Map: KEY / VALUE
+
+      meuMap.set('1', 'Vermelho')
+      meuMap.set('2', 'Verde')
+      meuMap.set('3', 'Azul')
+
+      // map -> set
+
+      meuSet.add(4)
+      meuSet.add(1)
+      meuSet.add(2)
+
+      console.log(meuSet.size)
+      console.log('------------')
+
+      for(n of meuSet){
+         console.log(n)
+      }
+   </script>
+</head>
+<body>
+   
+</body>
+</html>

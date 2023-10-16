@@ -1,0 +1,428 @@
+[
+    {
+        "id": "78df9a8f381b782b",
+        "type": "tab",
+        "label": "Aula04",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cdc0bfc6620c1346",
+        "type": "tab",
+        "label": "Aula05 - CFB Cursos",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6a8275d59c26b714",
+        "type": "inject",
+        "z": "78df9a8f381b782b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "canal",
+                "v": "CFB Cursos",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 40,
+        "wires": [
+            [
+                "5001d71b9bb23bf8"
+            ]
+        ]
+    },
+    {
+        "id": "cae35a0c1a17d6a0",
+        "type": "debug",
+        "z": "78df9a8f381b782b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 370,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "4f15bf31b79df921",
+        "type": "function",
+        "z": "78df9a8f381b782b",
+        "name": "",
+        "func": "let data = new Date(msg.payload)\n// msg.payload = data.toString()\nmsg.topic = data.toString()\n// let num = Math.random() * 10\n//msg.canal = Math.random() * 10\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 160,
+        "wires": [
+            [
+                "cae35a0c1a17d6a0"
+            ]
+        ]
+    },
+    {
+        "id": "5001d71b9bb23bf8",
+        "type": "random",
+        "z": "78df9a8f381b782b",
+        "name": "Sorteio",
+        "low": "0",
+        "high": "50",
+        "inte": "true",
+        "property": "canal",
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "4f15bf31b79df921"
+            ]
+        ]
+    },
+    {
+        "id": "8fcf95de48816fb7",
+        "type": "inject",
+        "z": "cdc0bfc6620c1346",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "entrada1",
+        "payloadType": "str",
+        "x": 100,
+        "y": 40,
+        "wires": [
+            [
+                "d0855418c109ecfe"
+            ]
+        ]
+    },
+    {
+        "id": "de61645740337b0e",
+        "type": "debug",
+        "z": "cdc0bfc6620c1346",
+        "name": "s1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "d0855418c109ecfe",
+        "type": "function",
+        "z": "cdc0bfc6620c1346",
+        "name": "",
+        "func": "// Para ter 2 saidas basta ir em Setup e mudar o numero de saidas e cololocar o retorur em um array\n//return [msg, null];\n\nif(msg.payload === 'entrada1') {\n   msg.payload = Math.random() * 10\n   return [msg, null]\n} else if(msg.payload === 'entrada2'){\n   msg.payload = (Math.random() * 100) + 100\n   return [null, msg]\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 80,
+        "wires": [
+            [
+                "de61645740337b0e"
+            ],
+            [
+                "04c42a547313197f"
+            ]
+        ]
+    },
+    {
+        "id": "04c42a547313197f",
+        "type": "debug",
+        "z": "cdc0bfc6620c1346",
+        "name": "s2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "4c4f3b5fa49652a5",
+        "type": "inject",
+        "z": "cdc0bfc6620c1346",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "entrada2",
+        "payloadType": "str",
+        "x": 100,
+        "y": 120,
+        "wires": [
+            [
+                "d0855418c109ecfe"
+            ]
+        ]
+    },
+    {
+        "id": "90a713d00a372573",
+        "type": "inject",
+        "z": "cdc0bfc6620c1346",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "entrada1",
+        "payloadType": "str",
+        "x": 100,
+        "y": 260,
+        "wires": [
+            [
+                "e3fea3c6955bbdd5"
+            ]
+        ]
+    },
+    {
+        "id": "168cce1aca438ea5",
+        "type": "debug",
+        "z": "cdc0bfc6620c1346",
+        "name": "s1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "e3fea3c6955bbdd5",
+        "type": "function",
+        "z": "cdc0bfc6620c1346",
+        "name": "",
+        "func": "// Para ter 2 saidas basta ir em Setup e mudar o numero de saidas e cololocar o retorur em um array\n//return [msg, null];\n\n/*if(msg.payload === 'entrada1') {\n   msg.payload = Math.random() * 10\n   return [msg, null]\n} else if(msg.payload === 'entrada2'){\n   msg.payload = (Math.random() * 100) + 100\n   return [null, msg]\n}*/\n\nmsg.payload = Math.random() * 30\nif(msg.payload <= 10) {\n   return [msg, null, null]\n} else if(msg.payload <= 20){\n   return [null, msg, null]\n} else {\n   return [null, null, msg]\n}\n",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 260,
+        "wires": [
+            [
+                "168cce1aca438ea5"
+            ],
+            [
+                "1b8853127e80b4b3"
+            ],
+            [
+                "2a0c293c13e33206"
+            ]
+        ]
+    },
+    {
+        "id": "1b8853127e80b4b3",
+        "type": "debug",
+        "z": "cdc0bfc6620c1346",
+        "name": "s2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "2a0c293c13e33206",
+        "type": "debug",
+        "z": "cdc0bfc6620c1346",
+        "name": "s3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "35c0df07bb362efe",
+        "type": "inject",
+        "z": "cdc0bfc6620c1346",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "entrada1",
+        "payloadType": "str",
+        "x": 100,
+        "y": 460,
+        "wires": [
+            [
+                "759e451a5e105fc3"
+            ]
+        ]
+    },
+    {
+        "id": "8a550e4d6953424d",
+        "type": "debug",
+        "z": "cdc0bfc6620c1346",
+        "name": "n1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "n1",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "759e451a5e105fc3",
+        "type": "function",
+        "z": "cdc0bfc6620c1346",
+        "name": "",
+        "func": "msg.n1 = 1\nmsg.n2 = 2\nmsg.n3 = 3\nreturn [msg, msg, msg]\n ",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 460,
+        "wires": [
+            [
+                "8a550e4d6953424d"
+            ],
+            [
+                "28d78d6d0c0cb6de"
+            ],
+            [
+                "9175af28fa69febc"
+            ]
+        ]
+    },
+    {
+        "id": "28d78d6d0c0cb6de",
+        "type": "debug",
+        "z": "cdc0bfc6620c1346",
+        "name": "n2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "n2",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "9175af28fa69febc",
+        "type": "debug",
+        "z": "cdc0bfc6620c1346",
+        "name": "n3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "n3",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 520,
+        "wires": []
+    }
+]

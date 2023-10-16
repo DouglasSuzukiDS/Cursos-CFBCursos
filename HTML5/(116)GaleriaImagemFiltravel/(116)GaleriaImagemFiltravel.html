@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>CFB Cursos - HTML5 116 - Galeria de Imagens Filtrável</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+
+<body>
+
+	<section class="galeria">
+		<header id="cabecalhoGaleria">
+			<button class="btn ativo" onclick="gerenciarImagens('tudo')">Tudo</button>
+			<button class="btn" onclick="gerenciarImagens('c1')">Cursos 1</button>
+			<button class="btn" onclick="gerenciarImagens('c2')">Cursos 2</button>
+			<button class="btn" onclick="gerenciarImagens('c3')">Cursos 3</button>
+		</header>
+
+		<article class="imagens">
+			<img src="HTML_CP-01.jpg" class="img c1">
+			<img src="JS-01.jpg" class="img c1">
+			<img src="QT-01.jpg" class="img c2">
+			<img src="appi-01.jpg" class="img c2" >
+			<img src="arduino-01.jpg" class="img c3">
+			<img src="cs-01.jpg" class="img c3">
+		</article>
+		
+	</section>
+
+	<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>

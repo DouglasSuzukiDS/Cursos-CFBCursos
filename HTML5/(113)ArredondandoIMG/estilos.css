@@ -1,0 +1,12 @@
+/*(113)ArredondandoIMG*/
+
+.imgRedonda{
+	border-radius: 50%;
+	width: 300px;
+	transition: all 0.5s;
+}
+
+.imgRedonda:hover{
+	border-radius: 0%;
+	transition: all 0.5s;
+}

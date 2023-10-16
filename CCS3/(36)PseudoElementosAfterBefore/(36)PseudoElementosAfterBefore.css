@@ -1,0 +1,26 @@
+/*
+	Before = Usando quando se quer adicionar uma formatação expecifica antes de qualquer elemento/marcador, começa do lado esquerdo do elementos
+
+	After = Insere o elemento depois, começa ao lado direito do elemento
+*/
+
+p.cfb::before{ /* Assim somente os elementos p podem receber a formatação */
+	content: url("marcador.png");
+	color: #F00;
+}
+
+.cfb::before{
+	content: url("marcador.png");
+}
+
+.cfb::after{ 
+	content: url("marcador.png");
+}
+
+p::after{
+	content: " - cfb";
+}
+
+p{
+	font-size: 40px;
+}

@@ -1,0 +1,284 @@
+body{
+	margin: 0px;
+}
+
+body::-webkit-scrollbar{ /* Containner da Barra de rolagem */
+    width: 5px;
+    color: #000;
+    background-color: #273539;    
+}
+body::-webkit-scrollbar-thumb{ /* Barra de rolagem em si */
+    border-radius: 5px;
+    /*background-color: #F00;*/
+    background: rgba(255,255,255, 0.3);
+    /*background: rgba(255,255,255, 0.3); Para Deixar o scroll transparente */ 
+    width: 1px;
+}
+
+section, div, summary{
+	display: flex;
+	justify-content: space-between;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+div{
+	margin-right: 5px;
+	text-align: center;
+}
+
+#main{
+	/*border: 1px solid #000;*/
+	top: 0px;
+	left: 0px;
+	height: 150px;
+	width: 100%;
+	background-image: url("lay.png");
+	background-size: 100%;
+	background-attachment: fixed;
+}
+
+#cf{
+	height: 100%;
+	width: 100%;
+	background-attachment: fixed;
+}
+
+#arsenal{
+	border: 0px solid #F00;
+	top: 150px;
+	left: 0px;
+	height: 100%;
+	width: 1335px;
+	/*align-items: center;*/
+}
+
+.menu{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin: auto;
+	text-align: center;
+}
+
+#pi a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 0px;
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#vip a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 104px;
+	border: 2px solid #F00;
+	border-radius: 5px;
+}
+
+#rifle a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 208px;
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#sniper a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 312px;
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#escopeta a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 416px;
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#metralhadora a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 520px;
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#subm a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 624px;	
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#pistola a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 728px;	
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#faca a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 832px;	
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#granada a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 936px;	
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#soldado a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 1040px;	
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#caixa a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 1180px;	
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#mnzp{
+}
+
+#mngp{
+
+}
+
+#pi a:hover, #vip a:hover, #rifle a:hover, #sniper a:hover, #escopeta a:hover, #metralhadora a:hover{
+	border: 2px solid #00F;
+	border-radius: 5px;
+}
+
+#subm a:hover, #pistola a:hover, #faca a:hover, #granada a:hover, #soldado a:hover, #caixa a:hover{
+	border: 2px solid #00F;
+	border-radius: 5px;
+}
+
+#pi a:active, #vip a:active, #rifle a:active, #sniper a:active, #escopeta a:active, #metralhadora a:active{
+	border: 2px solid #F00;
+	border-radius: 5px;
+}
+
+#subm a:active, #pistola a:active, #faca a:active, #granada a:active, #soldado a:active, #caixa a:active{
+	border: 2px solid #F00;
+	border-radius: 5px;
+}
+
+#SeVipVit{ /* Div Com os Sections VIP e VIT */
+	border: 1px solid #F0F;
+	/*width: 100%;*/
+	height: 100%;
+	margin: 15px;
+	/*flex-wrap: wrap;*/
+}
+
+#SeVip{ /* Section com os DETAILS */
+	margin-top: 10px;
+	border: 1px solid #0F0;
+	width: 500px;
+	height: 100%;
+	text-align: center;
+	align-items: center;
+}
+
+#SeVit{ /* Section com os DETAILS */
+	margin-top: 10px;
+	border: 1px solid #0F0;
+	width: 500px;
+	height: 100%;
+	text-align: center;
+	align-items: center;
+
+}
+
+#ArmasVip, #Vit{ /* DIV com dos DETAILS */
+	border: 1px solid #000;
+	width: 360px;
+	height: 100%;
+	/*margin:auto;*/
+}
+
+
+
+#divVip, #divVit{ /* Configuração da DIV com as imagens */
+	border: 1px solid #00F;
+	width: 320px;
+	height: 310px;
+	/*height: 100%;*/
+	margin: auto;
+	padding: 5px;
+	overflow: auto;
+}
+
+/* Barra de rolagem para as DIVS com as VIPS e VITORIOSAS */
+.scroll::-webkit-scrollbar{ /* Containner da Barra de rolagem */
+    width: 5px;
+    color: #000;
+    background-color: #273539;    
+}
+.scroll::-webkit-scrollbar-thumb{ /* Barra de rolagem em si */
+    border-radius: 5px;
+    /*background-color: #F00;*/
+    background: rgba(255,255,255, 0.3);
+    /*background: rgba(255,255,255, 0.3); Para Deixar o scroll transparente */ 
+    width: 1px;
+}
+
+summary{ /* FOrmatações para o Summary */
+	border: 1px solid #0FF;
+	padding: 5px;
+	margin: 5px;
+	width: 150px;
+	font-family: "BatmanForeverAlternate";
+	background: linear-gradient(to bottom, #DDD, #666);
+}
+
+details[open] summary{
+	margin: auto;
+	border: 2px solid #F00;
+	padding: 5px;
+}
+
+.img{ /* Formatações para IMG */
+	border: 1px solid #F00;
+	border-radius: 7px;
+}
+
+

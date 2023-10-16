@@ -1,0 +1,4 @@
+Foi Usando o WAMP mas decidir usar o Node Red
+
+Para rodar basta abrir  o terminal e digitar: node-red e abrir no navegador
+http://127.0.0.1:1880/

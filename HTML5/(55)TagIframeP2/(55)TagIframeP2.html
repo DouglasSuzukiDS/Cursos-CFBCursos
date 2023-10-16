@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML5 55 - Tag Iframe - Parte 2</title>
+
+		<style>
+			iframe{
+				width: 500px;
+				height: 300px;
+				border: none;
+			}
+
+			#banner{
+				width: 500px;
+				height: 100px;
+				border: none;
+			}
+		</style>
+
+		<script>
+			function trocaBanner(){
+				var num=Math.floor(Math.random()*3);
+				var imgs=['b1.jpg','b2.jpg','b3.jpg'];
+				document.getElementById("banner").src=imgs[num];
+			}
+			function iniciar(){
+				trocaBanner();
+			}
+			window.addEventListener("load", iniciar);
+		</script>
+	</head>
+
+	<body>
+		<!--
+			<iframe> = Uma especia de quadro que permite a exibição de um outro conteudo na propria página;
+				sandbox: Desabilita recursos do iframe, como formularios, ponteiros, popups, scripts.
+					allow-script: Permite uso de scripts;
+
+		-->
+
+		<iframe src="" name="banner" id="banner"></iframe>
+		<br>	
+
+		<a href="(33)FormularioP3.html" target="main">Aula 33</a>
+		<a href="http://www.cfbcursos.com.br" target="main">Site Canal</a>
+		<a href="http://w3c.org" target="main">W3</a>
+		<br>
+		<iframe src="" name="main"></iframe>
+		
+	</body>
+</html>

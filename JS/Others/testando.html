@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Teste</title>
+
+	<style>
+			.Tabela{
+				border: 1px;
+				text-align: center;
+			}
+			.bt{
+				border: 1;
+				padding: 10px;
+				width: 100px;
+				height: 50px;
+				display: inline-block;
+				margin: 5px;
+				cursor: pointer;
+				border-radius: 4px;
+			}
+		
+	</style>
+	<script>
+
+	var Snipers=["AWM-Magma x2", "APR 338", "AWM-Zebra", "AWM-Caçador", "AWM-Crimson", "AWM-Ferrugem", "FR-F2 Ferrugem", "HK G28", "PSG-2", "SL8", "M700", "Steyr Elite", "SR99", "DSR-1", "Falcon OP99", "R93T2", "TRG-21", "WA2000", "Dragunov", "AWM"];
+
+	var Granadas=["Flashbang x5", "Granada x5", "Smoke x5", "Flashbang Fênix Dourado x5", "Granada Fênix Dourado", "Smoke Fênix Dourado", "Fumaça Prata", "Granada Neve x5", "Docinho x2"];
+
+	Snipers.sort(); Granadas.sort()
+
+	function mtSnipers(){
+		var tp="Snipers no Arsenal: "+ Snipers.length + "<br><br>";
+		document.write(tp);
+			for(var i=0; i<Snipers.length; i++){
+				document.write(Snipers[i]+"<br>");
+			}
+	}
+
+	function mtGranadas(){
+				var tp="Granadas no Arsenal: "+ Granadas.length+ "<br><br>";
+				document.write(tp);
+				for(var i=0; i<Granadas.length; i++){
+					pegaTab(); 
+					document.write(Granadas[i]+"<br>");
+				}
+			}
+
+	function pegaTab(){
+		window.addEventListener("click",function(){
+				var tabela=document.getElementById("Tabela");
+				var botao=document.getElementById("escolha"); //Captura o botão
+				var colunas=document.createElement("tr"); // Cria o elemento TR que é a coluna
+				var linhas=document.createElement("td"); // Cria o elemento TD que é a linha
+				linhas.appendChild(td);
+				linhas=botao.length;
+				linhas=innerHTML=botao;
+				colunas.innerHTML=linhas;
+				tabela.innerHTML=colunas;
+					for(var i=0; i<botao; i++){
+						tabela.innerHTML=escolha;
+						document.write(tabela);
+					}
+		}); //Capta a Tabela
+	}
+
+	</script>
+</head>
+<body>
+	<div align="right" id="escolha">
+		<div align="left" > <button id="btSnipers" class="bt" onclick="mtSnipers()">Snipers</button> </div>
+		<div align="left" > <button id="btSnipers" class="bt" onclick="mtGranadas()">Granadas</button> </div>
+
+	</div>
+
+	<table id="Tabela" > 
+		<!--<tr>
+			<td>
+				
+			</td>
+		</tr> -->
+
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+
+		<title>CFB Cursos - Javascript 08 - Operadores Lógios - AND(&&) e OR (||) </title>
+		<meta charset="UTF-8">
+
+		<script>
+			/*  // && = Só retorna verdadeiro se todos os testes forem verdadeiros;
+				// ||= Basta que uma condição seja verdadeira pra retorno seja verdadeiro;
+			*/
+
+			var pontos=72;
+			var energia=30;
+			//Vitória => Pontotuação (  ((>=30 && <=40)) || ((Pontuação >=70 && <=80))  )  energia >=40
+
+			if( ((pontos >=30) && (pontos >=40) && (energia >=40) ) || ((pontos >=70) && (pontos <=80) && (energia >=40) ) ){
+				document.write("Ganhou");
+
+			}else{
+				document.write("Perdeu");
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+	
+	</body>
+</html>

@@ -1,0 +1,26 @@
+[
+    {
+        "id": "c61dc5a9b7a9843a",
+        "type": "mysql",
+        "z": "8d15c54c78161ef0",
+        "mydb": "b0512ccf716d9232",
+        "name": "",
+        "x": 400,
+        "y": 120,
+        "wires": [
+            [
+                "89672d24354a90dd"
+            ]
+        ]
+    },
+    {
+        "id": "b0512ccf716d9232",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "cfbcursos",
+        "tz": "",
+        "charset": "UTF8"
+    }
+]

@@ -1,0 +1,35 @@
+/*
+	transition:	Faz a transição de um elemento;
+		Com o valor da propriedade para transição + o tempo
+		width = Largura
+		height = Altura
+
+	transition-timing-function: transição do elemento
+		ease = Padrão, começa de vagar acelera, e no final diminui
+		ease-in = Começa devagar e termina rapido
+		ease-out = Começa rapido e termina devagar 
+		ease-in-out = Começa devagar, acelera e termina debvagar
+		linear = Transição linear, velocidade constante
+		bubic-bezier (X,Y "bezier1", X,Y "bezier2")
+
+	transition-delay = Gera um atraso na animação
+*/
+
+p{
+	width: 300px;
+	height: 250px;
+	border: 1Px solid #000;
+	border-radius: 10px;
+	padding: 10px;
+	text-align: justify;
+	transition: background-color 1s, color 1s, transform 4s;
+	transition-timing-function: linear; 
+	transition-delay: 0s;
+}
+
+p:hover{ /* Evento para quando o mouse estiver em cima do elemento */
+
+	background-color: #F00;
+	color: #FFF;
+	transform: rotate(360deg);
+}

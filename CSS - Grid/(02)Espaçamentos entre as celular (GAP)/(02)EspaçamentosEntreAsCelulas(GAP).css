@@ -1,0 +1,25 @@
+body{
+   font-family: Arial;
+   color: #000;
+}
+
+.container{
+   display: grid;
+   /* display: inline-grid; */ /* O elemento fica apenas do tamanho do seu conteudo  */
+
+   grid-template-columns: auto auto auto; 
+      /* Informa o quantas colunas o container tera e seu tamanho. Com o valor auto, o elemento se ajustara */
+
+   /* grid-column-gap: 10px;
+   grid-row-gap: 10px; */
+   grid-gap: 5px; /*1ºValor Column; 2ºValor Row;  Apenas 1 valor, server pros dois  */
+      /* Seria os espaçamentos entre os elementos */
+}
+
+.item{
+   background-color: #048;
+   color: #FFF;
+   border: 1px solid #000;
+   text-align: center;
+   margin: 10px; /* Tambem pode ser usado nos elementos, com a resalva que caso já tenha espaçamento grid no container, sera somado com a margin */
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+   <title>Pesquisar</title>
+</head>
+<body>
+   <div id="pesquisa" class="pesquisa">
+      <div class="campoPesq">
+         <label>ID</label>
+         <input type="radio" name="f_pesq" value="id">
+      </div>
+
+      <div class="campoPesq">
+         <label>Nome</label>
+         <input type="radio" name="f_pesq" value="nome" checked>
+      </div>
+
+      <div class="campoPesq">
+         <label>Data de Nascimentos</label>
+         <input type="radio" name="f_pesq" value="nasc">
+      </div>
+
+      <div class="campoPesq">
+         <label>Email</label>
+         <input type="radio" name="f_pesq" value="email">
+      </div>
+
+      <div class="campoPesq">
+         <label>Pesquisar</label>
+         <input type="text" id="f_txtpesq" name="f_txtpesq">
+      </div>
+
+      <div class="campoPesq">
+         <button id="btn_pesq" class="btn_geral">Pesquisar</button>
+      </div>
+   </div>
+
+   <div id="dgv" class="dgv">
+      <div id="resultado" class="resultado">
+         <div id="titulos" class="titulos">
+            <div class="titulo c1">Id</div>
+            <div class="titulo c2">Nome</div>
+            <div class="titulo c3">Celular</div>
+            <div class="titulo c4">Email</div>
+            <div class="titulo c4">Data</div>
+         </div>
+   
+         <div id="dados" class="dados">
+   
+            <div class="linhaDados">
+               <div class="coluna c1">Id</div>
+               <div class="coluna c2">Nome</div>
+               <div class="coluna c3">Celular</div>
+               <div class="coluna c4">Email</div>
+               <div class="coluna c4">Data</div>
+            </div>
+            
+         </div>
+   
+      </div>
+   </div>
+
+   <script src="pesquisar.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>CFB Cursos - Javascript 33 - addEventListener</title>
+		<meta charset="UTF-8">
+
+		<style>
+
+			#dv1{
+				width:100px;
+				height:100px;
+				border:1px solid #000;
+				background-color: #f00;
+				position:absolute;
+				left:0px;
+				top:0px;
+			}
+		</style>
+
+		<script>
+
+			function msg(){
+				alert("CFB Cursos");
+			}
+
+			/*function cor1(){
+				var obj=document.getElementById("dv1");
+				obj.style.backgroundColor="#fff";
+			}
+
+			function cor2(){
+				var obj=document.getElementById("dv1");
+				obj.style.backgroundColor="#f00";
+			}*/
+
+			function cor(obj,cor){
+				obj.style.backgroundColor=cor;
+			}
+
+			//Inicialização de eventos
+			function addEventos(){
+				var obj=document.getElementById("dv1");
+				obj.addEventListener("click",msg);
+				/*obj.addEventListener("mouseover",cor1);
+				obj.addEventListener("mouseout",cor2);*/
+				obj.addEventListener("mouseover",function(event){
+					cor(obj,"#fff");
+				});
+				obj.addEventListener("mouseout",function(event){
+					cor(obj,"#f00");
+				});
+			//document.getElementById("dv1").addEventListener("click",msg);
+		}
+		window.addEventListener("load",addEventos);
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id="dv1"></div>
+	
+	</body>
+</html>

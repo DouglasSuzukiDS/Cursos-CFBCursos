@@ -1,0 +1,7 @@
+Foi Usando o WAMP mas decidir usar o Node Red
+
+Intalar o node-red-node-mysql caso não houver intslado;
+   - 3 barrinhas > Manager Pallets > Install > Buscar por: node-red-node-mysql
+
+Para rodar basta abrir  o terminal e digitar: node-red e abrir no navegador
+http://127.0.0.1:1880/

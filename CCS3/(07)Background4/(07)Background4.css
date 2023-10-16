@@ -1,0 +1,7 @@
+body{
+	/* background: #FFF url(cfb.jpg) no-repeat 0px 0px / 100%;
+		A / serve pra indicar a porcentagem da imagem quando se usa o posicionamento antes
+	   Assim a imagem se ajusta conforme o tamanho da janela */
+	  background: #FFF url(cfb.jpg) no-repeat center 0px / 400px;
+	  /* Assim a imagem sempre fica fixa no centro */
+}

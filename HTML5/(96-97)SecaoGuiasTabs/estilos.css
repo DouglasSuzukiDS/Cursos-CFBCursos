@@ -1,0 +1,47 @@
+/* (96-97)Seção de Guias e Tabs */
+
+body{
+	font-family: Arial;
+}
+
+.tabs{
+	overflow: hidden;
+	border: 1px solid #CCC;
+	background-color: #F1F1F1;
+}
+
+.tabs button{
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: .4s;
+	font-size: 17px;
+}
+
+.tabs button:hover{
+	background-color: #DDD;
+}
+
+.tabs button.ativo{
+	background-color: #CCC;
+}
+
+.conteudoTab{
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #CCC;
+	border-top: none;
+}
+
+.fecharTab{
+	float: right;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.fecharTab:hover{
+	color: #F00;
+}

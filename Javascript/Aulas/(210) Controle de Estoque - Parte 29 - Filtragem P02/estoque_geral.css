@@ -1,0 +1,316 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --azul-principal: #005288;
+   --fundo-janela: #CCC;
+}
+
+body {
+   background-color: #202225;
+   overflow: hidden !important;
+}
+
+.menuPrincipal {
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   /* border: 1px solid #F00; */
+   width: 240px;
+   height: 100vh;
+   transition: all ease .75s;
+}
+
+.ocultar {
+   left: -160px !important;
+}
+
+.menuItens {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   flex-direction: column;
+   background-color: #CCC;
+   height: 100%;
+}
+
+.btn_menuItem {
+   cursor: pointer;
+   margin: 5px;
+   padding: 5px 15px;
+   width: 150px;
+   border: none;
+   border-radius: 5px;
+   text-decoration: none;
+   background-color: #888;
+   text-align: center;
+   color: #C1C7E0;
+}
+
+.btn_menuPrincipal {
+   cursor: pointer;
+   border: none;
+   width: 30px;
+}
+
+.principal{
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   width: 100%;
+   height: 100vh;
+}
+
+.fPrincipal{
+   width: 100%;
+   height: 100%;
+   border: none;
+}
+
+/* Formatação de Grids */
+
+.areaGrid {
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   width: 100%;
+   max-height: calc(100vh - 160px);
+   overflow-y: auto;
+}
+
+.grid {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.tituloGrid {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   background-color: var(--azul-principal);
+   color: #C1C7E0;
+}
+
+.colunaTituloGrid {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.dadosGrid {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   flex-direction: column;
+}
+
+.linhaGrid {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+}
+
+.linhaGrid:hover {
+   background-color: #0AC !important;
+   color: #FFF;
+}
+
+.ocultarLinhaGrid {
+   display: none !important;
+}
+
+.linhaGrid:nth-child(even) {
+   background-color: #EEE;
+}
+
+.linhaGrid:nth-child(odd) {
+   background-color: #CCC;
+}
+
+.colunaLinhaGrid {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.icone_op {
+   width: 25px;
+   cursor: pointer;
+}
+
+/* Topo da Janela */
+.topoJanela {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 10px 0px 10px 0px;
+}
+
+.btn_mainOper {
+   background-color: var(--azul-principal);
+   border-radius: 100px;
+   cursor: pointer;
+   width: 40px;
+}
+
+/* Janela Novo */
+.popUp {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgba(0, 0, 0, 0.8);
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   height: 100vh;
+}
+
+.janelaPopUp {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   flex-direction: column;
+   width: 50%;
+}
+
+.tituloPopUp {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: #C1C7E0;
+   background-color: var(--azul-principal);
+   padding: 5px;
+   border-radius: 5px 5px 0px 0px;
+   width: 100%;
+}
+
+.corpoPopUp {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   flex-direction: column;
+   background-color: var(--fundo-janela);
+   padding: 5px;
+   width: 100%;
+}
+
+.rodapePopUp {
+   display: flex;
+   justify-content: space-around;
+   align-items: flex-start;
+   background-color: var(--azul-principal);
+   border-radius: 0px 0px 5px 5px;
+   padding: 5px;
+   width: 100%;
+}
+
+.btn_janelaOpera {
+   width: 20px;
+   cursor: pointer;
+}
+
+.btn_comandoPopUp {
+   background-color: #012D4B;
+   border: none;
+   color: #C1C7E0;
+   padding: 5px;
+   border-radius: 5px;
+   cursor: pointer;
+   text-transform: uppercase;
+}
+
+.campoForm {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   flex-direction: column;
+   width: 100%;
+}
+
+.campoForm2 {
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   flex-direction: row;
+   width: 100%;
+   background-color: #FFF;
+   padding: 5px;
+   border-radius: 5px;
+}
+
+.campoForm input, .campoForm select {
+   padding: 5px;
+   margin-bottom: 5px;
+   border-radius: 5px;
+   border: none;
+   width: 100%;
+   background-color: #FFF;
+}
+
+.campoFiltragem {
+   width: 300px;
+}
+
+.inputFiltragem {
+   border: 3px solid #888 !important;
+}
+
+.filtragem {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.campoForm div  {
+   padding: 5px;
+   margin-bottom: 5px;
+   border-radius: 5px;
+   border: none;
+   background-color: #FFF;
+}
+
+.ocultarPopUp {
+   display: none !important;
+}
+
+.telefones {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   flex-wrap: wrap;
+   width: 100%;
+}
+
+.tel {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+}
+
+.numTel {
+   background-color: #888 !important;
+   padding: 5px;
+   border: 5px;
+   border-radius: 5px 0px 0px 5px !important;
+   width: 120px !important;
+}
+
+.delTel {
+   background-color: #F88 !important;
+   padding: 5px;
+   border: 5px;
+   border-radius: 0px 5px 5px 0px !important;
+   width: 28px !important;
+   cursor: pointer;
+}

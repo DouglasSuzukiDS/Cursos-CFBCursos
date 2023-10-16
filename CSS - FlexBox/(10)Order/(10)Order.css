@@ -1,0 +1,92 @@
+.item{
+   margin: 5px;
+   padding: 5px;
+   background: #447;
+   text-align: center;
+   font-size: 1em;
+   color: #FFF;
+}
+
+.container{
+   max-width: 600px;
+   height: 400px;
+   margin: 0 auto;
+   border: 1px solid #000;
+   justify-content: center; /* Eixo Principal */
+   /*align-items: center; /* Eixo Secundário */
+   align-content: space-between; /* Eixo Secundário */
+}
+
+.flexivel{
+   display: flex;
+}
+
+.horizontal{
+   flex-direction: row;
+}
+
+.vertical{
+   flex-direction: column;
+}
+
+.quebra{
+   flex-wrap: wrap;
+}
+
+.tam0{
+   flex-grow: 0;
+}
+
+.tam1{
+   flex-grow: 1;
+}
+
+.tam2{
+   flex-grow: 2;
+}
+
+.tam3{
+   flex-grow: 3;
+}
+
+.base0{
+   flex-basis: 0;
+}
+
+.base1{
+   flex-basis: 1;
+}
+
+.base2{
+   flex-basis: 2;
+}
+
+.base3{
+   flex-basis: auto;
+}
+
+/* .ordem0{
+   order: 0;
+}
+
+.ordem1{
+   order: 1;
+}
+
+.ordem2{
+   order: 2;
+}
+
+.ordem3{
+   order: 3;
+} */
+
+body{
+   font-family: Arial;
+   color: #000;
+}
+
+
+/*
+   Flex Basis: Funciona como o flex-grow com a diferença de que o tamanho do item é igual entre os conteúdos do container
+*/

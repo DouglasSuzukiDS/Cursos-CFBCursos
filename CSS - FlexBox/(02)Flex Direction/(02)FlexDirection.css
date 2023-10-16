@@ -1,0 +1,40 @@
+.item{
+   margin: 5px;
+   padding: 5px;
+   background: #447;
+   text-align: center;
+   font-size: 1em;
+   color: #FFF;
+}
+
+.container{
+   max-width: 600px;
+   /* height: 600px; */
+   margin: 0 auto;
+   border: 1px solid #000;
+}
+
+.flexivel{
+   display: flex;
+}
+
+.horizontal{
+   flex-direction: row;
+}
+
+.vertical{
+   flex-direction: column;
+}
+
+body{
+   font-family: Arial;
+   color: #000;
+}
+
+
+/*
+   Flex Direction = Muda o eixo de exibição dos elementos, sendo o padrão 'row/linha' podendo ser mudado para 'column/coluna'
+      Row-reverse: Faz com que os elementos sejam posicionados no Main Axios, da direita pra esquerda;
+      Colunm-Reverse: Faz com que os elementos sejam posicionado no Cross Axis, de cima pra baixo;
+
+*/

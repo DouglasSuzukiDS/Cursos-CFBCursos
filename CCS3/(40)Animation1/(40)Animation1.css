@@ -1,0 +1,39 @@
+/*
+	keyframe = É um quadro chave que define propriedades daquele momento da animação
+*/
+
+@keyframes anima1{
+	from{left: 500px; top: 500px;}
+	to{left: 0px; top: 0px;}
+}
+
+@keyframes anima2{
+	from{background-color: #FFF; left: 0px; top: 0px;}
+	to{background-color: #F00; left: 0px; top: 0px;}
+}
+
+@keyframes anima3{
+	from{background-color: #F00; left: 0px; top: 0px;}
+	to{background-color: #FFF; left: 0px; top: 0px;}
+}
+
+@keyframes anima4{
+	from{left: 0px; top: 0px;}
+	to{left: 500px; top: 500px;}
+}
+
+p{
+	position: relative;
+	left: 500px;
+	top: 500px;
+	width: 260px;
+	height: 260px;
+	border: 1px solid #000;
+	border-radius: 10px;
+	padding: 10px;
+	text-align: justify;
+	animation-name: anima1, anima2, anima3, anima4;
+	animation-duration: 2s; 
+	animation-timing-function: linear;
+	animation-delay: 0s, 2s, 4s, 6s; /* Assim controla o delay dos keyframes */
+}

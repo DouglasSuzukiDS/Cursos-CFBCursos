@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML5 25 - Tag DIV, Parte 2</title>
+
+		<style>
+			/*
+				position: Permite fazer a posição do elemento. Sempre faz o posicionamento do elemento em relação a janela, desde que o pai seja static;
+
+					static = Valor Padrão, não consegue posicionar;
+
+					absolute = Permite fazer o posicionamento. É posicionado de acordo a janela, desde que seu pai  seja static. Caso o pai não for static, é posicionado ao elemento pai;
+
+					relative = Posiciona o elemento em relação ao pai;
+
+					fixed = Deixa o elemento fixado. É posicionado de a janela;
+
+				z-index: Permite colocar ordem de exibição dos elementos;
+
+			*/
+
+			body{
+				margin: 0px;
+			}
+
+			*{
+				box-sizing: border-box;
+				padding: 0px;
+			}
+
+			.main{
+				border: 1px dotted #F00;
+				margin: auto;
+				width: 960px;
+			}
+
+			#cabecalho, #corpo , #rodape{
+				border: 1px dotted #AAA;
+			}
+
+			#cabecalho{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100px;
+			}
+
+			#corpo{
+				position: absolute;
+				top: 100px;
+				left: 0px;
+				width: 100%;
+				height: 570px;
+			}
+
+			#caixa1, #caixa2, #caixa3{
+				width: 150px;
+				height: 70px;
+			}
+
+			#caixa1{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				background-color: #F00;
+				color: #FFF;
+				border: 1px solid #000;
+			}
+
+			#caixa2{	
+				position: relative;
+				top: 0px;
+				left: 0px;
+				background-color: #0F0;
+				color: #FFF;
+				border: 1px solid #000;
+			}
+
+			#caixa3{
+				position: fixed;
+				bottom: 0px;
+				left: 0px;
+				background-color: #00F;
+				color: #FFF;
+				border: 1px solid #000;
+				z-index: 100;
+			}
+
+			#rodape{
+				position: absolute;
+				top: 670px;
+				height: 0px;
+				width: 100%;
+				height: 90px;
+				background-color: #000;
+				color: #FFF;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div id="cabecalho">
+			<div class="main">
+				<h1>CFB Cursos</h1>
+			</div>
+		</div>
+
+		<div id="corpo">
+			<div class="main">
+
+				<div id="caixa1">					
+					<h3>Caixa 1</h3>
+				</div>
+
+				<div id="caixa2">					
+					<h3>Caixa 2</h3>
+				</div>
+
+				<div id="caixa3">					
+					<h3>Caixa 3</h3>
+				</div>
+
+				<p>Nesta aula vamos aprender a manipular DIVS, usando position, top, left, width, height.</p>
+				<p>Se ainda não for inscrito no canal, se inscreva e clique no sinonho</p>
+				<p>Siga-nos na nossa redes sociais, endereço na descrição do vídeo</p>
+			</div>
+		</div>
+
+		<div id="rodape">
+			<div class="main">
+				<p>www.youtube.como/cfbsursos</p>
+				<p>cfbcursos.com</p>
+			</div>
+		</div>
+		
+	</body>
+</html>

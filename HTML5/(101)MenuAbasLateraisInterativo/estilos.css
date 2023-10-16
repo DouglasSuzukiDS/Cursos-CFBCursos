@@ -1,0 +1,32 @@
+/* (101)MenuAbasLateraisInterativo */
+
+.aside a{
+	position: absolute;
+	left: -90px;
+	transition: 0.2s;
+	padding: 15px;
+	width: 100px;
+	text-decoration: none;
+	font-size: 20px;
+	color: #FFF;
+	border-radius: 0px 15px 15px 0px;
+}
+
+.aside a:hover{
+	left: 0;
+}
+
+#canal{
+	top: 20px;
+	background-color: #800;
+}
+
+#cursos{
+	top: 80px;
+	background-color: #080;
+}
+
+#contatos{
+	top: 140px;
+	background-color: #008;
+}

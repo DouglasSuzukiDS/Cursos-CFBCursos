@@ -1,0 +1,41 @@
+/* Margens = Espaçamento do Elemento pra Fora 
+   Padding = Espaçamento do Elemento pra Detro */
+
+p{
+	border: 1px solid #F00;
+	margin: 0px;
+	text-align: center; /* Centraliza o Texto na margem */
+	margin: auto; /* Nesse caso vai centralizar a margem na div */  
+}
+
+body{
+	margin: 0px;
+}
+
+div{
+	border: 1px solid #000;
+	margin: auto; /* Centraliza o Elemento */ 
+	/* Só funciona de tiver o width/lartura definida */
+} 
+
+#dv1{
+	/* margin: 50px 200px 300px 50px; /* Superior, Direita, Baixo, Esquerda */
+	
+	/* margin-top: 150px;  /* Superior */
+	/* margin-right: 400px; /* Direita */
+	/* margin-bottom: 300px; /* Baixo */
+	/* margin-left: 10px;  /* Esquerda */ 
+
+	width: 300px;
+	height: 300px;
+	margin-bottom: 30px;
+}
+#dv1 p{
+	width: 200px;
+}
+
+#dv2{
+	/* margin: 0px; */
+	width: 200px;
+	height: 200px;
+}

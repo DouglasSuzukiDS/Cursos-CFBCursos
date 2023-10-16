@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML5 78 - Formatando Tabela com CSS - Tabelas Parte 4</title>
+
+		<style>
+			/*
+				border-collapse: collapse => Tira o espaço entre as bordas;
+			*/
+			thead{color: #0A0; background-color: #EEE;}
+			tbody{color: #00f;}
+			tfoot{color: #F00;}
+			table,th,td{border: 1px solid #000;}
+			table{border-collapse: collapse;}
+			
+		</style>
+	</head>
+
+	<body>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Fabricante</th>
+					<th>Modelo</th>
+					<th>Valor</th>
+				</tr>			
+			</thead>
+			
+			<tbody>				
+				<tr>
+					<td>Honda</td>
+					<td>WRV</td>
+					<td>R$70.000</td>
+				</tr>
+
+				<tr>
+					<td>Volkswagem</td>
+					<td>Golf GTI</td>
+					<td>R$80.000</td>
+				</tr>
+
+				<tr>
+					<td>Ford</td>
+					<td>Ranger</td>
+					<td>R$90.000</td>
+				</tr>
+			</tbody>
+
+			<tfoot>
+				<tr>
+					<td colspan="4">Tabela de preços 2019</td>
+				</tr>
+			</tfoot>
+
+		</table>
+		
+	</body>
+</html>

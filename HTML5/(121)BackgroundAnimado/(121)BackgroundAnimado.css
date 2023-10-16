@@ -1,0 +1,43 @@
+/*(121)BackgroundAnimado*/
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	font-family: Arial;
+	font-size: 17px;
+}
+
+#meuVideo{
+	position: fixed;
+	right: 0;
+	top: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -1;
+}
+
+.conteudo{
+	position: fixed;
+	bottom: 0;
+	background: rgba(0,0,0,0.5);
+	color: #F1F1F1;
+	width: 100%;
+	padding: 20px;
+}
+
+#btnPausa{
+	width: 200px;
+	font-size: 18px;
+	padding: 10px;
+	border: none;
+	background-color: #000;
+	color: #FFF;
+	cursor: pointer;
+}
+
+#btnPausa:hover{
+	background-color: #DDD;
+	color: #000;
+}

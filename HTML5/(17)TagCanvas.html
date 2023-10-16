@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML5 17 - Tag Canvas</title>
+		
+		<style>
+			canvas{border: 1px solid #000;}
+		</style>
+
+		<script>
+			function desenha(){
+				var canvas = document.getElementById('telaDesenho');
+				var ctx = canvas.getContext('2d');
+				ctx.fillRect(25,25,100,100);
+			}
+		</script>
+	</head>
+
+	<body>
+		<!--
+			<canvas> = Serve para redenrizar gráficos;
+
+			Display: Block;
+			Categoria: Fluxo, Fraseado, Incorporado;
+			Contido por: Onde o incorporado é esperado;
+			Filhos: Transparentes (somente são exibidos caso o brpwser não dê suporte ao elemento canvas, pode ser um texto de aviso); 
+		-->
+
+		<canvas id="telaDesenho" width="500px" height="500px">
+			Seu Browser não tem msuporte ao suporte ao  elemennto Canvaas !
+		</canvas>
+
+		<script>desenha();</script>
+		
+	</body>
+</html>

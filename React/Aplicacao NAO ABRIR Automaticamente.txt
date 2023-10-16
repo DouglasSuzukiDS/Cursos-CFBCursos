@@ -1,0 +1,1 @@
+Para a aplicação React não apbrir automaticamente basta criar um arquivo chamado .env e nele escrever browser =  none

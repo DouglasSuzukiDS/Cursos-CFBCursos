@@ -1,0 +1,60 @@
+[
+    {
+        "id": "78df9a8f381b782b",
+        "type": "tab",
+        "label": "Aula02",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6a8275d59c26b714",
+        "type": "inject",
+        "z": "78df9a8f381b782b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "canal",
+                "v": "CFB Cursos",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 40,
+        "wires": [
+            [
+                "cae35a0c1a17d6a0"
+            ]
+        ]
+    },
+    {
+        "id": "cae35a0c1a17d6a0",
+        "type": "debug",
+        "z": "78df9a8f381b782b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 240,
+        "y": 40,
+        "wires": []
+    }
+]

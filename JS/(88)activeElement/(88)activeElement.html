@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - Javascript 88 - Capturando Elemento ativo na página - activeElement</title>
+	</head>
+
+		<script>
+			var dvcx,frames;
+
+			// activeElement = Retorna o elemento que está ativo na página, atributo somente leitura;
+
+			/*function ativo(){
+
+				var elemento=document.activeElement.tagName;
+				console.log(elemento);
+			}*/   //Maneira menos elegante
+
+			/*function loop(){
+				//dvcx.innerHTML=document.activeElement.tagName; //Nome da tag
+				dvcx.innerHTML=document.activeElement; //Elemento
+				frames=requestAnimationFrame(loop);
+			}
+
+			function inicia(){
+				dvcx=document.getElementById("cx");
+				loop();
+			}*/
+
+			function ativo(){
+				var cx=document.getElementById("texto_selecionado");
+				var elemento=document.activeElement;
+				var selecao=elemento.value.substring(elemento.selectionStart,elemento.selectionEnd); // Copia so o selecionado
+				cx.innerHTML=selecao; //Forma mais didatica
+
+				//document.getElementById("texto_selecionado").innerHTML=document.activeElement.value.substring(document.activeElement.selectionStart,document.activeElement.selectionEnd);  //Forma direta e confusa;
+			}
+			function inicia(){
+				var texto=document.getElementById("txt_original");
+				texto.addEventListener("mouseup",ativo);
+			}
+
+			window.addEventListener("load",inicia);
+
+		</script>
+
+	<!-- <body onclick="ativo()"> -->
+	<body>
+
+		<!-- <div id="cx"></div>
+		<input type="text" name="txt">
+		<button>Teste</button> --> 
+		<textarea rows="5" cols="20" id="txt_original">CFB Cursos - Curso de Javascript - Aula 88 - Atributo activeElement</textarea><br>
+		<!-- <img src="cabeca2.png"> -->
+		Texto Selecionado:<span id="texto_selecionado"></span>
+		
+	</body>
+</html>

@@ -1,0 +1,23 @@
+/* (123)BarraRolagem */
+
+::-webkit-scrollbar{ /* Fundo da barra */
+    width: 10px;
+    background-color: #000;
+}
+
+::-webkit-scrollbar-track{ /* Caminho da Barra */
+    background-color: #888;
+}
+
+::-webkit-scrollbar-button{ /* Botões Superior-Inferior */
+    background-color: #000;
+}
+
+::-webkit-scrollbar-thumb{ /* Barra de Rolagem */
+    background-color: #BBB;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover{ /* Barra de Rolagem */
+    background-color: #CCC;
+}

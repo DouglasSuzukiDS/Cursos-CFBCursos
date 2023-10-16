@@ -1,0 +1,176 @@
+[
+    {
+        "id": "8c27bfcdc64a8aef",
+        "type": "tab",
+        "label": "Estoque",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "29f3c46e98eb4e03",
+        "type": "http in",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "url": "/todosusuarios",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 40,
+        "wires": [
+            [
+                "f655d4775e7ffc2e"
+            ]
+        ]
+    },
+    {
+        "id": "f7fafac36c88d36a",
+        "type": "http response",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 630,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "82b682108a264bdb",
+        "type": "debug",
+        "z": "8c27bfcdc64a8aef",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "f655d4775e7ffc2e",
+        "type": "function",
+        "z": "8c27bfcdc64a8aef",
+        "name": "function 2",
+        "func": "msg.topic = `SELECT * FROM usuario`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 40,
+        "wires": [
+            [
+                "29c8a725ce0b039a"
+            ]
+        ]
+    },
+    {
+        "id": "29c8a725ce0b039a",
+        "type": "mysql",
+        "z": "8c27bfcdc64a8aef",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 480,
+        "y": 40,
+        "wires": [
+            [
+                "f7fafac36c88d36a",
+                "82b682108a264bdb"
+            ]
+        ]
+    },
+    {
+        "id": "c843468871228037",
+        "type": "http in",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "url": "/tiposcolab",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "56060a0ee0732079"
+            ]
+        ]
+    },
+    {
+        "id": "66efe2c21feb5625",
+        "type": "http response",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 610,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "e78837de59a7b8c8",
+        "type": "debug",
+        "z": "8c27bfcdc64a8aef",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "56060a0ee0732079",
+        "type": "function",
+        "z": "8c27bfcdc64a8aef",
+        "name": "function 3",
+        "func": "msg.topic = `SELECT * FROM tipousuario`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 140,
+        "wires": [
+            [
+                "bb379f2a20dc9064"
+            ]
+        ]
+    },
+    {
+        "id": "bb379f2a20dc9064",
+        "type": "mysql",
+        "z": "8c27bfcdc64a8aef",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 460,
+        "y": 140,
+        "wires": [
+            [
+                "66efe2c21feb5625",
+                "e78837de59a7b8c8"
+            ]
+        ]
+    },
+    {
+        "id": "8eb5ca5ddf10b0fd",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "estoque",
+        "tz": "",
+        "charset": "UTF8"
+    }
+]

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML5 20 - Tags Details e Summary</title>
+
+		<style>
+			summary::-webkit-details-marker{ /* Marcador */
+				color: #F00;
+			}
+			details[open] summary::-webkit-details-marker{
+				color: #00F;
+			}
+
+			#cursos article{
+				border: 1px solid #000;
+				border-radius: 15px;
+				padding: 20px;
+			}
+
+			details{
+				background-color: #888;
+			}
+			summary{
+				background-color: #FFF;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<!--
+			<details> = Permite ocultar ou não um certo conteúdo, como um dropbox;
+				Display: Block;
+				Categoria: Fluxo e Interativo;
+				Contido Por: Fluxo;
+				Filhos: <legend>
+
+			<summary> = É o da caixa details;
+
+		-->
+
+		<details id="cursos">
+
+			<summary>Cursos do CFB Cursos</summary>
+
+			<article>
+				<p>HTML Completo e Profissional</p>
+				<p>CSS</p>
+				<p>Javascript</p>
+				<p>C++</p>
+				<p>QtCreator</p>
+				<p>PHP/MySQL</p>
+			</article>
+
+			<article>
+				<p>HTML Completo e Profissional</p>
+				<p>CSS</p>
+				<p>Javascript</p>
+				<p>C++</p>
+				<p>QtCreator</p>
+				<p>PHP/MySQL</p>
+			</article>
+
+		</details>
+
+		<details>
+
+			<summary>Cursos do CFB Cursos</summary>
+
+			<article>
+				<p>HTML Completo e Profissional</p>
+				<p>CSS</p>
+				<p>Javascript</p>
+				<p>C++</p>
+				<p>QtCreator</p>
+				<p>PHP/MySQL</p>
+			</article>
+
+			<article>
+				<p>HTML Completo e Profissional</p>
+				<p>CSS</p>
+				<p>Javascript</p>
+				<p>C++</p>
+				<p>QtCreator</p>
+				<p>PHP/MySQL</p>
+			</article>
+
+		</details>
+
+			<article>
+				<p>HTML Completo e Profissional</p>
+				<p>CSS</p>
+				<p>Javascript</p>
+				<p>C++</p>
+				<p>QtCreator</p>
+				<p>PHP/MySQL</p>
+			</article>
+		
+	</body>
+</html>

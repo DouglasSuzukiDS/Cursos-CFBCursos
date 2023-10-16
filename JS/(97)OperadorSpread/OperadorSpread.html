@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 97 - Operador Spread</title>
+
+    <script>
+
+        const jogador = [
+            nome = "Kaido",
+            pontos = 1000,
+            vidas = 7
+        ]
+        console.log(...jogador)
+
+        const notas = [100, 200, 300]
+        /*console.log(notas)
+        console.log(...notas) // Spread "explode"/separa os elementos, os tornando elementos individuais*/
+
+        function soma(n1, n2, n3){
+            return n1 + n2 + n3
+        }
+        //console.log(soma(notas[0], notas[1], notas[2]))
+        //console.log(soma(...notas)) //Spread
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+/* (80) Aprendendo sobre a Biblioteca Math - Parte 01 */
+body {
+   background-color: #202225;
+}
+   
+* {
+   padding: 0;
+   margin: 0;
+   border: none;
+   box-sizing: border-box;
+   font-size: large;
+}
+
+
+.mat {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 300px;
+   background-color: #EEE;
+   padding: 10px;
+   border-radius: 5px;
+   border: 3ps solid #888;
+   font-size: xx-large;
+   font-weight: bold;
+}

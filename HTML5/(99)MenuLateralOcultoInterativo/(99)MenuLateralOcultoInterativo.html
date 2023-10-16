@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML5 99 - Menu Lateral Oculto Interativo</title>
+		<link rel="stylesheet" type="text/css" href="estilos.css">
+	</head>
+
+	<body>
+		
+		<aside id="menuOculto" class="menuOculto">
+			 <a href="javascript:void(0)" class="btnFechar" onclick="fecharNav()">&times;</a><!-- js:void(0) Faz com que o HREF nao execute sua propriedade de abrir link  -->
+			<a href="#">Sobre</a>
+			<a href="#">Cursos</a>
+			<a href="#">Endereços</a>
+			<a href="#">Contatos</a>
+		</aside>
+
+		<section id="principal">
+			<span style="font-size: 30px; cursor: pointer;" onclick="abrirNav()">&#9776;</span>
+			<p>CFB Cursos</p>
+		</section>
+
+		<script type="text/javascript" src="scripts.js"></script>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+p{
+	font-size: 20pt;
+	font-weight: bold;
+	/* Quando o par de caracteres for igual, se pode contrair */
+	/* color: #FF0000; || color: #f00; Hexdecimal */ 
+	/* color: #88FF22; || color: #8f2; Hexdecimal */ 
+	/* color: #000; */ 
+	color: #CD4766;
+	background-color: rgb(205,71,102); /* Decimal */ 
+}

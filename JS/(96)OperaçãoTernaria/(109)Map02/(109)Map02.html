@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFB Cursos - Javascript - Aula 109 - Map - Parte 2</title>
+
+    <script>
+        /*let produtos = new Map([
+            /*["01", ["Mouse", "R$10,75"]],
+            ["02", ["Teclado"], "R$38,90"],
+            ["03", ["Monitor"], "R$420,50"],
+            ["04", ["Gabinete"], "R$150,00"]
+
+        ])*/
+        
+        let produtos = new Map([
+            ["01", "Mouse"],
+            ["02", "Teclado"],
+            ["03", "Monitor"],
+            ["04", "Gabinete"]
+        ])
+
+        // produtos.set("05", ["Memória", "R$199,90"])
+        produtos.set("05", "Memória")
+
+        // produtos.clear() // Apaga todos os elementos  
+        // produtos.delete("03") // Deleta o elemento na posição
+
+        console.log(produtos.has("02") ? "Produto Encontrado" : "Não esta na lista") // Verifica se o elemento existe
+
+        function info(chave, valor){
+            console.log("Chave: " + chave + " - Valor: " + valor)
+        }
+
+        // produtos.forEach(info) // Executa uma função para cada valor
+
+        let itk = produtos.keys()
+        let itv = produtos.values()
+        console.log(itk.next().value)
+        console.log(itv.next().value)
+
+        //console.log("Tamanho: " + produtos.size)
+
+        /*for(p of produtos)
+        // console.log(p[1][1])// Imprime o numero do produto, o produto e o valor
+        console.log(p)*/
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

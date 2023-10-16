@@ -1,0 +1,44 @@
+body{
+   font-family: Arial;
+   color: #000;
+}
+
+.container{
+   display: grid;
+   /* display: inline-grid; */ /* O elemento fica apenas do tamanho do seu conteudo  */
+
+   grid-template-columns: auto auto auto; 
+      /* Informa o quantas colunas o container tera e seu tamanho. Com o valor auto, o elemento se ajustara */
+
+   /* grid-column-gap: 10px;
+   grid-row-gap: 10px; */
+   grid-gap: 10px; /*1ºValor Column; 2ºValor Row;  Apenas 1 valor, server pros dois  */
+      /* Seria os espaçamentos entre os elementos */
+}
+
+.item{
+   background-color: #048;
+   color: #FFF;
+   border: 1px solid #000;
+   text-align: center;
+}
+
+.it1{
+   /* grid-column-start: 1;
+   grid-column-end: 3;  */
+      /* Indica o tamanho do elemento até determinada coluna */
+   /*grid-column: 1 / 3; /* Forma reduzida */
+
+   grid-column: 1 / span 2;
+      /* span seria o tanto que o elemento ira expandir.
+            Caso a configuração por para o elemento oculpar a 1 coluna, e ja estiver ocupada, ele vai pra linha de baixo
+      */
+
+   /* grid-row-start: 1;
+   grid-row-end: 3; */
+   /* grid-row: 1 / 3; */
+}
+
+.it2{
+   grid-column: 1 / span 3;
+}

@@ -1,0 +1,39 @@
+	/*
+		font-size: 16px; Tamanho padrão da font dos browseres
+		EM: Unidade de medida em relação a fonte, conforme o elemento pai;
+
+		REM: Unidade de medida em relação a sua RAÍZ-HTML;
+
+		% = Leva em consideração o espaço do elemento anterior 
+	*/
+
+html{
+	font-size: 20px;
+}
+
+body{
+	font-size: 2em; /* 40px */
+	margin: 0px;
+	padding: 0´px;
+}
+
+div{
+	width: 300px;
+}
+
+#d1{
+	/*border: 1rem solid #F00;
+	height: 1em; /* 20px; */
+
+	border: 1px solid #F00;
+	width: 100%;
+	height: 250px;
+}
+
+#d2{
+	border: 1px solid #00F;
+	width: 50%;
+	height: 50%;
+	/*height: 2rem; /* 40px */
+}
+

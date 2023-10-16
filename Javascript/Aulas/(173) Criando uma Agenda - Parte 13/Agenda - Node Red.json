@@ -1,0 +1,482 @@
+[
+    {
+        "id": "0284ef6bf3345299",
+        "type": "tab",
+        "label": "Agenda",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8aaa287184c35f19",
+        "type": "mysql",
+        "z": "0284ef6bf3345299",
+        "mydb": "b0512ccf716d9232",
+        "name": "",
+        "x": 580,
+        "y": 80,
+        "wires": [
+            [
+                "2e490728c48c852b"
+            ]
+        ]
+    },
+    {
+        "id": "2e490728c48c852b",
+        "type": "http response",
+        "z": "0284ef6bf3345299",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 730,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "f7f7f0d4ae86d01e",
+        "type": "http in",
+        "z": "0284ef6bf3345299",
+        "name": "",
+        "url": "/contatos",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "faaf7d744bb6c26e"
+            ]
+        ]
+    },
+    {
+        "id": "faaf7d744bb6c26e",
+        "type": "function",
+        "z": "0284ef6bf3345299",
+        "name": "Resultado",
+        "func": "let query = `SELECT * FROM contato`\nmsg.topic = query\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 80,
+        "wires": [
+            [
+                "8aaa287184c35f19"
+            ]
+        ]
+    },
+    {
+        "id": "4bf306438a770457",
+        "type": "mysql",
+        "z": "0284ef6bf3345299",
+        "mydb": "b0512ccf716d9232",
+        "name": "",
+        "x": 580,
+        "y": 140,
+        "wires": [
+            [
+                "fac5c6870a69c044"
+            ]
+        ]
+    },
+    {
+        "id": "58725208f12ca741",
+        "type": "http in",
+        "z": "0284ef6bf3345299",
+        "name": "",
+        "url": "/addcontatos",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "0c07314356c6f382"
+            ]
+        ]
+    },
+    {
+        "id": "0c07314356c6f382",
+        "type": "function",
+        "z": "0284ef6bf3345299",
+        "name": "Resultado",
+        "func": "msg.payload = JSON.parse(msg.payload)\nconst f_nome = msg.payload.f_nome\nconst f_celular = msg.payload.f_celular\nconst f_email = msg.payload.f_email\nconst f_dtnasc = msg.payload.f_dtnasc\n\nlet query = `INSERT INTO contato VALUES (\n    NULL, \"${f_nome}\", \"${f_celular}\", \"${f_email}\", \"${f_dtnasc}\")`\nmsg.topic = query\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 140,
+        "wires": [
+            [
+                "4bf306438a770457",
+                "476ed554f0376a89"
+            ]
+        ]
+    },
+    {
+        "id": "8f9842b5c109457e",
+        "type": "mysql",
+        "z": "0284ef6bf3345299",
+        "mydb": "b0512ccf716d9232",
+        "name": "",
+        "x": 580,
+        "y": 400,
+        "wires": [
+            [
+                "d8ca9b12956c140f"
+            ]
+        ]
+    },
+    {
+        "id": "d8ca9b12956c140f",
+        "type": "http response",
+        "z": "0284ef6bf3345299",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 730,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "37d8d85759b5ad35",
+        "type": "http in",
+        "z": "0284ef6bf3345299",
+        "name": "",
+        "url": "/editarcontatos",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 400,
+        "wires": [
+            [
+                "e369c59bb79c2825"
+            ]
+        ]
+    },
+    {
+        "id": "e369c59bb79c2825",
+        "type": "function",
+        "z": "0284ef6bf3345299",
+        "name": "Resultado",
+        "func": "let query = `SELECT * FROM contato`\nmsg.topic = query\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 400,
+        "wires": [
+            [
+                "8f9842b5c109457e"
+            ]
+        ]
+    },
+    {
+        "id": "fda9974268e39527",
+        "type": "function",
+        "z": "0284ef6bf3345299",
+        "name": "Resultado",
+        "func": "let query = `SELECT * FROM contato`\nmsg.topic = query\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 460,
+        "wires": [
+            [
+                "6e04ca268f26606b"
+            ]
+        ]
+    },
+    {
+        "id": "0eca2b0a16717c7c",
+        "type": "http in",
+        "z": "0284ef6bf3345299",
+        "name": "",
+        "url": "/deletarcontatos/:id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 460,
+        "wires": [
+            [
+                "fda9974268e39527"
+            ]
+        ]
+    },
+    {
+        "id": "6e04ca268f26606b",
+        "type": "mysql",
+        "z": "0284ef6bf3345299",
+        "mydb": "b0512ccf716d9232",
+        "name": "",
+        "x": 580,
+        "y": 460,
+        "wires": [
+            [
+                "216ff31d892bc834"
+            ]
+        ]
+    },
+    {
+        "id": "216ff31d892bc834",
+        "type": "http response",
+        "z": "0284ef6bf3345299",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 730,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "476ed554f0376a89",
+        "type": "debug",
+        "z": "0284ef6bf3345299",
+        "name": "debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "fac5c6870a69c044",
+        "type": "http response",
+        "z": "0284ef6bf3345299",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 730,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "6be078b7c69f1fbf",
+        "type": "mysql",
+        "z": "0284ef6bf3345299",
+        "mydb": "b0512ccf716d9232",
+        "name": "",
+        "x": 580,
+        "y": 200,
+        "wires": [
+            [
+                "7264077eded2818b"
+            ]
+        ]
+    },
+    {
+        "id": "7264077eded2818b",
+        "type": "http response",
+        "z": "0284ef6bf3345299",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 730,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "a575d218a7ed93ba",
+        "type": "http in",
+        "z": "0284ef6bf3345299",
+        "name": "",
+        "url": "/pesquisarcontatos/:tipo/:pesq",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 200,
+        "wires": [
+            [
+                "e485d77c8ccb6505"
+            ]
+        ]
+    },
+    {
+        "id": "e485d77c8ccb6505",
+        "type": "function",
+        "z": "0284ef6bf3345299",
+        "name": "Resultado",
+        "func": "const tipo = msg.req.params.tipo \nconst pesq = msg.req.params.pesq\n\nlet query = `SELECT * FROM contato WHERE`\n\nif (tipo == 'id') {\n    query += ` n_contato_contato_id LIKE \"%${pesq}%\"`\n} else if (tipo == 'nome') {\n    query += ` s_nome_contato LIKE \"%${pesq}%\"`\n} else if (tipo == 'nasc') {\n    query += ` dt_dtnasc_contato = \"${pesq}\"`\n} else if (tipo == 'email') {\n    query += ` s_email_contato LIKE \"%${pesq}%\"`\n}\n\nmsg.topic = query\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 200,
+        "wires": [
+            [
+                "6be078b7c69f1fbf",
+                "b8cba7fe21296bb0"
+            ]
+        ]
+    },
+    {
+        "id": "27872a515ba8b734",
+        "type": "debug",
+        "z": "0284ef6bf3345299",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 240,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "84763c6fe52e92f8",
+        "type": "http response",
+        "z": "0284ef6bf3345299",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 90,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "b8cba7fe21296bb0",
+        "type": "debug",
+        "z": "0284ef6bf3345299",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "5892e6e5ac892cee",
+        "type": "mysql",
+        "z": "0284ef6bf3345299",
+        "mydb": "b0512ccf716d9232",
+        "name": "",
+        "x": 580,
+        "y": 300,
+        "wires": [
+            [
+                "0c9015a94c47592e",
+                "952e8fa58f41fcf1"
+            ]
+        ]
+    },
+    {
+        "id": "0c9015a94c47592e",
+        "type": "http response",
+        "z": "0284ef6bf3345299",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 730,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "6b38e7954e8b793f",
+        "type": "http in",
+        "z": "0284ef6bf3345299",
+        "name": "",
+        "url": "/pesquisartodoscontatos",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 300,
+        "wires": [
+            [
+                "e5d2109ee25052f6"
+            ]
+        ]
+    },
+    {
+        "id": "e5d2109ee25052f6",
+        "type": "function",
+        "z": "0284ef6bf3345299",
+        "name": "Resultado",
+        "func": "let query = `SELECT * FROM contato`\n\nmsg.topic = query\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 300,
+        "wires": [
+            [
+                "5892e6e5ac892cee"
+            ]
+        ]
+    },
+    {
+        "id": "952e8fa58f41fcf1",
+        "type": "debug",
+        "z": "0284ef6bf3345299",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "b0512ccf716d9232",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "cfbcursos",
+        "tz": "",
+        "charset": "UTF8"
+    }
+]

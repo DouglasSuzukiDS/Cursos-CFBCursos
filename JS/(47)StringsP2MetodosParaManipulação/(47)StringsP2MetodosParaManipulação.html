@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+		<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - Javascript 47 - Strings P2 - Métodos para Manipução de Strings </title>
+
+		<script>
+		
+			/* Métodos:
+				// search = Só retorna a primeira ocorrência encontrada em sua posição;
+
+				// replace = Substitui determinado caractere dentro da String;
+
+				// charAt = Retorna o caractere que foi indicada a posição com o parametro do Metodo;
+
+				// charCodeAt = Retorna o código do caractere; 
+
+				// fromCharCode = Faz o contrário de charCodeAt, é informado o código e é transformamado no caractere correspondente;  	
+
+				// concat = Concatena uma string na outra;
+			*/
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<p id="txt">CFB Cursos - Curso de Javascript</p>
+	
+		<script>
+
+			var texto=document.getElementById("txt").innerHTML;
+			var txt2=" - aula 46 do curso de javascript";
+
+			//var res=texto.search(/curso/i); // Só retorna a primeira ocorrência encontrada em sua posição;
+
+			//var res=texto.replace(/curso/i,"aula"); // Substitui apenas a 1 palavra encontrada; 
+
+			//var res=texto.replace(/curso/ig,"aula"); // Substitui todas as palavras encontradas; 
+
+			//var res=texto.charAt(11); // Retorna o Caractere;
+
+			//var res=texto.charCodeAt(0); // Retorna o código do caractere;
+
+			/*var res=texto.charCodeAt(0);
+
+			document.write(res + "<br>");
+			document.write(String.fromCharCode(67));
+			document.write(String.fromCharCode(res)); // Forma abreviada;*/
+
+			var res=texto.concat(txt2); //É possível colocar o que se deseja concatenar diretamente no parametro, ou acrecentar mais strings com + variavel;
+
+			document.write(res);
+
+		</script> 
+		
+	</body>
+</html>

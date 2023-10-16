@@ -1,0 +1,19 @@
+/* (122)RolagemSuave */
+
+html {
+    scroll-behavior: smooth;
+    /*Rolagem da página suave*/
+}
+
+.sec {
+    color: #FFF;
+    height: 600px;
+}
+
+#sec1 {
+    background-color: #F00;
+}
+
+#sec2 {
+    background-color: #0F0;
+}

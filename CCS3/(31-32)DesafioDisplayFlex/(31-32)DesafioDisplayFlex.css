@@ -1,0 +1,51 @@
+/* *{  Formatação para todos os elementos
+	outline: 1px solid #000;
+} */
+
+header, section, nav, footer{
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+}
+
+header{
+	height: 150px;
+}
+
+nav{
+	justify-content: flex-end;
+	background: tomato;
+	flex-wrap: wrap; /* Quebra a linha */
+}
+
+nav a{
+	width: 150px;
+	height: 50px;
+	min-width: 150px;
+	max-width: 150px;
+	display: flex;
+	align-items: center; /* Alinhamento Vertical */
+	justify-content: center; /* Alinhamento Horizontal */
+}
+
+section{
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+section div{
+	border: 1px solid #000;
+	flex: 1;
+	margin: 5px;
+	min-width: 200px;
+	max-width: 200px;
+	min-height: 100px;
+	max-height: 100px;
+}
+
+footer{
+	background: #888;
+	color: #FFF;
+	align-items: center; /* Alinhamento Vertical */
+	justify-content: center; /* Alinhamento Horizontal */
+}

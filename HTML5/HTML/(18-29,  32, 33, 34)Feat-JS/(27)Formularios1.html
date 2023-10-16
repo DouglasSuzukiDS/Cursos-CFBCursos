@@ -1,0 +1,41 @@
+﻿<html>
+	<head>
+		<title>Aula 27 - Formulários</title>
+		<style type="text/css">
+		</style>
+	</head>
+
+	<body>
+
+		<form name="cad" action="" method="get">
+			<label>Nome:</label><br/>
+			<input type="text" name="fname" size="40" maxlength="35" value="Digite seu nome"/><br/><br/>
+	
+			<label>Senha:</label><br/>
+			<input type="password" name="fsenha" size="15" maxlength="10"/><br/><br/>
+
+			<label>Possui veículo próprio?</label><br/>
+			<input type="radio" name="fcarro" value="S" checked="checked"/>SIM<br/>
+			<input type="radio"name="fcarro" value="N"/>NÃO<br/><br/>
+
+			<label>Caso possu, qual a marca?</label><br/>
+			<input type="checkbox" name="fvw"/>VW<br/>
+			<input type="checkbox" name="fgm"/>GM<br/>
+			<input type="checkbox" name="ffiat"/>FIAT<br/>
+			<input type="checkbox" name="fford"/>FORD<br/>
+			<input type="checkbox" name="fhyundai"/>HYUNDAI<br/>
+			<input type="checkbox" name="fbmw"/>BMW<br/>
+			<input type="checkbox" name="fkia"/>KIA<br/>
+			<input type="checkbox" name="foutro"/>OUTRO<br/><br/>
+ 		</form>
+
+	</body>
+</html>
+
+<!--//ACTION = Quem vai receber os dados
+//METHOD POST = Passagem não explicita, onde não faz passagem de dodos pela URL, passagem direta do arquivo via memória
+//METHOD GET = Passagem explicita onde manda os valores pela URL(action)
+//LABEL = Etiqueta, texto que define o campo
+//TYPE RADIO = Escolher apenas uma opção
+//VALUE = Valor do elemento, em várias opção devem ter o mesmo "name"
+-->

@@ -1,0 +1,29 @@
+https://dbdiagram.io
+
+Table pessoa {
+  n_pessoa_pessoa int [pk, increment]
+  n_fornecedor_fornecedor int [ref: > fornecedor.n_fornecedor_fornecedor]
+  n_tipopessoa_tipopessoa int [ref: > tipopessoa.n_tipopessoa_tipopessoa ]
+  s_nome_pessoa varchar
+  s_foto_pessoa text
+  c_status_pessoa char
+}
+
+Table telefone {
+  n_telefone_telefone int [pk, increment]
+  n_pessoa_pessoa int [ref: > pessoa.n_pessoa_pessoa]
+  s_ddd_telefone varchar
+  s_numero_telefone varchar
+}
+
+Table tipopessoa {
+  n_tipopessoa_tipopessoa int [pk, increment]
+  s_desc_tipopessoa varchar
+  n_nivel_tipopessoa int
+}
+
+Table fornecedor {
+  n_fornecedor_fornecedor int [pk, increment]
+  s_desc_fornecedor varchar
+  n_status_fornecedor int
+}

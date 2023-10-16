@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<!-- 
+			84, 85, 86 e 87 = Montagem do Layout;
+			88 = Animação ao Scroll;
+			89 = Efeito Paralax: Efeito para deixar uma imagem de fundo a mostra somente quando a tela estiver em determinado containner;
+			90, 91 e 92 = Janela Modal: maneira de abrir uma imagem em tamanho maior com a opção de fecha-la;
+		 -->
+		<title>CFB Cursos - HTML5 84, 85, 86, 87, 88, 89, 90, 91, 92 - Contruindo Layout Full Page - Partes 1, 2, 3, 4, 5, 6, 7, 8 e 9</title>
+		<link rel="stylesheet" type="text/css" href="estilos.css">
+		
+	</head>
+
+	<body>
+
+		<header>
+			<nav>
+				<ul>
+					<li><a href="#banner">Home</a></li>
+					<li><a href="#sobre">Sobre</a></li>
+					<li><a href="#cursos">Cursos</a></li>
+					<li><a href="#canal">Canal</a></li>
+					<li><a href="#contato">Contato</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section id="banner" class="banner">
+			<img src="banner.png">
+		</section>
+
+		<section id="sobre" class="flexivel">
+			<article class="borda0" data-anima="esquerda">
+				Sobre o canal
+			</article>
+			<article class="borda0" data-anima="direitas">
+				Sobre mim
+			</article>
+		</section>
+
+		<section id="cursos" class="flexivel">	
+			<article class="borda0 conteinerCursos" data-anima="esquerda">
+				<img src="c1.jpg" class="mini" onclick="cliqueModal(this)" alt="Curso de HTML Completo e Profissional #91">
+				
+				<img src="c2.jpg" class="mini" onclick="cliqueModal(this)" alt="Curso de HTML Completo e Profissional #90">
+
+				<img src="c3.jpg" class="mini" onclick="cliqueModal(this)" alt="Curso de HTML Completo e Profissional #89">
+
+				<img src="c4.jpg" class="mini" onclick="cliqueModal(this)" alt="Curso de HTML Completo e Profissional #88">
+			</article>
+
+			<article class="borda0 conteinerCursos" data-anima="centro">
+				<img src="c5.jpg" class="mini" onclick="cliqueModal(this)" alt="Curso de HTML Completo e Profissional #85">
+
+				<img src="c6.jpg" class="mini" onclick="cliqueModal(this)" alt="Curso de HTML Completo e Profissional #83">
+
+				<img src="c7.jpg" class="mini" onclick="cliqueModal(this)" alt="Curso de HTML Completo e Profissional #81">
+
+				<img src="c8.jpg" class="mini" onclick="cliqueModal(this)" alt="Curso de HTML Completo e Profissional #80">
+			</article>
+
+			<article class="borda0 conteinerCursos" data-anima="direita">
+				<img src="c9.jpg" class="mini" onclick="cliqueModal(this)" alt="Curso de HTML Completo e Profissional #79">
+
+				<img src="c10.jpg" class="mini" onclick="cliqueModal(this)" alt="Curso de HTML Completo e Profissional #78">
+
+				<img src="c11.jpg" class="mini" onclick="cliqueModal(this)" alt="Curso de HTML Completo e Profissional #76">
+
+				<img src="c12.jpg" class="mini" onclick="cliqueModal(this)" alt="Curso de HTML Completo e Profissional #75">
+			</article>
+		</section>
+
+		<section class="parallax p1">
+			<article>
+				CFB Cursos<br>CFB Cursos<br>CFB Cursos<br>CFB Cursos<br>CFB Cursos
+			</article>
+		</section>
+
+		<section id="canal" class="flexivel">
+			<article class="borda0" data-anima="esquerda">
+				Imagem Link Canal
+			</article>
+
+			<article class="borda0" data-anima="centro">
+				Link Direto para o Canal
+			</article>
+		</section>
+
+		<section class="parallax p2">
+			<article>
+				CFB Cursos<br>CFB Cursos<br>CFB Cursos<br>CFB Cursos<br>CFB Cursos
+			</article>
+		</section>
+
+		<section id="contato" class="flexivel">				
+			<article class="borda0" data-anima="esquerda">
+				Contato Esquerda
+			</article>
+
+			<article class="borda0" data-anima="centro">
+				Contato Centro
+			</article>
+
+			<article class="borda0" data-anima="direita">
+				Contato Direita
+			</article>
+		</section>
+
+		<footer id="">
+		</footer>
+
+		<div id="janelaModal" class="janelaModal escondeJanelaModal">
+			<span id="btnFechar" class="fecharModal">X</span>
+			<img id="imgModal" class="imgModal">
+			<div id="txtModal" class="txtModal"></div>
+		</div>
+
+		<script type="text/javascript" src="scripts.js"></script>
+		
+	</body>
+</html>

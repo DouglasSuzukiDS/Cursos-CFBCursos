@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML5 18 - Gráficos SVG - Parte 6 - Path </title>
+	</head>
+
+	<body>
+
+		<!--
+			path: Usado para poder fazer curvas no elementos
+			Sua sintaxe é: M+X,Y + c+X,Y;
+
+				d=M+COORDENADAS;
+				c= Coodenadas para as Curvas;
+				L= Coordenadas para a linha
+		-->
+
+		<svg width="600" height="600">
+
+			<!--
+				
+				<path style="stroke: #000; stroke-width:1; fill: none" d="M0,0 c300,0 600,300
+							600,600 c-150,-150 -450,-150
+							-600,0 c150,-150 150, -450
+							0,-600
+			"/>
+
+
+			-->
+
+			<path style="stroke: #000; stroke-width:1; fill: #F00" d="M150,150 c0,-150 300,-150
+						 300,0    c150,0 150,300
+						 0,300	  c0,150 -300,150
+						 -300,0   c-150,0 -150,-300
+						 0,-300
+			"/>
+
+		</svg>
+		
+	</body>
+</html>

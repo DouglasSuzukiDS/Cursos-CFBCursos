@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+   <style>
+      .caixas {
+         display: flex;
+         width: 100%;
+      }
+
+      .caixa {
+         background-color: #DDD;
+         border: 1px solid #000;
+         border-radius: 10px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100px;
+         height: 100px;
+         box-sizing: border-box;
+         flex-wrap: wrap;
+         margin-right: 10px;
+      }
+
+      .ocultar {
+         display: none;
+      }
+
+      .btnFechar {
+         background-color: #800;
+         color: #FFF;
+         padding: 5px;
+         border-radius: 5px;
+         border: none;
+         width: 30px;
+         height: 30px;
+         cursor: pointer;
+      }
+
+   </style>
+   <title>(40) Função hasClass - Como saber se um elemento usa uma dederminada Classe</title>
+
+</head>
+<body>
+   <p>
+      <button id="btnReset">Reset</button>           
+   </p>
+
+   <div id="caixas" class="caixas">
+      <div id="caixa1" class="caixa" style="background-color: #800;">
+         <button id="btnFechar1" class="btnFechar">X</button>
+      </div>
+
+      <div id="caixa2" class="caixa" style="background-color: #080;">
+         <button id="btnFechar2" class="btnFechar">X</button>
+      </div>
+
+      <div id="caixa3" class="caixa" style="background-color: #008;">
+         <button id="btnFechar3" class="btnFechar">X</button>
+      </div>
+
+      <div id="caixa4" class="caixa" style="background-color: #880;">
+         <button id="btnFechar4" class="btnFechar">X</button>
+      </div>
+
+      <div id="caixa5" class="caixa" style="background-color: #088;">
+         <button id="btnFechar5" class="btnFechar">X</button>
+      </div>
+   </div>
+   
+   <script src="script.js"></script>
+
+</body>
+</html>

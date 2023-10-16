@@ -1,0 +1,70 @@
+/*
+	font-size: 16px; Tamanho padrão da font dos browseres
+
+	EM: Unidade de medida em relação a fonte, conforme o elemento pai;
+
+	REM: Unidade de medida em relação a sua RAÍZ-HTML;
+
+	% = Leva em consideração o espaço do elemento anterior 
+
+	VW: Largura do Browser em porcentagem da janela;
+
+	VH: Alturaa do Browser em porcentagem da janela;
+
+	EX: Formatação em relação ao tamanho da letra x(minusculo) do tipo da fonte do elemento pai;
+
+	CM: Centimentros;
+
+	PT: Ponto, 1pt = 1.3333px;
+
+	MM: Milimetros;
+
+	PC: Paicas, 1pc = 16px ;
+
+	IN: Polegada, 1in = 2.54CM;
+*/
+
+/*
+	1cm = 37.7952px;
+
+	1mm = 3.7795px;
+
+	1in = 96px;
+
+	1pt = 1.3333px;
+*/
+
+p{
+	
+}
+
+#p1{
+	font-size: 20px;
+}
+
+#p2{
+	font-size: 20pt; /* 1pt = 1.3333px */
+}
+
+#p3{
+	font-size: 1pc; /* 1pc = 16px */
+}
+
+div{
+	border: 1px solid #000; 
+}
+
+#d1{
+	width: 2.54cm;
+	height: 2.54cm;
+}
+
+#d2{
+	width: 25.4mm;
+	height: 25.4mm;
+}
+
+#d3{
+	width: 1in; /* 1in = 2.54cm */
+	height: 1in;
+}

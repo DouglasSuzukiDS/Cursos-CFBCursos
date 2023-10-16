@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - Javascript 46 - Strings P1 Match</title>
+
+		<script>
+			// Match = Pesquina em uma string por outra string indicada;
+
+			/* Modificadores:
+				// i = Busca sem case-sentive, não diferencia letras maiúsculas de letras minusculas;
+
+				// g = diz ao método para encontrar todas as ocorrências da palavra e nao para na primeira encontrada, cada ocorrência é armazenada em uma posição do array;
+
+				// m = Pesquisa bormal sem armazenas em forma de array;
+			*/
+
+			/* Metacarateres: 
+				// \w = Pesquisa somente por letras e numerais, ignorando espaços, tralos, etc;
+
+				// \W= Pesquisa por caractere diferente de números e letras;
+
+				// \d = Pesquisa por numerais;
+
+				// \D = Pesquisa por todos os caracteres que não são numerais;
+
+				// \s = Pesquisa pelos espaços;
+
+				// \S = Pesquisa por todos os caracteres mesnos espaços;
+
+				// \b = Pesquisa por ocorrência que iniciem ou terminem com uma letra ou número,cada ocorrência que inicia ou termina com um número ou letra conta como 2;
+
+				// \B = Pesquisa por ocorrência que NÃO iniciem ou terminem com uma letra ou número;
+
+				// \O = Procura por caracteres nulos;
+
+				// \n = Procura por quebra de linha;
+
+				// \r = Procura por caractere de "retorno de carro" ENTER;
+
+				// \t = Procura por caractere de tabulação TAB;
+
+				// \v = Procura por caracterede tabulação vertical;
+
+				// s+ = Procura por palavras que contenham uma ou maus letras "s";
+			*/
+
+		</script>
+
+	</head>
+
+	<body>
+	
+		<p id="txt">CFB Cursos - Curso de Javascript - aula 46 do curso de javascript</p>
+
+		<script>
+
+			var texto=document.getElementById("txt").innerHTML;
+
+			//var res=texto.match("de"); // Pesquisa normal
+
+			//var res=texto.match(/Javascript/g); // Informa todas as vezes que a string e encontrada com case-sensitive;
+
+			//var res=texto.match(/o/ig); // Informa quantas vezes a string aparece, sem case-sentitive
+
+			//var res=texto.match(/[oa]/ig); // Pesquisa as palavras na []; 
+
+
+			//var res=texto.match(/[^oa]/ig); // Pesquisa em toda a string, menos as palavrasdepois do ^; 
+
+			//var res=texto.match(/[a-g]/ig); // Pesquisa entre as letras;
+
+			//var res=texto.match(/[^a-g]/ig); // Pesquisa o caractere depois do "g";
+
+			var res=texto.match(/[a|o|e]/ig); // Pesquisa os caracteres;
+
+			//document.write(res); // Palavra procurada || NULL
+			//document.write(res.length); // Número de resultados
+			document.write(res + " : " + res.length + "<br>");
+
+			document.write(res[1]); // Caractere na posição do Array;
+		</script> 
+
+	</body>
+</html>

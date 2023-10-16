@@ -1,0 +1,35 @@
+/*
+	First-Letter = Define a formatação da 1 letra
+
+	First-Line = Define a formatação da 1 linha
+
+	Selection = Define a formatação do texto selecionado
+*/
+
+p{
+	font-size: 30px;
+}
+
+p::first-letter{
+	font-size: 40px;
+	color: #F00;
+}
+
+p::first-line{
+	background: #FF0;
+}
+
+::selection{
+	color: #0F0;
+	background: #F00;	
+}
+
+::-moz-selection{ /* Para o Mozila */
+	color: #0F0;
+	background: #F00;	
+}
+
+::-webkit-selection{ /* Para outros navegadores */
+	color: #0F0;
+	background: #F00;	
+}

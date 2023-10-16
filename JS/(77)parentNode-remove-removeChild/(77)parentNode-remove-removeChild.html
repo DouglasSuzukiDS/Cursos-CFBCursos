@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - Javascript 77 - parentNode - remove - removeChild </title>
+
+		<script>
+
+			// parentNode = Retorna o elemento pai de um elemento especificado;
+			// nodeName = Retorna o nome do elemento de forma simples
+			// remove = Simplesmente remove o elemento;
+			// removeChild = Remove o elemento em forma de array;
+
+
+			function inicia(){
+				/*var elemento=document.getElementById("p1");
+				//alert(elemento.parentNode.nodeName); 
+				elemento.remove();*/
+				//document.getElementById("p8").remove();
+				var elementos=document.getElementById("cfbcursos").childNodes;
+				document.getElementById("cfbcursos").removeChild(elementos[11]); // Se conta todas as tags;
+			}
+
+			window.addEventListener("load",inicia);
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id="cfbcursos">
+			<p id="p1">Curso de Javascript</p>
+			<p id="p2">Curso de HTML/HTML5</p>
+			<p id="p3">Curso de CSS3</p>
+			<p id="p4">Curso de PHP/MySQL</p>
+			<p id="p5">Curso de C++</p>
+			<p id="p6">Curso Photoshop</p>
+			<p id="p7">Curso de Flash</p>
+			<p id="p8">Curso de Unity/C#</p>
+		</div>
+		
+	</body>
+</html>

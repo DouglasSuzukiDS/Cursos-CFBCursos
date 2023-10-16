@@ -1,0 +1,26 @@
+/* Margem Interna do Elemento */
+
+body{
+	margin: 0px;
+}
+div{
+	border: 1px solid #000;
+	width: 500px;
+	margin: 100px;
+	margin: auto;
+	margin-bottom: 50px;
+}
+
+#dv1{
+	/* padding: 100px; /* Vale para as 4 áreas */
+	/* padding: 50px 0px 150px 200px; /* Configurações Personalizadas */ 
+	padding-top: 50px;
+	padding-right: 0px;
+	padding-bottom: 150px;
+	padding-left: 200px;
+}
+
+#dv2{
+	padding: 50px;
+}
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+   <title>Filtrar</title>
+</head>
+<body>
+   <div id="fundoPopUp" class="fundoPopUp ocultar">
+
+      <div id="janelaPopUp" class="janelaPopUp">
+
+         <div id="tiutloPopUp" class="tituloPopUp">
+            Editar Contato
+         </div>
+
+         <div id="principalPopUp" class="principalPopUp">
+            <div class="campoForm">
+               <label for="">ID</label>
+               <input type="text" name="f_id" id="f_id" readonly style="cursor: not-allowed;">
+            </div>
+
+            <div class="campoForm">
+               <label for="">Nome</label>
+               <input type="text" name="f_nome" id="f_nome">
+            </div>
+         
+            <div class="campoForm">
+               <label for="">Celular</label>
+               <input type="text" name="f_celuçar" id="f_celular">
+            </div>
+         
+            <div class="campoForm">
+               <label for="">Email</label>
+               <input type="email" name="f_email" id="f_email">
+            </div>
+         
+            <div class="campoForm">
+               <label for="">Data de Nascimento</label>
+               <input type="text" name="f_dtnasc" id="f_dtnasc">
+            </div>
+         </div>
+
+         <div id="rodapePopUp" class="rodapePopUp">
+            <button class="btn_geral" id="btn_gravar">Gravar</button>
+            <button class="btn_geral" id="btn_cancelar">Cancelar</button>
+         </div>
+
+      </div>
+
+   </div>
+
+   <h2>Filtrar</h2>
+   <div id="filtro" class="filtro">
+      <div class="campoForm">
+         <label for="">Nome</label>
+         <input type="text" name="f_filtroNome" id="f_filtroNome">
+      </div>
+
+      <div class="campoForm">
+         <img src="Filter.svg" alt="Filtar" class="iconeFiltro" id="btn_filtrar" />
+      </div>
+   </div>
+
+   <div id="dgv" class="dgv">
+      <div id="resultado" class="resultado">
+         <div id="titulos" class="titulos">
+            <div class="titulo c1">Id</div>
+            <div class="titulo c2">Nome</div>
+            <div class="titulo c3">Celular</div>
+            <div class="titulo c4">Email</div>
+            <div class="titulo c5">Data</div>
+            <div class="titulo c6">Operações</div>
+         </div>
+   
+         <div id="dados" class="dados">
+            <!-- <div class="linhaDados">
+               <div class="coluna c1">Id</div>
+               <div class="coluna c2">Nome</div>
+               <div class="coluna c3">Celular</div>
+               <div class="coluna c4">Email</div>
+               <div class="coluna c5">Data</div>
+               <div class="coluna c6">Operações</div>
+            </div> -->
+         </div>
+   
+      </div>
+   </div>
+
+   <script src="filtrar.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CBF Cursos - Javascript 62 - OBJ Window P1 - Open, Close  </title>
+
+		<script>
+
+			var minhaJanela;
+
+			function abreJ(){
+				/* //iframe = Mostra outro código HTML dentro da página HTML, de forma menor;
+				//top= eixo vertical 
+
+				*/
+
+				//window.open(); //Abre uma nova janela; 
+
+				//var minhaJanela=window.open("(62Teste)tmp.html"); 
+				//Abre o arquivo, link escolhido;
+
+				//var minhaJanela=window.open("(62Teste)tmp.html","_blank"); // Abre em nova janela;
+
+				//var minhaJanela=window.open("(62Teste)tmp.html","_self"); // Abre na mesma janela
+
+				//var minhaJanela=window.open("(62Teste)tmp.html","cfb");
+
+				//var minhaJanela=window.open("(62Teste)tmp.html","_blank","width=300, height=300",); //Abre uma nova janela no tamanho desejado;
+
+				minhaJanela=window.open("(62Teste)tmp.html","_blank","width=300, height=300,top=300,left=300"); //Abre uma nova janela no tamanho e posição desejada;
+			}
+
+			function fechaJ(){
+				minhaJanela.close(); //Fecha a janela porem, a pagina que representa a janela tem quer varial global, se não for, ela so minimiza;
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<button onclick="abreJ()">Abre Nova Janela</button>
+		<button onclick="fechaJ()">Fechar Janela</button>
+
+		<iframe name="cfb" src=""></iframe>
+		
+	</body>
+</html>

@@ -1,0 +1,96 @@
+[
+    {
+        "id": "78df9a8f381b782b",
+        "type": "tab",
+        "label": "Aula04",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6a8275d59c26b714",
+        "type": "inject",
+        "z": "78df9a8f381b782b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "canal",
+                "v": "CFB Cursos",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 40,
+        "wires": [
+            [
+                "5001d71b9bb23bf8"
+            ]
+        ]
+    },
+    {
+        "id": "cae35a0c1a17d6a0",
+        "type": "debug",
+        "z": "78df9a8f381b782b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 370,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "4f15bf31b79df921",
+        "type": "function",
+        "z": "78df9a8f381b782b",
+        "name": "",
+        "func": "let data = new Date(msg.payload)\n// msg.payload = data.toString()\nmsg.topic = data.toString()\n// let num = Math.random() * 10\n//msg.canal = Math.random() * 10\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 160,
+        "wires": [
+            [
+                "cae35a0c1a17d6a0"
+            ]
+        ]
+    },
+    {
+        "id": "5001d71b9bb23bf8",
+        "type": "random",
+        "z": "78df9a8f381b782b",
+        "name": "Sorteio",
+        "low": "0",
+        "high": "50",
+        "inte": "true",
+        "property": "canal",
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "4f15bf31b79df921"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,51 @@
+/* (183) Controle de Estoque - Parte 02 */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: #202225;
+}
+
+.menuPrincipal {
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   /* border: 1px solid #F00; */
+   width: 240px;
+   height: 100vh;
+}
+
+.ocultar {
+   left: -210px !important;
+}
+
+.menuItens {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   flex-direction: column;
+   background-color: #AAA;
+   height: 100%;
+}
+
+.btn_menuItem {
+   cursor: pointer;
+   margin: 5px;
+   padding: 5px 15px;
+   width: 200px;
+}
+
+.btn_menuPrincipal {
+   cursor: pointer;
+   width: 30px;
+}
+
+.btn_menuPrincipal img {
+   width: inherit;
+}

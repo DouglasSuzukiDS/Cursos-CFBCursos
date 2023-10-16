@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>CFB Curos - Javascript 10 - IF Alinhado</title>
+		<meta charset="UTF-8">
+
+		<script>
+			var nota=80;
+			var res;
+
+			// Aprovado com Louvor    >95
+			// Aprovado               >= 60
+			// Recuperação            >=40 && <60
+			// Reprovado              <40 
+			// Reprovado com Louvor   <20
+
+			if(nota>=60){
+				res="Aprovado";
+				if(nota>=95){
+					if(nota == 100){
+						res+=" com excelência";
+					}else{
+						res+=" com louvor";
+					}
+				}else{
+					res+=" com nota normal";
+				}
+				
+			}else if (nota >=40) /*((nota >=40)&&(nota <60))*/ {
+				res="Recuperação";
+			}else{
+				res="Recuperação";
+				if(nota >= 20){
+					res+=" por nota baixa";
+				}else{
+					res+=" com Louvor";
+				}
+			}
+
+			document.write(res);
+
+		</script>
+
+	</head>
+
+	<body>
+	
+	</body>
+</html>

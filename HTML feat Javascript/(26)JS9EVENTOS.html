@@ -1,0 +1,52 @@
+﻿<html>
+	<head>
+		<title>Aula 9 - JavaScript</title>
+		<script language "Javascript">
+
+			function cump(){
+				alert("Olá, seja bem vindo");
+			}
+			
+			function clique(){
+				alert("Fui clicado");
+			}
+
+			function entra(){
+				alert("Fui Selecionado");
+			}
+
+			function sai(){
+				alert("Perdi o foco");
+			}
+
+			function fechar(){
+				alert("Tchal...");
+			}		
+	
+		</script>
+	</head>
+
+	<body onLoad="cump()" onUnload="fechar()">
+
+		<input type="Button" value="Aula JS - Eventos" onClick="clique()"/>
+		<br/>
+		<input type="text" name="txt_aula" onFocus="entra()" onBlur="sai()"/>
+
+	</body>
+</html>
+
+	<!-- // ONLOAD = Evento de quando a página é carregada
+	     // ONCLICK = Evento de quando o botão é clicado 
+	     // ONFOCUS = Evento de quando e clicado na caixa de texto
+	     // ONBLUR = Evento de quando se sai da caixa de texto
+             // ONDBLCLICK = Quando o usuario da um click duplo
+             // ONKEYDOWN = Quando uma tecla esta pra baixo 
+	     // ONKEYPRESS = Quando a tecla é precionada
+	     // ONKEYUP = Quando se solta a tecla
+	     // ONMOUSEDOWN = Quando se clica no objeto com o mouse
+	     // ONMOUSEOUT = Quando o mouse sai do elemento
+	     // ONMOUSEOVER = Quando posiciona o mouse em cima do elemento
+	     // ONMOUSEUP = Quando você libera o clique do mouse do elemento
+	     // ONRESET = Quando se preiona o botão reset do formulário
+	     // ONSELECT = Quando se seleiona o texto no campo de texto
+	     // ONSUBMIT = Quando se clica no botão submit do formulário -->

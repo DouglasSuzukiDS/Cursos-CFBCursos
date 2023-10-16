@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - Javascript 48 - Strings P3 - Métodos Para Manipulação de Strings</title>
+
+		<script>
+			
+			/* Métodos:
+				// indexOf = Retorna a posição de um caractere, somente o primeiro encontrado (case-sensitive);
+
+				// lastIndexOf = Retorna a posiçãodo último caractere (case-sentive);
+
+				// localeCompare = Faz a comparação de duas strings; // 0 = Iguais | !=0 = Diferentes 
+
+				// slice = Corta a String em um ponto específico e retorna o resultado do corte;
+
+				// split = Conta string por palavra no caractere indicado em forma de vetor;
+
+				// substr = Semelhante o slice com a diferença de que se indica a Posição Inicial e o Tamanho do Corte;
+
+				// toLowerCase = Converter para Minusculo;
+
+				// toUpperCase = Converter para Maiusculo;
+			*/
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<p id="txt">CFB Cursos - Curso de Javascript</p>
+
+		<script>
+			
+			var texto=document.getElementById("txt").innerHTML;
+			var texto2=texto;
+
+			//var res=texto1.indexOf("j");
+			//var res=texto1.lastIndexOf("C");
+
+			/*if(res < 0){
+				document.write("Letra não encontrada");
+			}else{
+				document.write(res);
+			}*/
+
+			/*var res=texto1.localeCompare(texto2);
+
+			if( res == 0){
+				document.write("Strings iguais");
+			}else{
+				document.write("Strings diferentes");
+			}*/
+
+			//var res=texto.slice(22,32);
+			//document.write(res);
+
+			/*var res=texto.split(" ");
+			document.write(res[0]);*/
+
+			//var res=texto.substr(4,6);
+
+			//var res=texto.toLowerCase();
+			//var res=texto.toUpperCase();
+			var res=texto.toUpperCase().substr(22,10);
+			document.write(res);
+
+		</script>
+		
+	</body>
+</html>

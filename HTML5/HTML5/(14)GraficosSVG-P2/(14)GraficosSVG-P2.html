@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML5 14 - Gráficos SVG - Parte 2</title>
+
+	</head>
+
+	<body>
+
+		<!--
+			circle: Insere um cirgulo;
+				r: Informa o Raio do Circulo
+				cx e cy: Centros X e Y;
+				stroke: Controrno;
+				fill: Preenchimento;
+				stroke-width: Largura do contorno;
+
+			ellipse: Usado pra informa circulo não perfeito, se pode informa o Raio para o X e Y;
+				rx e ry: Informa o Raio X e Y do Circulo
+				cx e cy: Centros X e Y;
+
+			line: Linha;
+				x1: Inicio da linha com valor para X e Y;
+				x2: Fim da linha com valor para X e Y;
+		-->
+
+		<svg width="400" height="400" style="background: #FFF; border: 1px solid #000">
+
+			
+			<circle r="50" cx="50" cy="50" stroke="#000000"; fill="#FF0000" stroke-width="1"/>
+
+			<circle r="50" cx="150" cy="50" stroke="#000000"; fill="#00FF00" stroke-width="1"/>
+
+			<!-- <circle r="50" cx="50" cy="150" stroke="#000000"; fill="#0000FF" stroke-width="1"/>
+
+			<circle r="50" cx="150" cy="150" stroke="#000000"; fill="#000000" stroke-width="1"/> -->
+
+			<ellipse cx="100" cy="150" rx="100" ry="50" stroke="#000000"; fill="#FFFF00" stroke-width="1"/>
+
+			<line x1="0" y1="0" x2="400" y2="400" stroke="#000000" stroke-width="1"/>
+
+		</svg>
+		
+	</body>
+</html>

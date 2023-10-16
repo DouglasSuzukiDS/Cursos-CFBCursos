@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML5 39 - Formulários Parte 9, Select, Option.</title>
+
+		<style>
+			.quebra{display: block;}
+			form{
+				border: 1px solid #000;
+				padding: 10px;
+				border-radius: 15px;
+				background-color: #EEE;
+			}
+			.espaco{margin-bottom: 15px;}
+			.espaco_t{margin-top: 15px;}
+		</style>
+
+	</head>
+
+	<body>
+		<!-- FORM
+			<form>: Representa uma coleção de elementos para associados do formulários;
+					Display: Block;
+					Categoria: Fluxo;
+					Contido por: Fluxo;
+					Filhos: Fluxo;
+
+				action: URL com o arquivo que irá receber os dados enviados;
+
+				autocomplete: Autocompletar campos ativos.
+
+				enctype: Codificação (tipo) dos dados enviados.
+
+				method: Método de envio dos dados (get = Envio pela URL /post = Envio externamente);
+
+				name: Nome do formulário;
+
+				novalidade: Desabilita a validação pelo Browser;
+
+				target: Como a página de destino (action) será aberta;
+
+				enctype="mulpart/form-data": Configura o form para o envio de imagens;
+		-->
+
+		<!-- LABEL/INPUT
+
+			<label> = Seria uma etiqueta de Identificação do campo;
+					Display: Block;
+					Categoria: Fluxo e Fraseado;
+					Contido por: Fraseados;
+					Filhos: Fraseados;
+
+			<input> = Area do formulário;
+					Display: Inline;
+					Categoria: Fluxo, Fraseado e Interativo;
+					Contido por: Fraseados;
+					Filhos: None;
+
+				type="text" = Caixa de texto;
+				type="submit" = Botão para envio dos dados;
+				type="reset" = Botão para Apagar os dados;
+				type="button" = Botão para configuração;
+		-->
+
+		<!-- Inputs-Password/CheckBox/Radio
+			Passaword = Campo para senha;
+
+			checkbox = Elemento de seleção multipla;
+
+			radio = Elemento de seleção unica, todas as opções devem ter o mesmo nome;
+
+				maxlenght = Tamanho máximo de caracteres;
+				size = Tamanho do elemento;
+				checked = A opção já vem marcada;
+		-->
+
+		<!-- Inputs-Date/Time/Datatime-local
+			Time: Permite selecionar uma hora;
+				min e max: Hora minima e máxima;
+				required: Atributo quequerido;
+
+			Date: Permite selecionar uma data;
+				min e max: Data minima e máxima;
+
+			Datetime-Local: Data e Hora;
+		-->	
+
+		<!-- Inputs Month/Week/Hidden
+			month: Retorna o mes da data selecionada;
+
+			Week: Retorna o numero da semana;
+
+			hidden: Objeto oculto, usado informar quem vai receber os dados;
+		-->
+
+		<!-- Inputs Color/Email/Image
+			color: Permite selecionar uma cor;
+
+			email: Campo próprio para campo de email;
+
+			image: Permite a inserção de imagens para funcionar como o botao SUBMIT;
+		-->
+
+		<!-- Inputs tel/ Number/Search
+			tel: Campo expecifico para telefone;
+				pattern: Padrão para uso; 
+					Deve ser montado: \[NUMERO QUE PODEM SER USADOR]{QUANTIDADE DE NUMEROS}\)[NUMERO 9]{QUANTIDADE DE NUMERO}[NUMERO QUE PODEM SER USADOR]{QUANTIDADE DE NUMERO}-[NUMERO QUE PODEM SER USADOR]{QUANTIDADE DE NUMERO} ou [OQUE PODE SER USAR]{QUANTIDADE DE ELEMENTOS PARA SEREM USADOS}
+
+				placeholder: Forma de como deve ser digitado;
+
+			Number: Permite selecionar um número;
+				step: Incrementação por click;
+				min e max: Minimo e maximo;
+
+			search: Campo de texto para pesquisa, com um proprio X para apagar;
+		-->
+
+		<!-- Inputs File/URL
+			file: Permite o usuario selecionar um arquivo do seu aparelho;
+				multiple (boolean) = Pemite a seleção multipla de arquivos;
+
+			<form enctype="multipart/form-data"> : Configura o form para o envio de imagens;
+				accept = " .doc, .docx";
+				accept = " application/msword ";
+				accept = " image/*, .pdf ";
+				accept = " .jpg, .gif, .png ";
+				accept = " image/jpg, image/gif, image/png ";
+
+			url: ;
+
+				placeholder: Forma de como deve ser digitado;
+					"https://cfbcursos.com.br"									
+				pattern: Padrão para uso;
+					"https://.*"
+		-->
+
+		<!-- Select/ Option
+			select: Permite seleciona um conjunto de opções;
+				multiple: Permite selecionar outros elementos
+				size: QUantos elementos seram visiveis por vez;
+
+			option: São as opções para seleção;
+				value: Valor da opção selecionada para o envio;
+		-->
+
+		<form name="f_cadastro" action="#" method="get">
+
+			<select name="f_gen">
+				<option value="ip3d7">Impressora 3D YUT65</option>
+				<option value="t98">TV 98" Led</option>
+			</select>
+
+			<input class="quebra espaco_t" type="submit" name="f_entrar" value="Entrar">
+		</form>
+		
+	</body>
+</html>

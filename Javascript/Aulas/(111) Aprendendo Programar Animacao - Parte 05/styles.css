@@ -1,0 +1,35 @@
+/* (111) Aprendendo Programar Animação - Parte 05 */
+body {
+   background-color: #202225;
+}
+   
+* {
+   padding: 0;
+   margin: 0;
+   border: none;
+   box-sizing: border-box;
+}
+
+.painel {
+   position: relative;
+   display: flex;
+   width: 100%;
+   justify-content: flex-start;
+   align-items: center;
+   background-color: #EEE;
+}
+
+button {
+   width: 150px;
+   height: 30px;
+   border-radius: 10px;
+   cursor: pointer;
+   margin: 10px;
+   background-color: #CCC;
+}
+
+.carro {
+   background-color: #F00;
+   /* width: 100px; */
+   /* height: 40px; */
+}

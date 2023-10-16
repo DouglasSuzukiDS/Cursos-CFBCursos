@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>(01) Introducao ao Canvas HTML e JS</title>
+
+   <style type="text/css">
+      #desenho1 {
+         /* width: 500px;
+         height: 500px; */
+         border: 1px solid #000;
+      }
+   </style>
+</head>
+<body>
+
+   <!-- <canvas id="" width="" height=""> // Atributos disponiveis na propria tag -->
+   <canvas id="desenho1" width="500" height="500">
+      <h1>CFB Cursos</h1>
+      <h3>Seu browser não possui suporte ao Canvas</h3>
+      <!-- Sera exibido apenas se o navegador não tiver suporte ao canvas -->
+   </canvas>
+
+   <script type="text/javascript">
+      let canvar = document.getElementById('desenho1')
+      let ctx = canvar.getContext('2d')
+
+      // ctx.fillStyle = 'rgb(0, 0, 255)' 
+      ctx.fillStyle = '#00F' // Preenchimento
+      ctx.fillRect(0, 0, 100, 100) // Retangulo preenchido com a cor do fillStyle
+
+      ctx.fillStyle = 'rgba(255, 0, 0, 0.5)' 
+      ctx.fillRect(50, 50, 100, 100)
+   </script> 
+</body>
+</html>

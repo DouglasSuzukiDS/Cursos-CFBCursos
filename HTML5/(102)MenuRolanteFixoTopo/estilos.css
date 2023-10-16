@@ -1,0 +1,51 @@
+/* (102)MenuRolanteFixoTopo */
+
+body {
+    margin: 0px;
+    font-size: 20px;
+    font-family: Arial;
+}
+
+header {
+    background-color: #EEE;
+    padding: 30px;
+    text-align: center;
+}
+
+nav {
+    overflow: hidden;
+    background-color: #222;
+}
+
+nav a {
+    float: left;
+    color: #EEE;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav a:hover {
+    background-color: #DDD;
+    color: #000;
+}
+
+nav a.ativo {
+    background-color: #800;
+    color: #FFF;
+}
+
+.principal {
+    padding: 16px;
+}
+
+.FixoNoTopo {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+.FixoNoTopo+.principal {
+    padding-top: 60px;
+}

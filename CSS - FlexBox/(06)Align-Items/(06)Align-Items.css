@@ -1,0 +1,56 @@
+.item{
+   margin: 5px;
+   padding: 5px;
+   background: #447;
+   text-align: center;
+   font-size: 1em;
+   color: #FFF;
+   width: calc(33.3333% - 20px);
+}
+
+.container{
+   max-width: 600px;
+   height: 400px;
+   margin: 0 auto;
+   border: 1px solid #000;
+   /* justify-content: space-around; /* Eixo Principal */
+   align-items: center; /* Eixo Secundário */
+}
+
+.flexivel{
+   display: flex;
+}
+
+.horizontal{
+   flex-direction: row;
+}
+
+.vertical{
+   flex-direction: column;
+}
+
+.quebra{
+   flex-wrap: wrap;
+}
+
+body{
+   font-family: Arial;
+   color: #000;
+}
+
+
+/*
+   Align-Items: Define o alinhamento dos itens de acordo com o Cross Axis 
+      - stretch: Estica o elemento, comportamento padrão caso o tamanho do elemento não esteja definido;
+
+      - flex-start: Os elementos ficam no começo do Cross Axis;
+
+      - flex-end: Os elementos ficam no final do Cross Axis;
+
+      - center: Centraliza os elementos;
+
+      - baseline: Linha base do elemento;
+
+
+
+*/

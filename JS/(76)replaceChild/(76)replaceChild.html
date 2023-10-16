@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - Javascript 96 - replaceChild - Substituir elementos HTML por JS</title>
+
+		<script>
+
+			//replaceChild = Permite substituir um elemento por outro;
+
+			function inicia(){
+
+				var novoH1=document.createElement("h1");
+				var listaCursos=document.getElementById("cfbcursos");
+				var novo=document.getElementById("novo");
+				var antigoP=listaCursos.childNodes[9]; //Conta abertura e fechamanto das tags;
+				var txtH=document.createTextNode(antigoP.innerHTML);
+				novoH1.appendChild(txtH);
+				listaCursos.replaceChild(novoH1,antigoP);
+				//listaCursos.replaceChild(novo,antigoP);
+			}
+
+			window.addEventListener("load",inicia);
+
+		</script>
+	</head>
+	<body>
+		
+		<!-- <h1 id="novo">Novo Elemento</h1>  -->
+		<div id="cfbcursos">
+			<p>Curso de Javascript</p>
+			<p>Curso de HTML/HTML5</p>
+			<p>Curso de CSS3</p>
+			<p>Curso de PHP/MySQL</p>
+			<p>Curso de C++</p>
+			<p>Curso Photoshop</p>
+			<p>Curso de Flash</p>
+			<p>Curso de Unity/C#</p>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,21 @@
+body{
+   font-family: Arial;
+   color: #000;
+}
+
+.container{
+   display: grid;
+   /* display: inline-grid; */ /* O elemento fica apenas do tamanho do seu conteudo  */
+   grid-template-columns: auto auto; 
+      /* Informa o quantas colunas o container tera e seu tamanho. Com o valor auto, o elemento se ajustara */
+   grid-template-rows: 150px auto 50px;
+
+
+}
+
+.item{
+   background-color: #048;
+   color: #FFF;
+   border: 1px solid #000;
+   text-align: center;
+}

@@ -1,0 +1,144 @@
+[
+    {
+        "id": "8d15c54c78161ef0",
+        "type": "tab",
+        "label": "Curso de Javascript",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8657e3b93d9937f5",
+        "type": "function",
+        "z": "8d15c54c78161ef0",
+        "name": "function 1",
+        "func": "let query = 'SELECT * FROM produtos;'\nmsg.topic = query\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 120,
+        "wires": [
+            [
+                "c61dc5a9b7a9843a"
+            ]
+        ]
+    },
+    {
+        "id": "5df111e161ec5aec",
+        "type": "http in",
+        "z": "8d15c54c78161ef0",
+        "name": "Produtos",
+        "url": "/produtos",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 80,
+        "y": 120,
+        "wires": [
+            [
+                "8657e3b93d9937f5"
+            ]
+        ]
+    },
+    {
+        "id": "89672d24354a90dd",
+        "type": "http response",
+        "z": "8d15c54c78161ef0",
+        "name": "",
+        "statusCode": "",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 550,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "c61dc5a9b7a9843a",
+        "type": "mysql",
+        "z": "8d15c54c78161ef0",
+        "mydb": "b0512ccf716d9232",
+        "name": "",
+        "x": 400,
+        "y": 120,
+        "wires": [
+            [
+                "89672d24354a90dd"
+            ]
+        ]
+    },
+    {
+        "id": "b67643ca9195c13e",
+        "type": "http in",
+        "z": "8d15c54c78161ef0",
+        "name": "Remove",
+        "url": "/removeproduto/:id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 80,
+        "y": 200,
+        "wires": [
+            [
+                "bfe3c6018f5dc1c3"
+            ]
+        ]
+    },
+    {
+        "id": "bfe3c6018f5dc1c3",
+        "type": "function",
+        "z": "8d15c54c78161ef0",
+        "name": "Delete",
+        "func": "let id = msg.req.params.id\nlet query = `DELETE FROM produtos WHERE n_id_produto = ${id}`\nmsg.topic = query\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 200,
+        "wires": [
+            [
+                "f4258e4f3239c8d6"
+            ]
+        ]
+    },
+    {
+        "id": "f4258e4f3239c8d6",
+        "type": "mysql",
+        "z": "8d15c54c78161ef0",
+        "mydb": "b0512ccf716d9232",
+        "name": "",
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "8717d712881e1276"
+            ]
+        ]
+    },
+    {
+        "id": "8717d712881e1276",
+        "type": "http response",
+        "z": "8d15c54c78161ef0",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 530,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "b0512ccf716d9232",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "cfbcursos",
+        "tz": "",
+        "charset": "UTF8"
+    }
+]

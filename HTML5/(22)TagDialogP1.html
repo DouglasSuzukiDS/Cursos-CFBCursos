@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML5 22 - Tag Dialog Parte 1</title>
+
+		<script>
+			function abrirDialog(){
+				document.getElementById("d1").setAttribute("open","");
+			}
+			function fecharDialog(){
+				document.getElementById("d1").removeAttribute("open");
+			}
+			
+		</script>
+
+	</head>
+
+	<body>
+		<!--
+			<dialog> = Abre uma caixa de dialogo;
+			Categoria: Fluxo;
+			Contido por: Fluxo;
+			Filhos: Qualquer um;
+		-->
+
+		<button onclick="abrirDialog()">Abrir</button>
+		<button onclick="fecharDialog()">Fechar</button>
+		<dialog id="d1" open>			
+			<p><dfn title="Linguagem de Marcação para Web">HTML</dfn> Hypertext Markup Language é uma linguagem de marcação utilizada na construção de páginas na Web.</p>
+
+			<p><dfn><abbr title="Formatação para Páginas da Web.">CSS</abbr></dfn> Cascading Style Sheets recurso para adicionar estilos e formatações a um documento Web.</p>
+		</dialog>
+
+		
+	</body>
+</html>

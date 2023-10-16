@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - CSS3 22 - Transformações 3D</title>
+
+		<link rel="stylesheet" type="text/css" href="(22)Transformacoes3D.css">
+
+		<script>
+			var y, n=0, ny=0, rotYINT;
+
+			function rotateYDIV(){
+				y=document.getElementById("dv1");
+				clearInterval(rotYINT);
+				rotYINT=setInterval("startYRotate()",10);
+			}
+
+			function startYRotate(){
+
+				/*y.style.webkitTransform="rotateY(" + ny + "deg)"; //FireFox
+				y.style.OTransform="rotateY(" + ny + "deg)"; // Opera
+				y.style.MozTransform="rotateY(" + ny + "deg)"; //Mozila */
+
+				ny=ny+1;
+				y.style.transform="rotateY(" + ny + "deg) translate(200px, 200px)";
+				if(ny==180 || ny>=360){
+					clearInterval(rotYINT);
+					if(ny>=360) { ny=0; }
+				}
+			} 
+
+		</script>
+	</head>
+
+	<body>
+
+		<div id="dv1" onclick="rotateYDIV()">
+			CFB
+		</div>
+		
+	</body>
+</html>

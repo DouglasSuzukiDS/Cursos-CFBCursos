@@ -1,0 +1,27 @@
+/*
+	Ajuste dos elementos dentro do containner;
+		display-flex = Usado no Containner
+		flex = Usado nos filhos do Containner
+			1 = Elemento Flexivel, preenche o espaço do containner
+		flex-wrap: ;
+			nowrap = Não faz a quebra de linha 
+			wrap = Faz a bra de linha
+ */
+
+ section{
+ 	border: 3px solid #F00;
+ 	display: flex; /* Deixa os elementos um do lado do outro */
+ 	flex-wrap: nowrap;
+
+ 	display: -webkit-flex; /* Para versões mais abtigas do Chrome */
+ 	-webkit-flex-wrap: nowrap;
+ 	
+ 	display: -moz-flex; /* Para versões mais antigas do Mozina */
+ 	-moz-flex-wrap: nowrap;
+ }
+
+ div{
+ 	border: 1px solid #000;
+ 	width: 100px;
+ }
+

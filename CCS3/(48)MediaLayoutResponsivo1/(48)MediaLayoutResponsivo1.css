@@ -1,0 +1,60 @@
+/*
+	Layout Responsivo = Adaptação do Layout para dispositivos e tamanho de telas diferentes,
+
+	@media = Cada média é responsável/comandos para uma formatação expecifica, retorna True ou False
+		print = Impressora
+		screen = Tela computador, cell, tablet.
+		speech = Leitores de arquivos digitais
+		all = Todos os dispositivos
+
+		orientation: Configura a exibição para retrato ou paisagem
+			porttrait = Retrato
+			landscape = Paisagem
+
+*/
+
+
+img{
+	width: 500px;
+}
+
+body{
+	background: #FF0;
+}
+
+/*@media screen and (min-width: 0px) and (max-width: 400px) {
+	body{
+		background: #F00;
+	}
+}
+
+@media screen and (min-width: 401px) and (max-width: 800px) {
+	body{
+		background: #0F0;
+	}
+}
+
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+	body{
+		background: #00F;
+	}
+}*/
+
+@media screen and (max-width: 400px) and (orientation: portrait){
+	body{
+		background: #F00;
+	}
+	img{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 400px) and (orientation: landscape){
+	body{
+		background: #00F;
+	}
+	img{
+		width: 100%;
+	}
+}
+}

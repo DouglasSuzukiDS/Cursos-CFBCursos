@@ -1,0 +1,24 @@
+/* (76) Aprendendo sobre Promise - Parte 02 */
+body {
+   background-color: #202225;
+}
+   
+* {
+   padding: 0;
+   margin: 0;
+   border: none;
+   box-sizing: border-box;
+   font-size: large;
+}
+
+.numero {
+   font-size: large;
+}
+
+.ok {
+   color: #00F;
+}
+
+.erro {
+   color: #F00;
+}

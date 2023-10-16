@@ -1,0 +1,36 @@
+*{box-sizing: border-box;} /* Valor real do elemento */
+body{font-family: Arial; margin: 0px;}
+
+.slide{
+	/*display: none;*/
+}
+
+.imgSlide{vertical-align: middle;}
+
+.btnAnterior, .btnProximo{
+	cursor: pointer;
+	position: absolute; /* Pode definir posição */
+	top: 50%;
+	width: auto;
+	padding: 15px;
+	margin-top: -22px;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 30px;
+	transition: 0.4s ease;
+	user-select: none;
+}
+
+.btnAnterior{
+	left: 0;
+	border-radius: 0 5px 5px 0;
+}
+
+.btnProximo{
+	right: 0;
+	border-radius: 5px 0 0 5px;
+}
+
+.btnAnterior:hover, .btnProximo:hover{
+	background-color: rgba(0, 0, 0, 0.6);
+}

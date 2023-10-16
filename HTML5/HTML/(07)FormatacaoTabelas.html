@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML 07 - Formatação para Tabelas com CSS</title>
+
+		<style type="text/css">
+
+			/*
+				border-collapse:;
+					collapse = Considera todos <TD> uma só
+
+				vertical-align: Alinhamento vertical;
+					top = Topo;
+					bottom = Baixo;
+					middle = Centro;
+
+				font-weight: Peso da fonte;
+					bold = Negrito;
+
+				font-family: Tipo de fonte;
+
+				font-style: Estilo da fonte;
+					italic = Italico;
+
+			*/
+
+			body{
+				background-color: #D0D0FF;
+			}
+			
+			table{
+				border-spacing: 0px;
+				border-collapse: collapse;
+			}
+
+			td{
+				border: 1px solid #0000FF;
+				padding: 0px;
+			}
+
+			.titulo1, .titulo2{
+				background-color: #808080;
+				text-align: center;
+				height: 50px;
+				vertical-align: middle;
+				color: #FFFFFF;
+				font-weight: bold;
+				font-size: 23px;
+				font-family: Arial;
+				font-style: italic;
+			}
+
+			.titulo2{
+				background-color: #C0C0C0;
+				height: 30px;
+				font-size: 15px;
+				color: #000000;
+	
+			}
+
+			.colaborador, .salario{
+				color: #000080;
+				background-color: #F8F8F8;
+			}
+			
+			.salario{
+				color: #800000;
+
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<!--
+			colspan = Mescla Colunas
+		-->
+
+		<table width="500">
+
+			<tr>
+				<td colspan="2" class="titulo1">Tabela de Colaboradores</td>
+			</tr>
+
+
+			<tr>
+				<td class="titulo2">Colaborador</td>
+				<td class="titulo2">Salário</td>
+			</tr>
+
+
+			<tr>
+				<td class="colaborador">Melioswaldir</td>
+				<td class="salario">R$ 3.500,00</td>
+			</tr>
+
+
+			<tr>
+				<td class="colaborador">Benecléia</td>
+				<td class="salario">R$ 2.750,00</td>
+			</tr>
+
+
+			<tr>
+				<td class="colaborador">Faromildon</td>
+				<td class="salario">R$ 3.000,00</td>
+			</tr>
+			
+		</table>
+		
+	</body>
+</html>

@@ -1,0 +1,23 @@
+/*
+	backface-visibility: As costas do elemento ;
+		visible = Visivel, Padrão;
+		hidden = Oculta a parte de trás do elemento
+
+
+
+*/
+
+#dv1{
+	width: 200px;
+	height: 200px;
+	border: 1px solid #000;
+
+	/*transform: rotateY(45deg);*/
+	transform: translate(200px, 200px);
+	backface-visibility: visible;
+	transform-origin: 200px 200px;
+}
+
+body{
+	perspective: 800px;  /* Perspectiva(profundidade) do elemento dentro da tag */
+}

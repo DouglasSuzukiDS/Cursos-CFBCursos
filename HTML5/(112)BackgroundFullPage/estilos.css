@@ -1,0 +1,16 @@
+/*(112)BackgroundFullPage*/
+
+body, html{
+	height: 100%;
+	margin: 0;
+}
+
+p{font-size: 30px;}
+
+.bg{
+	background-image: url("vit.jpg");
+	background-repeat: no-repeat;
+	background-size: cover; /* Cobre toda a área da página */
+	background-position: center;
+	background-attachment: fixed;
+}

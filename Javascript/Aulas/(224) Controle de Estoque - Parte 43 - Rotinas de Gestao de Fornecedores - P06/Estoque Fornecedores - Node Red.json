@@ -1,0 +1,494 @@
+[
+    {
+        "id": "8c27bfcdc64a8aef",
+        "type": "tab",
+        "label": "Estoque - Fornecedores",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0ab74eac82402844",
+        "type": "http in",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "url": "/todosfornecedores",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 60,
+        "wires": [
+            [
+                "b72c63c01c007293"
+            ]
+        ]
+    },
+    {
+        "id": "9f0bcfb8b907f355",
+        "type": "http response",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b86c7f960bea796c",
+        "type": "debug",
+        "z": "8c27bfcdc64a8aef",
+        "name": "debug 24",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "b72c63c01c007293",
+        "type": "function",
+        "z": "8c27bfcdc64a8aef",
+        "name": "function 14",
+        "func": "msg.topic = `SELECT * FROM fornecedor`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 60,
+        "wires": [
+            [
+                "aca0b89f4dcad0c5"
+            ]
+        ]
+    },
+    {
+        "id": "aca0b89f4dcad0c5",
+        "type": "mysql",
+        "z": "8c27bfcdc64a8aef",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 560,
+        "y": 60,
+        "wires": [
+            [
+                "9f0bcfb8b907f355",
+                "b86c7f960bea796c"
+            ]
+        ]
+    },
+    {
+        "id": "6dec5109e294fa19",
+        "type": "http in",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "url": "/mudarStatusFornecedor/:id/:status",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [
+                "02541b80903d6336"
+            ]
+        ]
+    },
+    {
+        "id": "675670b89098192e",
+        "type": "http response",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "d8f6a04656ea3198",
+        "type": "debug",
+        "z": "8c27bfcdc64a8aef",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "02541b80903d6336",
+        "type": "function",
+        "z": "8c27bfcdc64a8aef",
+        "name": "function 15",
+        "func": "const n_fornecedor_fornecedor = msg.req.params.id\nconst c_status_fornecedor = msg.req.params.status\n\nconst query = `UPDATE fornecedor SET c_status_fornecedor = '${c_status_fornecedor}' WHERE n_fornecedor_fornecedor = ${n_fornecedor_fornecedor}`\n\nmsg.topic = query\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 200,
+        "wires": [
+            [
+                "0a6392748a6ce2f8",
+                "d8f6a04656ea3198"
+            ]
+        ]
+    },
+    {
+        "id": "0a6392748a6ce2f8",
+        "type": "mysql",
+        "z": "8c27bfcdc64a8aef",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 560,
+        "y": 200,
+        "wires": [
+            [
+                "675670b89098192e"
+            ]
+        ]
+    },
+    {
+        "id": "8ef6a528d4ba1619",
+        "type": "http in",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "url": "/novoforn",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "361e93b9c20b031e"
+            ]
+        ]
+    },
+    {
+        "id": "de5f7ba1c830950c",
+        "type": "http response",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "cf172b0349321540",
+        "type": "debug",
+        "z": "8c27bfcdc64a8aef",
+        "name": "debug 26",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "361e93b9c20b031e",
+        "type": "function",
+        "z": "8c27bfcdc64a8aef",
+        "name": "function 16",
+        "func": "msg.payload = JSON.parse(msg.payload)\nconst s_desc_fornecedor = msg.payload.s_desc_fornecedor\nconst c_status_fornecedor = msg.payload.c_status_fornecedor\nconst s_logo_fornecedor = msg.payload.s_logo_fornecedor\n\nconst query = `INSERT INTO fornecedor (n_fornecedor_fornecedor, s_desc_fornecedor, c_status_fornecedor, s_logo_fornecedor) VALUES (NULL, '${s_desc_fornecedor}', '${c_status_fornecedor}', '${s_logo_fornecedor}')`\n\nmsg.topic = query\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 300,
+        "wires": [
+            [
+                "03ee01272af3d017",
+                "cf172b0349321540"
+            ]
+        ]
+    },
+    {
+        "id": "03ee01272af3d017",
+        "type": "mysql",
+        "z": "8c27bfcdc64a8aef",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 560,
+        "y": 300,
+        "wires": [
+            [
+                "de5f7ba1c830950c"
+            ]
+        ]
+    },
+    {
+        "id": "8e1d547b3a81ccd5",
+        "type": "http in",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "url": "/dadosforn/:id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 400,
+        "wires": [
+            [
+                "cbeacf572cb82bbb"
+            ]
+        ]
+    },
+    {
+        "id": "7590d35c4e454955",
+        "type": "http response",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "cbeacf572cb82bbb",
+        "type": "function",
+        "z": "8c27bfcdc64a8aef",
+        "name": "function 17",
+        "func": "const id = msg.req.params.id\n\nmsg.topic = `SELECT * FROM fornecedor WHERE n_fornecedor_fornecedor = ${id}`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 400,
+        "wires": [
+            [
+                "bc21c3568f3685df",
+                "6df065235b7faf71"
+            ]
+        ]
+    },
+    {
+        "id": "6df065235b7faf71",
+        "type": "mysql",
+        "z": "8c27bfcdc64a8aef",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 560,
+        "y": 400,
+        "wires": [
+            [
+                "7590d35c4e454955",
+                "bc21c3568f3685df"
+            ]
+        ]
+    },
+    {
+        "id": "bc21c3568f3685df",
+        "type": "debug",
+        "z": "8c27bfcdc64a8aef",
+        "name": "debug 27",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "270b568e1a741d39",
+        "type": "http in",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "url": "/editarforn",
+        "method": "put",
+        "upload": true,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 500,
+        "wires": [
+            [
+                "1898ae7ee847e3a3"
+            ]
+        ]
+    },
+    {
+        "id": "c4f5c948987dec9b",
+        "type": "http response",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "81008f042817ce41",
+        "type": "debug",
+        "z": "8c27bfcdc64a8aef",
+        "name": "debug 28",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "1898ae7ee847e3a3",
+        "type": "function",
+        "z": "8c27bfcdc64a8aef",
+        "name": "function 18",
+        "func": "msg.payload = JSON.parse(msg.payload)\n\nconst n_fornecedor_fornecedor = msg.payload.n_fornecedor_fornecedor\nconst s_desc_fornecedor = msg.payload.s_desc_fornecedor\nconst c_status_fornecedor = msg.payload.c_status_fornecedor\nconst s_logo_fornecedor = msg.payload.s_logo_fornecedor\n\nconst query = `UPDATE fornecedor SET s_desc_fornecedor = '${s_desc_fornecedor}', c_status_fornecedor = '${c_status_fornecedor}', s_logo_fornecedor = '${s_logo_fornecedor}' WHERE n_fornecedor_fornecedor = ${n_fornecedor_fornecedor}`\n\n// const query = \"UPDATE fornecedor SET s_desc_fornecedor = 'Fornecedor FDS', c_status_fornecedor = 'I', s_logo_fornecedor = '' WHERE n_fornecedor_fornecedor = 3;\"\nmsg.topic = query\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 500,
+        "wires": [
+            [
+                "c73a4aa07eb21c06",
+                "81008f042817ce41"
+            ]
+        ]
+    },
+    {
+        "id": "c73a4aa07eb21c06",
+        "type": "mysql",
+        "z": "8c27bfcdc64a8aef",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 560,
+        "y": 500,
+        "wires": [
+            [
+                "c4f5c948987dec9b"
+            ]
+        ]
+    },
+    {
+        "id": "abf830df83f82833",
+        "type": "http in",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "url": "/pesquisaforn/:tipo/:valor",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 600,
+        "wires": [
+            [
+                "2a6d08166069ab7a"
+            ]
+        ]
+    },
+    {
+        "id": "63f2c7a2cbd34fc0",
+        "type": "http response",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "160a49c41e2d969c",
+        "type": "debug",
+        "z": "8c27bfcdc64a8aef",
+        "name": "debug 29",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "2a6d08166069ab7a",
+        "type": "function",
+        "z": "8c27bfcdc64a8aef",
+        "name": "function 19",
+        "func": "const tipo = msg.req.params.tipo\nconst valor = msg.req.params.valor\n\nlet query = ``\n\nif(tipo === 'id') {\n    query = `SELECT * FROM fornecedor WHERE n_fornecedor_fornecedor = ${valor}`\n} else {\n    query = `SELECT * FROM fornecedor WHERE s_desc_fornecedor LIKE \"%${valor}%\"`\n}\n\nmsg.topic = query\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 640,
+        "wires": [
+            [
+                "d1a0799b3994e52f",
+                "160a49c41e2d969c"
+            ]
+        ]
+    },
+    {
+        "id": "d1a0799b3994e52f",
+        "type": "mysql",
+        "z": "8c27bfcdc64a8aef",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 560,
+        "y": 640,
+        "wires": [
+            [
+                "63f2c7a2cbd34fc0"
+            ]
+        ]
+    },
+    {
+        "id": "8eb5ca5ddf10b0fd",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "estoque",
+        "tz": "",
+        "charset": "UTF8"
+    }
+]

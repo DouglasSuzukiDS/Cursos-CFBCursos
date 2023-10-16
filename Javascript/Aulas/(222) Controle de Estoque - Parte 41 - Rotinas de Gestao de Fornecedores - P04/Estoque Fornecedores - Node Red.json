@@ -1,0 +1,321 @@
+[
+    {
+        "id": "8c27bfcdc64a8aef",
+        "type": "tab",
+        "label": "Estoque - Fornecedores",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0ab74eac82402844",
+        "type": "http in",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "url": "/todosfornecedores",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 60,
+        "wires": [
+            [
+                "b72c63c01c007293"
+            ]
+        ]
+    },
+    {
+        "id": "9f0bcfb8b907f355",
+        "type": "http response",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b86c7f960bea796c",
+        "type": "debug",
+        "z": "8c27bfcdc64a8aef",
+        "name": "debug 24",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "b72c63c01c007293",
+        "type": "function",
+        "z": "8c27bfcdc64a8aef",
+        "name": "function 14",
+        "func": "msg.topic = `SELECT * FROM fornecedor`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 60,
+        "wires": [
+            [
+                "aca0b89f4dcad0c5"
+            ]
+        ]
+    },
+    {
+        "id": "aca0b89f4dcad0c5",
+        "type": "mysql",
+        "z": "8c27bfcdc64a8aef",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 560,
+        "y": 60,
+        "wires": [
+            [
+                "9f0bcfb8b907f355",
+                "b86c7f960bea796c"
+            ]
+        ]
+    },
+    {
+        "id": "6dec5109e294fa19",
+        "type": "http in",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "url": "/mudarStatusFornecedor/:id/:status",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [
+                "02541b80903d6336"
+            ]
+        ]
+    },
+    {
+        "id": "675670b89098192e",
+        "type": "http response",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "d8f6a04656ea3198",
+        "type": "debug",
+        "z": "8c27bfcdc64a8aef",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "02541b80903d6336",
+        "type": "function",
+        "z": "8c27bfcdc64a8aef",
+        "name": "function 15",
+        "func": "const n_fornecedor_fornecedor = msg.req.params.id\nconst c_status_fornecedor = msg.req.params.status\n\nconst query = `UPDATE fornecedor SET c_status_fornecedor = '${c_status_fornecedor}' WHERE n_fornecedor_fornecedor = ${n_fornecedor_fornecedor}`\n\nmsg.topic = query\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 200,
+        "wires": [
+            [
+                "0a6392748a6ce2f8",
+                "d8f6a04656ea3198"
+            ]
+        ]
+    },
+    {
+        "id": "0a6392748a6ce2f8",
+        "type": "mysql",
+        "z": "8c27bfcdc64a8aef",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 560,
+        "y": 200,
+        "wires": [
+            [
+                "675670b89098192e"
+            ]
+        ]
+    },
+    {
+        "id": "8ef6a528d4ba1619",
+        "type": "http in",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "url": "/novoform",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "361e93b9c20b031e"
+            ]
+        ]
+    },
+    {
+        "id": "de5f7ba1c830950c",
+        "type": "http response",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "cf172b0349321540",
+        "type": "debug",
+        "z": "8c27bfcdc64a8aef",
+        "name": "debug 26",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "361e93b9c20b031e",
+        "type": "function",
+        "z": "8c27bfcdc64a8aef",
+        "name": "function 16",
+        "func": "msg.payload = JSON.parse(msg.payload)\nconst s_nome_pessoa = msg.payload.s_nome_pessoa\nconst n_tipopessoa_tipopessoa = msg.payload.n_tipopessoa_tipopessoa\nconst c_status_pessoa = msg.payload.c_status_pessoa\nconst s_foto_pessoa = msg.payload.s_foto_pessoa\nmsg.numtelefones = msg.payload.numtelefones\n\nconst query = `INSERT INTO pessoa (n_pessoa_pessoa, s_nome_pessoa, n_tipopessoa_tipopessoa, c_status_pessoa, s_foto_pessoa) VALUES (NULL, '${s_nome_pessoa}', ${n_tipopessoa_tipopessoa}, '${c_status_pessoa}', '${s_foto_pessoa}')`\n\nmsg.topic = query\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 300,
+        "wires": [
+            [
+                "03ee01272af3d017"
+            ]
+        ]
+    },
+    {
+        "id": "03ee01272af3d017",
+        "type": "mysql",
+        "z": "8c27bfcdc64a8aef",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 560,
+        "y": 300,
+        "wires": [
+            [
+                "3a7b3b5e896b6754"
+            ]
+        ]
+    },
+    {
+        "id": "90318c49d398908b",
+        "type": "function",
+        "z": "8c27bfcdc64a8aef",
+        "name": "function 17",
+        "func": "let n_usuario_usuario = msg.payload.insertId\nlet numtelefones = msg.numtelefones\n\nlet numtelefones_montado = ''\n\nnumtelefones.forEach(f => {\n    numtelefones_montado += `, (NULL, ${n_usuario_usuario}, '${f}')`\n})\n\nnumtelefones_montado = numtelefones_montado.substring(1)\n\nmsg.topic = `INSERT INTO telefone (n_telefone_telefone, n_usuario_usuario, s_numero_telefone) VALUES ${numtelefones_montado}`\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 360,
+        "wires": [
+            [
+                "9b22a3f4a5a6a1c4"
+            ]
+        ]
+    },
+    {
+        "id": "9b22a3f4a5a6a1c4",
+        "type": "mysql",
+        "z": "8c27bfcdc64a8aef",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 560,
+        "y": 360,
+        "wires": [
+            [
+                "de5f7ba1c830950c"
+            ]
+        ]
+    },
+    {
+        "id": "3a7b3b5e896b6754",
+        "type": "switch",
+        "z": "8c27bfcdc64a8aef",
+        "name": "",
+        "property": "numtelefones",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 150,
+        "y": 360,
+        "wires": [
+            [
+                "90318c49d398908b"
+            ],
+            [
+                "de5f7ba1c830950c"
+            ]
+        ]
+    },
+    {
+        "id": "8eb5ca5ddf10b0fd",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "estoque",
+        "tz": "",
+        "charset": "UTF8"
+    }
+]

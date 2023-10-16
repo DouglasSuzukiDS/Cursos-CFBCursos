@@ -1,0 +1,48 @@
+/*
+	font-size: 16px; Tamanho padrão da font dos browseres
+
+	EM: Unidade de medida em relação a fonte, conforme o elemento pai;
+
+	REM: Unidade de medida em relação a sua RAÍZ-HTML;
+
+	% = Leva em consideração o espaço do elemento anterior 
+
+	VW: Largura do Browser em porcentagem da janela;
+
+	VH: Alturaa do Browser em porcentagem da janela;
+
+	EX: Formatação em relação ao tamanho da letra x(minusculo) do tipo da fonte do elemento pai;
+*/
+
+body{
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	font-size: 20px;
+	font-family: Arial;
+}
+
+div, p{
+	display: inline-block;
+}
+
+p{
+	font-size: 10em;
+}
+
+#d1{
+	border: 1px solid #F00;
+
+	/*width: 90vw; /* 1/100 da largura da janela */
+	/*height: 90vh; /* 1/100 da altura da janela */
+
+	width: 10ex; /*  */
+	height: 10ex;
+}
+
+#d2{
+	border: 1px solid #00F;
+	width: 10em;
+	height: 10em;
+}
+

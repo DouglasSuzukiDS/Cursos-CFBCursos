@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML 16 - Formulários</title>
+
+		<style type="text/css">
+			body{
+				background-color: #EEEEEE;
+			}
+
+			label{
+				color: #606060;
+				font-weight: bold;
+			}
+
+			.bt{
+				background-color: #C00000;
+				color: #FFFFFF;
+				width: 100px;
+				height: 25px;
+				border: 0px;
+				cursor: pointer;
+			}
+
+			input:hover, select:hover, textarea:hover{
+				border: 2px solid #0000FF;
+			}
+
+			input:focus, select:focus, textarea:focus{
+				background-color: #FF8080;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<form name="F_Aula" method="POST" action="">
+
+			<label>Nome:</label><br>
+
+			<input type="text" name="F_nome" size="40" maxlength="30"><br><br>
+
+
+			<label>Senha:</label><br>
+
+			<input type="password" name="F_senha" size="40" maxlength="20"><br><br>
+
+
+			<label>Qual esporte pratica?</label><br>
+
+			<input type="checkbox" name="F_Futebol" value="Futebol"><label>Futebol</label><br>
+
+			<input type="checkbox" name="F_Natação" value="Natação"><label>Natação</label><br>
+
+			<input type="checkbox" name="F_Basket" value="Basket"><label>Basket</label><br><br>
+
+
+			<label>Possui veículo?</label><br>
+
+			<input type="radio" name="F_Veiculo" value="S"><label>SIM</label><br>
+			<input type="radio" name="F_Veiculo" value="N"><label>NÃO</label><br><br>
+
+			<label>Estado:</label><br>
+
+			<select name="F_Estado">
+				<option value="MG">Minas Gerais</option>
+				<option value="RJ">Rio De Janeiro</option>
+				<option value="SP">São Paulo</option>
+				<option value="ES">Espírito Santo</option>
+			</select><br><br>
+
+
+			<label>Comentário:</label><br>
+
+			<textarea name="F_Comentario" cols="45" rows="5"></textarea><br><br>
+
+			<input type="submit" class="bt" value="Enviar">
+
+			<input type="reset" class="bt" value="Limpar">
+			
+			<input type="button" class="bt" value="Sem Ação">
+
+		</form>
+		
+	</body>
+</html>

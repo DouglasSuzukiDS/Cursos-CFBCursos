@@ -1,0 +1,63 @@
+/*(114)Cartoes*/
+
+html{
+	box-sizing: border-box;
+}
+
+*, *:before, *:after{
+	box-sizing: inherit; /* Pega do elemento pai */
+}
+
+.colunaCartao{
+	float: left;
+	width: 25%;
+	margin-bottom: 16px;
+	padding: 0 8px;
+}
+
+@media screen and (max-width: 800px){
+	.colunaCartao{
+		width: 100%;
+		display: block;
+	}
+}
+
+.cartao{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.textoCartao{
+	padding: 0 16px;
+	padding-bottom: 3px;
+}
+
+.textoCartao::after, .linhaCartao::after{
+	content: "";
+	clear: both; /* Elimina o eleito left */
+	display: table;
+}
+
+.titulo{
+	color: #444;
+}
+
+.botao{
+	border: none;
+	outline: 0;
+	display: inline-block;
+	padding: 8px;
+	color: #FFF;
+	background-color: #000;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+}
+
+.botao:hover{
+	background-color: #444;
+}
+
+.imagem{
+	width: 100%;
+}
+

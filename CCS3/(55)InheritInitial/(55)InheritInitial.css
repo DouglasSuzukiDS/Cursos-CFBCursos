@@ -1,0 +1,34 @@
+/*
+	Inherit = Usa o valor definido o Valor definido no elemento Pai
+
+	Initial = Usa o valor inicial, valor padrão para propriedade/tag;
+*/
+
+*{ /* Todos elementos */
+	color: #000;
+}
+
+html{
+	color: #F00;
+}
+
+body{
+	color: #0F0;
+}
+
+#d1{
+	color: #F00;
+}
+
+#d2{
+	color: #F0F;
+}
+
+#d3{
+	color: #FF0;
+}
+
+h1, p{
+	/*color: inherit; /* Formatação do Elemento Pai */
+	color: initial; /* Formatação inicial para a Propriedade */
+}

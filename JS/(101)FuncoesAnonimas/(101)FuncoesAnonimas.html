@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 101 - Funções Anônimas</title>
+    <script>
+
+        let soma = function(...num){
+            let res = 0
+            for(n of num){
+                res += n
+            }
+            return res
+        }
+        let s = soma
+
+        console.log(soma(1, 2, 3))
+        console.log(soma(1, 2))
+        console.log(soma(1))
+        console.log(s)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

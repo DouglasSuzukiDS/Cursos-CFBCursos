@@ -1,0 +1,20 @@
+	/* Tipos de Borda 
+	   solid = Continua | dotted = Pontilhada | dashed = Tracejada
+	   double = Linhas duplas | groove = 3D | ridge = 3D
+	   inset =  Dentro Baixo Relevo | outset = Alto relevo
+	   none = Sem Borda | hidden = Borda Oculta */
+
+#d1,#d2,p{
+	width: 300px; /* Largura */
+	height: 300px; /* Altura */ 
+	background-color: #DDD;
+	border:  #000 solid 20px;
+}
+
+#d1{
+	border-color: #F00;
+}
+
+#d2{
+	border-style: dotted;
+}

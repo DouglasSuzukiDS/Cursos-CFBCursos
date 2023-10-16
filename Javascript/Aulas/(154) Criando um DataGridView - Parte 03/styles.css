@@ -1,0 +1,82 @@
+/* (154) Criando um DataGridView - Parte 03 */
+body {
+   background-color: #202225; 
+}
+   
+* {
+   padding: 0;
+   margin: 0;
+   border: none;
+   box-sizing: border-box;
+}
+
+.dgv {
+   display: flex;
+   justify-content: flex-start;
+   align-self: flex-start;
+   flex-direction: column;
+
+}
+
+.dgvTitulos {
+   display: flex;
+   justify-content: flex-start;
+   align-self: flex-start;
+   flex-direction: row;
+   background-color: #138;
+   color: #C1C7E0;
+   border-radius: 5px 5px 0px 0px;
+}
+
+.dgvTitulos div, .dgvLinha div {
+   padding: 5px;
+
+}
+
+.dgvDados {
+   display: flex;
+   justify-content: flex-start;
+   align-self: flex-start;
+   flex-direction: column;
+}
+
+.dgvLinha {
+   display: flex;
+   justify-content: flex-start;
+   align-self: flex-start;
+   flex-direction: row;
+}
+
+.dgvLinha:nth-child(odd) {
+   background-color: #DDD;
+}
+
+.dgvLinha:nth-child(even) {
+   background-color: #EEE;
+}
+
+.dgvLinha:hover {
+   background-color: #088 !important; 
+   cursor: pointer;
+   color: #C1C7E0 !important;
+}
+
+.c1 {
+   width: 50px;
+}
+
+.c2 {
+   width: 150px;
+}
+
+.c3 {
+   width: 150px;
+}
+
+.c4 {
+   width: 150px;
+}
+
+.c5 {
+   width: 100px;
+}

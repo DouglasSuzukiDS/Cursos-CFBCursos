@@ -1,0 +1,22 @@
+/*
+	Filter: Filtros;
+
+		Para usar mais de um filtro, é preciso usar todos no mesmo comando
+
+		sepia(PORGENTAGEM) = Efeito de Envelhecimento; 
+
+		brightness(PORCENTAGEM) = Brilho;
+
+		saturate(~PORCENTAGEM) = Saturação;
+
+		drop-shadow(distX distY tam cor) = Sombra projetada;
+
+		blur(PX) = Embaçamento;
+
+
+*/
+
+img{
+	width: 500px;
+	filter: sepia(80%) brightness(120%) saturate(80%) drop-shadow(5px 5px 5px #888) blur(1px);
+}

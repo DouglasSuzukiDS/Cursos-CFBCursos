@@ -1,0 +1,27 @@
+/*(116)GaleriaImagemFiltravel*/
+
+.galeria{
+	max-width: 1000px;
+	margin: auto;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #CCC;
+}
+
+.imagens{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.img{
+	max-width: 30%;
+	padding: 10px;
+}
+
+.ativo{
+	border: 2px solid #000;
+	background-color: #F00;
+	color: #FFF;
+}

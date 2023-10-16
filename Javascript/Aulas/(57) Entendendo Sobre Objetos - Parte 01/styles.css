@@ -1,0 +1,14 @@
+/* (57) Entendendo Sobre Objetos - Parte 01 */
+body {
+   background-color: #202225;
+}
+
+.caixa {
+   border: 5px solid #000;
+   width: 400px;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   margin: 5px;
+   padding: 5px;
+}

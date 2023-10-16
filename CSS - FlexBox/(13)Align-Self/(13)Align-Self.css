@@ -1,0 +1,118 @@
+.item{
+   margin: 5px;
+   padding: 5px;
+   background: #447;
+   text-align: center;
+   font-size: 1em;
+   color: #FFF;
+}
+
+.container{
+   max-width: 600px;
+   height: 400px;
+   margin: 0 auto;
+   border: 1px solid #000;
+   justify-content: center; /* Eixo Principal */
+   align-items: flex-start; /* Eixo Secundário
+   align-content: center; /* Eixo Secundário */
+}
+
+.flexivel{
+   display: flex;
+}
+
+.horizontal{
+   flex-direction: row;
+}
+
+.vertical{
+   flex-direction: column;
+}
+
+.quebra{
+   flex-wrap: wrap;
+}
+
+.tam0{
+   flex-grow: 0;
+}
+
+.tam1{
+   flex-grow: 1;
+}
+
+.tam2{
+   flex-grow: 2;
+}
+
+.tam3{
+   flex-grow: 3;
+}
+
+.base0{
+   flex-basis: 0;
+}
+
+.base1{
+   flex-basis: 1;
+}
+
+.base2{
+   flex-basis: 2;
+}
+
+.base3{
+   flex-basis: auto;
+}
+
+.reduzir0{
+   flex-shrink: 0;
+}
+
+.reduzir1{
+   flex-shrink: 1;
+}
+
+.reduzir2{
+   flex-shrink: 2;
+}
+
+
+.reduzir3{
+   flex-shrink: 3;
+}
+
+.flex{
+   /*
+      Flex: Seria um atalho para as propriedades:
+         flex-grow, flex-shrink, flex-basis;
+              N   ,      1     ,     0
+
+   */
+   flex: 3 2 200px;
+}
+
+.aux{
+   flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: 0;
+}
+
+.inicio{
+   align-self: flex-start;
+}
+
+.meio{
+   align-self: center;
+}
+
+.base{
+   align-self: flex-end;
+}
+
+body{
+   font-family: Arial;
+   color: #000;
+}
+
+

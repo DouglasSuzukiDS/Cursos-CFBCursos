@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - Javascript 65 - Objeto Navigator</title>
+
+		<style>
+			#painel{
+			width: 400px;
+			height: 500px;
+			border: 1px solid #000;
+			border-radius: 10px;
+			padding: 10px;
+			}
+
+		</style>
+
+		<script>
+
+			// navigator = Traz informações do Navegador
+			// appName = Nome do Browser;
+			// appVersion = Versão do Browser;
+			// cookieEnabled = Verifica se tem Cookies Habilitados;
+			// geolocation = Retorna a localização geografica;
+			// .getCurrentPosition(1º Função caso tenha sucesso, Se esta habilitado, 2º função caso obter erro; 3º Opções para se trabalhar com o geolocation, como presição) 
+			// language = Obtem a linguagem;
+			// onLine =Diz se o browser esta online ou não
+			// platform = Qual Sistema Operacional o Browser esta operando;
+			// product = Enginer do browser;
+			// userAgent = Qual agente foi enviado para o servidor
+
+			var painel;
+
+			function localizar(pos){
+				var c=pos.coords;
+				painel.innerHTML+="Loc: Lat: " + c.latitude + " - Lon: " + c.longitude + "<hr>";
+			}
+
+			function verifica(){
+				painel=document.getElementById("painel");
+				painel.innerHTML="Nome do Browser: " + navigator.appName + "<hr>";
+				painel.innerHTML+="Versão do Browser: " + navigator.appVersion + "<hr>";
+				painel.innerHTML+="Cookies: " + navigator.cookieEnabled + "<hr>";
+				//painel.innerHTML+="Localização: " + navigator.geolocation.getCurrentPosition(localizar) + "<hr>";
+				navigator.geolocation.getCurrentPosition(localizar) + "<hr>";
+				painel.innerHTML+="Idioma: " + navigator.language + "<hr>";
+				painel.innerHTML+="onLine: " + navigator.onLine + "<hr>";
+				painel.innerHTML+="S.O: " + navigator.platform + "<hr>";
+				painel.innerHTML+="Engine: " + navigator.product + "<hr>";
+				painel.innerHTML+="Agente: " + navigator.userAgent + "<hr>";
+
+
+			}
+
+			window.addEventListener("load",verifica);
+			
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id="painel"></div>
+		
+	</body>
+</html>

@@ -1,0 +1,4 @@
+Necessário instalar o Node-Red
+
+Para rodar basta abris  o terminal e digitar: node-red e abrir no navegador
+http://127.0.0.1:1880/

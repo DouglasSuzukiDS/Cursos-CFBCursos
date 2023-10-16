@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML5 21 - Contenteditable & Spellcheck</title>
+
+	</head>
+
+	<body>
+
+		<!--
+			contenteditable: Torna o conteúdo editável;
+				true = O Torna editável; || false
+
+			spellcheck: Verificação Ortográfica;
+			true || false
+		-->
+
+		<div id="dv1" contenteditable="false" spellcheck="true" style="border: 1px solid #000">
+			Canal Fessor Bruno
+		</div>
+
+		<br/>
+
+		<button onclick="document.getElementById('dv2').innerHTML = document.getElementById('dv1').textContent">Clique Aqui</button>
+
+		<br/><br/>
+
+		<div id="dv2" style="border: 1px solid #000">
+			Curso de HTML5
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>CFB Cursos - Javascript 22 - Tratamento Try Cath Finally</title>
+		<meta charset="UTF-8">
+
+		<script>
+			/*  TRY =  Rotina de tratamento do provável erro; Exceção;
+				CATCH = Tratamento do Erro
+				THROW = Gera uma exceção, ou gera um novo erro;
+				Finally = Acontece independente se houver erro ou não, não é obrigatório; */
+
+			var num; //Maximo´10
+
+			try{
+				num=prompt("Digite um valor");
+				if(num>10){
+				throw new Error("Valor Inválido, o valor máximo é 10")
+			}
+				//document.write("Valor: "+num);
+			}catch(e){
+				console.log("ERRO: " + e.message);
+				num=10;
+				//document.write("ERRO: " + e.message);
+				//console.log("Mensagem de erro: " + e.message)
+			}finally{
+				//document.write("<br>Fim do tratamento");
+				document.write("Valor: "+num);
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+	
+	</body>
+</html>

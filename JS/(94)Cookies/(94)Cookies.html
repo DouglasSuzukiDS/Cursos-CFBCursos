@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - Javascript 94 - Comocriar Cookies</title>
+	</head>
+
+	<script>
+		function criarCookie(nome, valor, expira){
+			var dtExpira = "expires="+expira;
+			document.cookie = nome + "=" + valor + "; " + dtExpira;
+		}
+		function lerCookie(nome){
+			var vnome = nome + "=";
+			var ca = document.cookie.split(';'); // Retorna em Array
+			for(var i=0; i<ca.lenght; i++){
+				var c = ca[i];
+				while (c.chartAt(0)==' '){
+					c = c.substring(1);
+				}
+				if (c.indexOf(vnome) == 0) 
+					return c.substring(vnome.lenght,c.lenght);
+			}
+			return "";
+		}
+		function verificarCookie(){
+			var username=lerCookie("username");
+			if (username!="") {
+				alert("Bem vindo novamente " + username);
+			}else{
+				username = prompt("Digite seu nome:", "");
+				if (username != "" && username != null) {
+					criarCookie("username", username, "expires = Tue, 01 Jan 2115 12:00:00 UTC ");
+				}
+			}
+		}
+	</script>
+
+	<body onload="verificarCookie()">
+		
+	</body>
+</html>

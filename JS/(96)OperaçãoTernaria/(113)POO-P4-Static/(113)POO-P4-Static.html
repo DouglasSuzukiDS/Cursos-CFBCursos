@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFB Cursos - Javascript - Aula 113 - Static</title>
+    <script>
+        // Static = Diz que vai utilizar um endereço de memória fixo
+        class Carro{
+            static alerta = true
+            constructor(marca, modelo, cor){ // Chamado quando se instancia um obj
+                this.marca = marca
+                this.modelo = modelo
+                this.cor = cor
+                this.ligado = false
+                this.km = 0
+                this.comb = 10
+            }
+
+            info(){
+                console.log("Marca.......: " + this.marca)
+                console.log("Modelo......: " + this.modelo)
+                console.log("Cor.........: " + this.cor)
+                console.log("Ligado......: " + (this.ligado ? "Sim" : "Não"))
+                console.log("KM..........: " + this.km)
+                console.log("Combustíverl: " + this.comb)
+                console.log("Alerta......: " + (Carro.alerta ? "Sim" : "Não"))
+                console.log("---------------------")
+            }
+
+            ligar(){
+                this.ligado = true
+            }
+
+            desligar(){
+                this.ligado = false
+            }
+
+            set setAlerta(t){
+                Carro.alerta = t
+            }
+
+            get getAlerta(){
+                return Carro.alerta
+            }
+
+            set setComb(v){ // Usado para definir um valor no atributo
+                if(v < 0 || v > 100){
+                    alert("Valor invalido")
+                }else{
+                    this.comb = v
+                    console.log("Combutível alterado, valor alterado, valor atual: " + this.comb)
+                }
+            }
+
+            get getComb(){ // Usado para obter o valor de atributo
+                return this.comb
+            }
+        }
+
+        let c1 = new Carro("Honda", "HRV", "Prata")
+        let c2 = new Carro("VW", "Golf", "Branco")
+        let c3 = new Carro("GM", "Camaro", "Preto")
+        let c4 = new Carro("Ford", "Mustang", "Vermelho")
+
+        c1.setComb = 100
+
+        //c1.setAlerta = false
+        Carro.alerta = false
+
+        c1.info()
+        c2.info()
+        c3.info()
+        c4.info()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

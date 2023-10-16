@@ -1,0 +1,250 @@
+body{
+	margin: 0px;
+}
+
+body::-webkit-scrollbar{ /* Containner da Barra de rolagem */
+    width: 5px;
+    color: #000;
+    background-color: #273539;    
+}
+body::-webkit-scrollbar-thumb{ /* Barra de rolagem em si */
+    border-radius: 5px;
+    /*background-color: #F00;*/
+    background: rgba(255,255,255, 0.3);
+    /*background: rgba(255,255,255, 0.3); Para Deixar o scroll transparente */ 
+    width: 1px;
+}
+
+section, div{
+	display: flex;
+	justify-content: space-between;
+	display: -webkit-flex;
+	display: -moz-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+div #arsenal{
+	margin-right: 5px;
+	text-align: center;
+}
+
+#main{
+	/*border: 1px solid #000;*/
+	top: 0px;
+	left: 0px;
+	height: 150px;
+	width: 100%;
+	background-image: url("lay.png");
+	background-size: 100%;
+	background-attachment: fixed;
+}
+
+#cf{
+	height: 100%;
+	width: 100%;
+	background-attachment: fixed;
+}
+
+#arsenal{
+	border: 1px solid #F00;
+	top: 150px;
+	left: 0px;
+	height: 100%;
+	width: 1335px;
+	/*align-items: center;*/
+}
+
+.menu{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin: auto;
+	text-align: center;
+}
+
+#pi a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 0px;
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#vip a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 104px;
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#rifle a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 208px;
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#sniper a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 312px;
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#escopeta a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 416px;
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#metralhadora a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 520px;
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#subm a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 624px;	
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#pistola a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 728px;	
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#faca a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 832px;	
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#granada a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 936px;	
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#soldado a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 1040px;	
+	border: 2px solid #F00;
+	border-radius: 5px;
+}
+
+#caixa a{
+	height: 60px;
+	width: 104px;
+	top: 0px;
+	left: 1180px;	
+	border: 1px solid #242424;
+	border-radius: 5px;
+}
+
+#mnzp{
+}
+
+#mngp{
+}
+
+#pi a:hover, #vip a:hover, #rifle a:hover, #sniper a:hover, #escopeta a:hover, #metralhadora a:hover{
+	border: 2px solid #00F;
+	border-radius: 5px;
+}
+
+#subm a:hover, #pistola a:hover, #faca a:hover, #granada a:hover, #soldado a:hover, #caixa a:hover{
+	border: 2px solid #00F;
+	border-radius: 5px;
+}
+
+#pi a:active, #vip a:active, #rifle a:active, #sniper a:active, #escopeta a:active, #metralhadora a:active{
+	border: 2px solid #F00;
+	border-radius: 5px;
+}
+
+#subm a:active, #pistola a:active, #faca a:active, #granada a:active, #soldado a:active, #caixa a:active{
+	border: 2px solid #F00;
+	border-radius: 5px;
+}
+
+/* Congirurações para a Tabela com os Soldados */
+
+#dSoldados{ /* DIV com os Soldados */
+	width: 100%;
+	height: 100%;
+	border: 1px solid #00F;
+	text-align: center;
+	align-items: center;
+	position: relative;
+	margin: 22px;
+}
+
+
+table{ /* Formatação para a Tabela de Soldados em Geral */
+	border: 0px solid #000;
+	border-collapse: collapse;
+	margin: 15px;
+}
+table #tSoldados{
+	padding: 10px;
+}
+
+tr, td{ /* Formatações padrões para os TR e TD */
+	border: 1px solid #000;
+	width: 305px;
+	height: 106px;
+	margin: 15px;
+}
+
+
+.img{ /* Imagem do Soldado */
+	background-image: 100%;
+	width: 100%;
+	height: 100%;
+	margin-bottom: -5px;
+	border-radius: 7px;
+}
+
+#td1 #td2 #td3 #td4 #td5 #td6 #td7 #td8{ /* Formatação pro Texto 1 */
+	font-size: 16px;
+	font-style: italic;
+	font-weight: bold;
+}
+.DD{
+	border:1px solid #000;
+	border-radius: 10px;
+}
+
+

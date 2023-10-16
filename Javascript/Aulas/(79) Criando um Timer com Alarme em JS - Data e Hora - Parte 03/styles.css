@@ -1,0 +1,57 @@
+/* (79) Criando um Timer com Alarme em JS - Data e Hora - Parte 03 */
+body {
+   background-color: #202225;
+}
+   
+* {
+   padding: 0;
+   margin: 0;
+   border: none;
+   box-sizing: border-box;
+   font-size: large;
+}
+
+.timer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   width: 300px;
+   background-color: #EEE;
+   padding: 10px;
+   border-radius: 5px;
+   border: 3px solid #888;
+}
+
+.div_relogio {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 200px;
+   background-color: #444;
+   color: #0F0;
+   font-family: 'Courier New', Courier, monospace;
+   font-size: large;
+   padding: 10px;
+   border-radius: 5px;
+}
+
+input[type='number'] {
+   border: 1px solid #000;
+   font-size: large;
+   cursor: pointer;
+   border-radius: 5px;
+   padding: 5px;
+}
+
+button {
+   background-color: #AAA;
+   padding: 10px 20px;
+   margin: 5px;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.alarme { 
+   background-color: #F00 !important;
+}

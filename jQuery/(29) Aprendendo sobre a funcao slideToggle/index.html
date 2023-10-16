@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+   <style>
+      * {
+         padding: 0;
+         margin: 0;
+      }
+
+      .menu {
+         display: flex;
+         width: 100%;
+         flex-direction: column;
+      }
+
+      #menus {
+         background-color: #888;
+         display: flex;
+         width: 100%;
+      }
+
+      .btnMenu {
+         margin: 5px;
+         padding: 5px;
+         cursor: pointer;
+      }
+
+      #controle {
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+         background-color: #F00;
+         padding: 5px;
+         border-radius: 0 0 10px 10px;
+         margin-left: 10px;
+         margin-right: auto;
+      }
+
+      #controle button {
+         margin: 5px;
+      }
+      
+   </style>
+   <title>(29) Aprendendo sobre a função slideToggle</title>
+
+</head>
+<body>
+   <div id="menu" class="menu">
+      <div id="menus">
+         <button class="btnMenu">Home</button>
+         <button class="btnMenu">Cursos</button>
+         <button class="btnMenu">Material</button>
+         <button class="btnMenu">Contatos</button>
+         <button class="btnMenu">Sobre</button>
+      </div>
+
+      <div id="controle">
+         <button class="btnMenu">Menu</button>   
+         <p id="msg">Menu Exibido</p>
+      </div>
+   </div>
+   
+   <script src="script.js"></script>
+
+</body>
+</html>

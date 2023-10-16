@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML5 34 - Formulários Parte 4, Date, Time, Datetime-Local.</title>
+
+		<style>
+			.quebra{display: block;}
+			form{
+				border: 1px solid #000;
+				padding: 10px;
+				border-radius: 15px;
+				background-color: #EEE;
+			}
+			.espaco{margin-bottom: 15px;}
+			.espaco_t{margin-top: 15px;}
+		</style>
+
+	</head>
+
+	<body>
+		<!-- FORM
+			<form>: Representa uma coleção de elementos para associados do formulários;
+					Display: Block;
+					Categoria: Fluxo;
+					Contido por: Fluxo;
+					Filhos: Fluxo;
+
+				action: URL com o arquivo que irá receber os dados enviados;
+
+				autocomplete: Autocompletar campos ativos.
+
+				enctype: Codificação (tipo) dos dados enviados.
+
+				method: Método de envio dos dados (get = Envio pela URL /post = Envio externamente);
+
+				name: Nome do formulário;
+
+				novalidade: Desabilita a validação pelo Browser;
+
+				target: Como a página de destino (action) será aberta;
+		-->
+
+		<!-- LABEL/INPUT
+
+			<label> = Seria uma etiqueta de Identificação do campo;
+					Display: Block;
+					Categoria: Fluxo e Fraseado;
+					Contido por: Fraseados;
+					Filhos: Fraseados;
+
+			<input> = Area do formulário;
+					Display: Inline;
+					Categoria: Fluxo, Fraseado e Interativo;
+					Contido por: Fraseados;
+					Filhos: None;
+
+				type="text" = Caixa de texto;
+				type="submit" = Botão para envio dos dados;
+				type="reset" = Botão para Apagar os dados;
+				type="button" = Botão para configuração;
+		-->
+
+		<!-- Inputs-Password/CheckBox/Radio
+			Passaword = Campo para senha;
+
+			checkbox = Elemento de seleção multipla;
+
+			radio = Elemento de seleção unica, todas as opções devem ter o mesmo nome;
+
+				maxlenght = Tamanho máximo de caracteres;
+				size = Tamanho do elemento;
+				checked = A opção já vem marcada;
+		-->
+
+		<!-- Inputs-Date/Time/Datatime-local
+			Time: Permite selecionar uma hora;
+				min e max: Hora minima e máxima;
+				required: Atributo quequerido;
+
+			Date: Permite selecionar uma data;
+				min e max: Data minima e máxima;
+
+			Datetime-Local: Data e Hora;
+		-->	
+
+		<form name="f_cadastro" action="#" method="get">
+			<label class="quebra">Hora:</label>
+			<input type="time" name="f_hora" min="09:00" max="17:00">
+
+			<label class="quebra espaco_t">Data:</label>
+			<input type="date" name="f_date" min="2019-06-03" max="2019-06-08">
+
+			<label class="quebra espaco_t">Data e hora:</label>
+			<input type="datetime-local" name="f_data_hora" min="2019-06-03" max="2019-06-08">
+
+			<input class="quebra espaco_t" type="submit" name="f_entrar" value="Entrar">
+		</form>
+		
+	</body>
+</html>

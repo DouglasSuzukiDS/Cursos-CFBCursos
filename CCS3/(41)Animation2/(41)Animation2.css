@@ -1,0 +1,61 @@
+/*
+	keyframe = É um quadro chave que define propriedades daquele momento da animação
+
+	animation-iteration-count: Quantas vezes sera executada a animação 
+		infinite = Infinito
+
+	animation-play-state: Pausa a animação
+		running = Animação rodando;
+		paused = Pausado;
+
+	animation-direction: DIreção da animação
+		reverse = Reversa;
+		alternade = Alternado, ambas as direções
+
+
+
+
+
+*/
+
+@keyframes anima{ /* Determina as posições dos quadros chave 
+	0%{left: 500px; top: 500px;}
+	14%{left: 0px; top: 0px;}
+	28%{background-color: #FFF; left: 0px; top: 0px;}
+	42%{background-color: #F00; left: 0px; top: 0px;}
+	57%{background-color: #F00; left: 0px; top: 0px;}
+	71%{background-color: #FFF; left: 0px; top: 0px;}
+	85%{left: 0px; top: 0px;}
+	100%{left: 500px; top: 500px;}*/
+
+	0%{left: 0px; top: 0px;}
+	25%{left: 500px; top: 0px;}
+	50%{left: 500px; top: 500px;}
+	75%{left: 0px; top: 500px;}
+	100%{left: 0px; top: 0px;}
+}
+
+
+p{
+	position: relative;
+
+	/*left: 500px;
+	top: 500px;*/
+
+	left: 0px;
+	top: 0px;
+
+	width: 260px;
+	height: 260px;
+	border: 1px solid #000;
+	border-radius: 10px;
+	padding: 10px;
+	text-align: justify;
+	animation-name: anima;
+	animation-duration: 2s; 
+	animation-timing-function: linear;
+	animation-delay: 0s; /* Assim controla o delay dos keyframes */
+	animation-iteration-count: infinite; /* Quantas vezes sera executada a animação || infinite = infinito */ 
+	animation-play-state: running;
+	animation-direction: alternate;
+}

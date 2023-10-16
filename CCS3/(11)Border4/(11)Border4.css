@@ -1,0 +1,7 @@
+p{
+	border: 30px solid;
+	border-image: url(borda1.png) 15 round; 
+	/* round: Uma volta; Fatias(meio) pertencentes as bordas são reetidas */
+	/* border-image: url(borda1.png) 30 stretch; */
+	/* stretch = Estica a fatia do meio das bordas */ 
+}

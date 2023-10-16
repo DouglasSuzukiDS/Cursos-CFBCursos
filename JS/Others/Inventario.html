@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Inventário do CrossFire, feito no dia 08/06/19</title>
+
+		<style>
+
+			.bt{
+				border: 1px solid #000;
+				padding: 10px;
+				width: 100px;
+				height: 50px;
+				display: inline-block;
+				margin: 5px;
+				cursor: pointer;
+				border-radius: 4px;
+				text-align: center;
+				color: #00f;
+			}
+		
+	</style>
+
+		<script>
+
+			var Vips=["M4A1 Dragão Cyborg", "AK47 Dragão Cyborg", "Barrett M28A1 Dragão Predador", "Desert Eagle Predador x3", "Desert Eagle Eldorado", "RPK Dragão Serpente", "Kukri Dragão Dourado", "Machado Dragão Dourado", "Pá Dragão Predador", "Soco Mortal Dragão das Trevas", "Víboras"];
+
+			var Rifles=["M4A1 Dragão Vitoriosa", "AK Bustar Platium", "AK47-k-Guarda Real", "M4A1 Aurum", "M4A1-XS Jade", "AK47-Super Ouro", "AN94-Arnuvo", "M4A1 Custom BR x2", "M4A1 Soberana", "M4A1 Camo x2", "M4A1 Violet Crystal", "SG552-Camo", "QBZ-95 Camo", "M4A1 Crimson x2", "SAR-21 Reptiliano", "AN94", "M4A1 Miau", "DBR-Cobra", "AK47 Camo x2", "M4A1-X Camo Azul", "Winchester", "XM8", "G36K", "Type 89", "M16", "Ash-12.7", "M16A2", "M4A1", "PindadSS2", "Steyr AUG A3", "Famas", "MK18 Mod 0", "Steyer AUG A1", "RX4 Storm", "Tantal W2 88", "9A-91", "HK G36L", "G3A3", "AK47", "CM 901", "Type56", "Scar Heavy", "L85A1", "SAR-21", "Zastava M21", "Berettaa AR-70", "QBZ-95", "Scar Light", "STG 44", "SG540", "SG552", "MSBS-5.56", "AK74", "M4A1 Kevin", "AK47 BR", "LAPA FA 03", "CR 300ML x2", "KAC PDW"];
+
+			var Snipers=["AWM-Magma x2", "APR 338", "AWM-Zebra", "AWM-Caçador", "AWM-Crimson", "AWM-Ferrugem", "FR-F2 Ferrugem", "HK G28", "PSG-2", "SL8", "M700", "Steyr Elite", "SR99", "DSR-1", "Falcon OP99", "R93T2", "TRG-21", "WA2000", "Dragunov", "AWM", "AR-50 A1", "Walther G22"];
+
+			var Submetralhadoras=["Kriss Super-V DDB", "Bizon PP19-Ouro", "Dual Scorpion-Cerâmica Azul", "Steyr-PDP", "Dual Scorpion vZ.61", "Sterling-SilverType", "Calico M960", "MP7", "MP5K A4", "P90", "MP7A1", "K1A", "SR3M", "MP5", "SR-2M", "Veresk", "Micro Galil"];
+
+			var Metralhadoras=["M240B-Trovão", "M60 Metal Líquido", "Gatling Gun Metal Líquido", "Lewis Gun", "SS77-QuadCamo", "MG3 Camo", "KSP58D", "FN M249 Minimi", "Vektor SS-77", "L86 LSW", "M60", "RPK", "MG36", "Ultimax 100", "Neqev NG7"];
+
+			var Escopetas=["Jack Hammer DDB", "AA-12", "Remington 870-Knife", "M37 Stakout-Chamas", "KSG-15 Dragão Azul", "687 EELL Diamond", "Dual Desperados", "Spas-12", "Remington 870", "KSG-15", "Serbu-Cano Serrado", "XM1014", "REM 870P Breachers", "500 Chainsaw"];
+
+			var Pistolas=["Desert Eagle Prata", "Búfalo", "COP 357 Derringer x2", "Anaconda Red Dragon x2", "Desert Eagle Tiger", "Desert Eagle SD", "Desert Eagle", "Desert Eagle Escopeta", "Desert Eagle Camo x2", "Python", "PMR-30 Camo", "Ots-23 Drotik", "Anaconda", "S&W M66", "Mateba", "MK.23", "Colt 1911", "PMR-30", "P228", "USP", "Beretta M9", "Glock-18", "Dual Colt Grafite", "3.8tinho", "Desert Eagle - Guarda Real"];
+
+			var Facas=["Espada Divina", "Facas Plasmas", "Lâmina do Dragão", "Machado Ares x2", "Kris-Ultimate Gold", "Espada Persona", "Luva Matilha", "Kukri Labaredas", "Martelo do Trovão x2", "Luvas Cano-Longo", "Machado Fênix", "Martelo", "Soco Magma", "Leque Cerâmica Azul", "Dual Karambit", "Marreta Biônica x3", "Soco Ingles x2", "Machado Tomahawk", "Tijolo", "Machete x2", "Faca  Elite", "Faca Predador", "Punhos do Titã x11","Adaga Laser"];
+
+			var Granadas=["Flashbang x5", "Granada x5", "Smoke x5", "Flashbang Fênix Dourado x5", "Granada Fênix Dourado", "Smoke Fênix Dourado", "Fumaça Prata", "Granada Neve x5", "Granada Docinho x2", "Granada Sabão x3"];
+
+			var Personagens=["Trinity Vitoriosa", "Arch", "Arch Elite", "OPES", "Oficial Ming", "Fantasma Feminino", "Fantasma Masculino", "SIA", "Wooyoung", "Chansung", "STAR", "SPOP-Elite", "SWAT-Elite", "SWAT-Moscow", "OMOH 2.0", "SAS 2.0", "OMOH", "SWAT", "SWAT 2.0", "SAS"];
+
+			var CaixasMNZP=[];
+				var cx01=["AK47 Red Dragon", 50],     cx02=["RedShot Esp", 15 ],     cx03=["AK47 Mania", 35],     cx04=["Soco Mortal", 10],
+			cx05=["Arnuvo", 50],     cx06=["Azul ", 40],     cx07=["Barragem ", 30],     cx08=["Black Dragon", 35],
+			cx09=["Camo", 20],     cx10=["Camo 2 ==> ", 40],     cx11=["Camo Tática ", 55],     cx12=["Coleção Fênix Dourada", 10],
+			cx13=["Cutelaria", 18],     cx14=["Desert-Eagle Camo", 105],     cx15=["Dia de Festa", 20],     cx16=["Especial 2.0", 45],
+			cx17=["Espoleta", 20],     cx18=["Evento da Amizade", 20],     cx19=["Event Especial CF", 20],     cx20=["HexCamo", 60],
+			cx21=["Imperial", 25],     cx22=["Indepedência", 120],     cx23=["Jade 1", 130],     cx24=["Jade 2", 30],
+			cx25=["Jasmine 2", 25],     cx26=["KAC ChainSaw", 35],     cx27=["Machado Phoenix", 60],     cx28=["Magma", 25],
+			cx29=["Modo Zumbi", 70],     cx30=["Nevasca", 5],     cx31=["Ouro Cintilante", 30],     cx32=["Ouro 3", 5],
+			cx33=["Ouro Negro", 35],    cx34=["Adagas Douradas", 10],    cx35=["Rosa Choque", 30],     cx36=["Selva", 20],
+			cx37=["Tigre 1", 30],     cx38=["Tigre 2", 30],     cx39=["Dual Colt Grafite", 10],     cx40=["Touro", 40],
+			cx41=["Tática", 45],     cx42=["Ultimate Gold", 5],     cx43=["Ultimate Gold 2", 60],     cx44=["Ultimate Silver", 40],
+			cx45=["Urban Camo", 5],     cx46=["Verde", 49],     cx47=["Zéfiro", 65],     cx48=["Galera", 44],
+			cx49=["Time", 40],     cx50=["Desert-Eagle SD", 20],     cx51=["FR-F2 Ferrugem", 50],     cx52=["Fênix", 50],
+			cx53=["M14EBR", 10],     cx54=["M200 CheyTac", 15],     cx55=["Mauser M1896", 10],     cx56=["Metal Líquido", 25],
+			cx57=["Pacote Ártico", 30],     cx58=["Red Spray", 40],     cx59=["Scar Lighr Ouro", 60],     cx60=["Soco Inglês", 20];
+			//cx29=["", ],     cx30=["", ],     cx31=["", ],     cx32=["", ];
+
+				CaixasMNZP.push(cx01);    CaixasMNZP.push(cx02);    CaixasMNZP.push(cx03);    CaixasMNZP.push(cx04);
+				CaixasMNZP.push(cx05);    CaixasMNZP.push(cx06);    CaixasMNZP.push(cx07);    CaixasMNZP.push(cx08);
+				CaixasMNZP.push(cx09);    CaixasMNZP.push(cx10);    CaixasMNZP.push(cx11);    CaixasMNZP.push(cx12);
+				CaixasMNZP.push(cx13);    CaixasMNZP.push(cx14);    CaixasMNZP.push(cx15);    CaixasMNZP.push(cx16);
+				CaixasMNZP.push(cx17);    CaixasMNZP.push(cx18);    CaixasMNZP.push(cx19);    CaixasMNZP.push(cx20);
+				CaixasMNZP.push(cx21);    CaixasMNZP.push(cx22);    CaixasMNZP.push(cx23);    CaixasMNZP.push(cx24);
+				CaixasMNZP.push(cx25);    CaixasMNZP.push(cx26);    CaixasMNZP.push(cx27);    CaixasMNZP.push(cx28);
+				CaixasMNZP.push(cx29);    CaixasMNZP.push(cx30);    CaixasMNZP.push(cx31);    CaixasMNZP.push(cx32);
+				CaixasMNZP.push(cx33);    CaixasMNZP.push(cx34);    CaixasMNZP.push(cx35);    CaixasMNZP.push(cx36);
+				CaixasMNZP.push(cx37);    CaixasMNZP.push(cx38);    CaixasMNZP.push(cx39);    CaixasMNZP.push(cx40);
+				CaixasMNZP.push(cx41);    CaixasMNZP.push(cx42);    CaixasMNZP.push(cx43);    CaixasMNZP.push(cx44);
+				CaixasMNZP.push(cx45);    CaixasMNZP.push(cx46);    CaixasMNZP.push(cx47);    CaixasMNZP.push(cx48);
+				CaixasMNZP.push(cx49);    CaixasMNZP.push(cx50);    CaixasMNZP.push(cx51);    CaixasMNZP.push(cx52);
+				CaixasMNZP.push(cx53);    CaixasMNZP.push(cx54);    CaixasMNZP.push(cx55);    CaixasMNZP.push(cx56);
+				CaixasMNZP.push(cx57);    CaixasMNZP.push(cx58);    CaixasMNZP.push(cx59);    CaixasMNZP.push(cx60);
+				//CaixasMNZP.push(cx1);    CaixasMNZP.push(cx3);    CaixasMNZP.push(cx3);    CaixasMNZP.push(cx3);
+				
+
+
+			var CaixasMNGP=[];
+			var cxGP01=["Camo 2", 30],     cxGP02=["Camo 4", 40],     cxGP03=["Camper", 5],     cxGP04=["Camuflagem", 60],
+			cxGP05=["Celebração", 55],     cxGP06=["Granada Fênix", 55],     cxGP07=["LAPA", 4],     cxGP08=["LR 300ML", 7],
+			cxGP09=["Machete", 6],     cxGP10=["Marreta Bionica", 19],     cxGP11=["Neqev NG7", 14],     cxGP12=["Walter G22", 4];
+		
+				CaixasMNGP.push(cxGP01);    CaixasMNGP.push(cxGP02);    CaixasMNGP.push(cxGP03);    CaixasMNGP.push(cxGP04);
+				CaixasMNGP.push(cxGP05);    CaixasMNGP.push(cxGP06);    CaixasMNGP.push(cxGP07);    CaixasMNGP.push(cxGP08);
+				CaixasMNGP.push(cxGP09);    CaixasMNGP.push(cxGP10);    CaixasMNGP.push(cxGP11);    CaixasMNGP.push(cxGP12);
+
+			var CaixasMZ=[];
+				var cxMZ01=["Bronze", 18],     cxMZ02=["Gravitron Bronze", 3],     cxMZ03=["Cofre Bau Ouro", 6],     cxMZ04=["Gravitron Cristal", 26],
+				cxMZ05=["Gravitron Prata", 23],     cxMZ06=["Prata", 25],     cxMZ07=["Mutante", 6],     cxMZ08=["Arca Dourada", 20],
+				cxMZ09=["Arca Prateada", 34],  cxMZ10=["Esp. Cratera 2.0", 64],  cxMZ11=["Chefe Cratera 2.0", 39],   cxMZ12=["Arca Brilhante", 162],
+				cxMZ13=["Arca Bronze", 12],   cxMZ14=["Des. Suprema Bronze", 4],    cxMZ15=["Des. Super Prata", 9],   cxMZ16=["C.M Bau Bronze", 25],
+				cxMZ17=["Evento B.R", 1],     cxMZ18=["B.R", 3],     cxMZ19=["C.M Bau Ouro", 2],     cxMZ20=["Coliseu Cof Cristal", 7],
+				cxMZ21=["Cristal Rubro", 6],     cxMZ22=["Gravitron S.C", 3],     cxMZ23=["Cristal", 12],     cxMZ24=["Esp.Arena", 2],
+				cxMZ25=["Coliseu Cof Bronze", 3],     cxMZ26=["Coliseu Chefe", 1],     cxMZ27=["Ouro", 2],     cxMZ28=["Desv. Atlas", 3],
+				cxMZ29=["C.M Bau Prata", 15],     cxMZ30=["Baliscus", 1],     cxMZ31=["Normal", 87],     cxMZ32=["Premium", 37],
+				cxMZ33=["Especial",106 ],     cxMZ34=["Besta Glacial", 79],     cxMZ35=["Máquina Gargola", 78],     cxMZ36=["Persona", 33],
+				cxMZ37=["Destruidor", 1],     cxMZ38=["Prata", 149],     cxMZ39=["Ouro", 41],     cxMZ40=["Especial Barragem", 121],
+				cxMZ41=["Cristal", 158],     cxMZ42=["Especial Barragem", 65],     cxMZ43=["Especial Barragem 3", 24],    cxMZ44=["Esp Cratera", 1],
+				cxMZ45=["Destastação Esp", 2];   
+				
+				CaixasMZ.push(cxMZ01);    CaixasMZ.push(cxMZ02);    CaixasMZ.push(cxMZ03);    CaixasMZ.push(cxMZ04);
+				CaixasMZ.push(cxMZ05);    CaixasMZ.push(cxMZ06);    CaixasMZ.push(cxMZ07);    CaixasMZ.push(cxMZ08);
+				CaixasMZ.push(cxMZ09);    CaixasMZ.push(cxMZ10);    CaixasMZ.push(cxMZ11);    CaixasMZ.push(cxMZ12);
+				CaixasMZ.push(cxMZ13);    CaixasMZ.push(cxMZ14);    CaixasMZ.push(cxMZ15);    CaixasMZ.push(cxMZ16);
+				CaixasMZ.push(cxMZ17);    CaixasMZ.push(cxMZ18);    CaixasMZ.push(cxMZ19);    CaixasMZ.push(cxMZ20);
+				CaixasMZ.push(cxMZ21);    CaixasMZ.push(cxMZ22);    CaixasMZ.push(cxMZ23);    CaixasMZ.push(cxMZ24);
+				CaixasMZ.push(cxMZ25);    CaixasMZ.push(cxMZ26);    CaixasMZ.push(cxMZ27);    CaixasMZ.push(cxMZ28);
+				CaixasMZ.push(cxMZ29);    CaixasMZ.push(cxMZ30);    CaixasMZ.push(cxMZ31);    CaixasMZ.push(cxMZ32);
+				CaixasMZ.push(cxMZ33);    CaixasMZ.push(cxMZ34);    CaixasMZ.push(cxMZ35);    CaixasMZ.push(cxMZ36);
+				CaixasMZ.push(cxMZ37);    CaixasMZ.push(cxMZ38);    CaixasMZ.push(cxMZ39);    CaixasMZ.push(cxMZ40);
+				CaixasMZ.push(cxMZ41);    CaixasMZ.push(cxMZ42);    CaixasMZ.push(cxMZ43);    CaixasMZ.push(cxMZ44);
+				CaixasMZ.push(cxMZ45);    
+
+			var CaixasLeilao=["VIP Agata ll x6", "VIp Agata l x3", "Kill Mark l x3", "Mascote 5 x3", "Mascote 1", "VIP Ametista x4", "Vitoriosa Ametista x3", "Vitoriosa Esmeralda"];
+
+			var CartaoPostal=["FPS Para Sempre", "2 Anos", "Aniversário 7 anos", "Camo Clássica", "3 Anos", "Honra e Glória", "Jack, o Estripador", "CF 2.0", "FPS Fortes", "[2016]Portugal", "[2016]Uruguai", "[2016]Egito", "[2016]Panamá", "[2016]Marrocos", "CrossFire 4 Anos", "[2016]Alemanha", "[2016]Japão", "[2016]Polônia", "[2016]Tunisia", "[2016]Croácia", "[2016]Costa Rica", "[2016]Argentina", "[2016]Bélgica", "[2016]Suíça", "[2016]México", "[2016]Sérvia", "[2016]Nigéria", "[2016]Senegal", "[2016]Correia do Sul", "[2016]Peru", "[2016]Inglaterra", "[2016]Espanha", "[2016]Austrália", "[2016]Dinamarca", "[2016]Suécia", "[2016]Colômbia", "[2016]França", "[2016]Rússia", "[2016]Brasil", "[2016]Arabia Saudita", "[2016]Irã", "[2016]Islândia", "OPES", "Aniversário 5 Anos", "Aniversário 6 Anos", "Soco Mortal Dragão das Trevas", "Desert Eagle Eldorado", "Crimson", "Dragão Dourado", "Dragão Cyborg","[CopaAmerica19]Argentina","[CopaAmerica19]Brasil","[CopaAmerica19]Chile","[CopaAmerica19]Colômbia","[CopaAmerica19]Japão","[CopaAmerica19]Bolívia","[CopaAmerica19]Equador","[CopaAmerica19]Paraguai","[CopaAmerica19]Peru","[CopaAmerica19]Uruguai","[CopaAmerica19]Venezuela","[CopaAmerica19]Qatar"];
+
+			var Spray=["2 Anos", "Aniversário 7 Anos", "Jack,o Estripador", "3 Anos", "Honra e Glória", "Franco Atirador", "CF 2.0", "FPS Fortes", "CF 4 Anos", "OPES", "Aniversário 5 Anos", "Aniversário 6 Anos", "Soco Mortal Dragão das Trevas", "Desert Eagle Eldorado"];
+
+			//document.write(Vips.length); Tamanho do Array;
+
+			Vips.sort();
+			Rifles.sort();
+			Snipers.sort();
+			Submetralhadoras.sort();
+			Metralhadoras.sort();
+			Escopetas.sort();
+			Pistolas.sort();
+			Facas.sort();;
+			Granadas.sort();
+			Personagens.sort();
+			CaixasMNZP.sort();
+			CaixasMNGP.sort();
+			CaixasMZ.sort();
+			CaixasLeilao.sort();
+			CartaoPostal.sort();
+			Spray.sort();
+
+			function mtVIPS(){
+				document.write("Armas VIPS: "+ Vips.length + "<br><br>");
+				for(var i=0; i<Vips.length; i++){
+					document.write(Vips[i]+"<br>");
+				}
+			}
+
+			function mtRifles(){
+				document.write("Rifles no Arsenal: "+ Rifles.length + "<br><br>");
+				for(var i=0; i< Rifles.length; i++){
+					document.write(Rifles[i]+"<br>");
+				}
+			}
+
+			function mtSnipers(){
+				document.write("Snipers no Arsenal: "+ Snipers.length + "<br><br>");
+				for(var i=0; i<Snipers.length; i++){
+					document.write(Snipers[i]+"<br>");
+				}
+			}
+
+			function mtSMG(){
+				document.write("Sub-Metralhadores no Arsenal: "+ Submetralhadoras.length + "<br><br>");
+				for(var i=0; i<Submetralhadoras.length; i++){
+					document.write(Submetralhadoras[i]+"<br>");
+				}
+			}
+
+			function mtMG(){
+				document.write("Metralhadoras no Arsenal: "+ Metralhadoras.length + "<br><br>");
+				for(var i=0; i<Metralhadoras.length; i++){
+					document.write(Metralhadoras[i]+"<br>");
+				}
+			}
+
+			function mtEscopetas(){
+				document.write("Escopetas no Arsenal: "+ Escopetas.length + "<br><br>");
+				for(var i=0; i<Escopetas.length; i++){
+					document.write(Escopetas[i]+"<br>");
+				}
+			}
+			
+			function mtPistolas(){
+				document.write("Pistolas no Arsenal: "+ Pistolas.length + "<br><br>");
+				for(var i=0; i<Pistolas.length; i++){
+					document.write(Pistolas[i]+"<br>");
+				}
+			}
+
+			function mtFacas(){
+				document.write("Facas no Arsenal: "+ Facas.length + "<br><br>");
+				for(var i=0; i<Facas.length; i++){
+					document.write(Facas[i]+"<br>");
+				}
+			}
+
+			function mtGranadas(){
+				document.write("Granadas no Arsenal: "+ Granadas.length + "<br><br>");
+				for(var i=0; i<Granadas.length; i++){
+					document.write(Granadas[i]+"<br>");
+				}
+			}
+
+			function mtPersonagens(){
+				document.write("Personagens Existentes: "+ Personagens.length + "<br><br>");
+				for(var i=0; i<Personagens.length ; i++){
+					document.write(Personagens[i]+"<br>");
+				}
+			}
+
+			function mtMNZP(){
+				document.write("Há dispivel no meu Inventário "+ CaixasMNZP.length + " Tipos de Caixas MN-ZP <br><br>");
+
+				for(i=0; i<CaixasMNZP.length; i++){
+					document.write(CaixasMNZP[i]+"<br>"+"<hr>");
+				}
+					
+						
+			}
+
+			function mtMNGP(){
+				document.write("Há dispivel no meu Inventário "+ CaixasMNGP.length + " Tipos de Caixas MN-GP <br><br>");
+				for(i=0; i<CaixasMNGP.length; i++){
+				document.write(CaixasMNGP[i]+"<br>"+"<hr>");
+				}
+			}
+
+			function mtCXMZ(){
+				document.write("Há dispivel no meu Inventário "+ CaixasMZ.length + " Tipos de Caixas MZ <br><br>");
+				for(i=0; i<45; i++){
+				document.write(CaixasMZ[i]+"<br>"+"<hr>");
+				}
+			}
+
+
+			function mtLeilao(){
+				document.write("Caixas de Leilão Disponíveis: "+ CaixasLeilao.length + "<br><br>");
+				for(var i=0; i<CaixasLeilao.length; i++){
+					document.write(CaixasLeilao[i]+"<br>");
+				}
+			}
+
+			function mtCP(){
+				document.write("Cartões Postais Disponíveis: "+ CartaoPostal.length + "<br><br>");
+				for(var i=0; i<CartaoPostal.length; i++){
+					document.write(CartaoPostal[i]+"<br>");
+				}
+			}
+
+			function mtSP(){
+				document.write("Sprays Disponíveis: "+ Spray.length + "<br><br>");
+				for(var i=0; i<Spray.length; i++){
+					document.write(Spray[i]+"<br>");
+				}
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+		<div id="cEscolheu">
+			<div align="left"> <button id="btVips" class="bt" onclick="mtVIPS()">VIPS</button> </div>
+			<div align="left"> <button id="btRifles" class="bt" onclick="mtRifles()">Rifles</button> </div>
+			<div align="left"> <button id="btSnipers" class="bt" onclick="mtSnipers()">Snipers</button> </div>
+			<div align="left"> <button id="btSMG" class="bt" onclick="mtSMG()">Sub-Metralhadoras</button> </div>
+			<div align="left"> <button id="btMG" class="bt" onclick="mtMG()">Metralhadoras</button></div>
+			<div align="left"> <button id="btEscopetas" class="bt" onclick="mtEscopetas()">Escopetas</button> </div>
+			<div align="left"> <button id="btPistolas" class="bt" onclick="mtPistolas()">Pistolas</button> </div>
+			<div align="left"> <button id="btFacas" class="bt" onclick="mtFacas()">Facas</button> </div>
+			<div align="left"> <button id="btGranadas" class="bt" onclick="mtGranadas()">Granadas</button></div>
+			<div align="left"> <button id="btPersonagens" class="bt" onclick="mtPersonagens()">Personagens</button> </div>
+			<div align="left"> <button id="btMNZP" class="bt" class="bt" onclick="mtMNZP()">Caixas MN-ZP</button> </div>
+			<div align="left"> <button id="btMNGP" class="bt" onclick="mtMNGP()">Caixas MN-GP</button> </div>
+			<div align="left"> <button id="btCaixas" class="bt" onclick="mtCXMZ()">Caixas Modo Zumbi</button> </div>
+			<div align="left"> <button id="btLeilao" class="bt" onclick="mtLeilao()">Caixas Leilão</button> </div>
+			<div align="left"> <button id="btCP" class="bt" onclick="mtCP()">Cartões Postais</button> </div>
+			<div align="left"> <button id="btSP" class="bt" onclick="mtSP()">Sprays</button> </div>
+		</div>
+
+		<table id="tTabela" align="center">
+
+			<td>
+				<tr>
+					
+				</tr>
+			</td>
+	
+		</table>
+								
+	</body>
+</html>

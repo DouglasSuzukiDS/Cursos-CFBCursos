@@ -1,0 +1,72 @@
+/*
+	table-layout: Atributo que divide o tamanho da tabela igualmente;
+		fixed: Fixo;
+
+	vertical-align: Posicão do texto na tabela;
+		top = Topo
+		midlle = Meio;
+		bottom = Em baixo
+
+	text-align: Alinhamento do texto;
+		center = Centro;
+
+	border-collapse: Separação das bordas;
+		collapse = Sem separação
+		separate = Separado 
+
+	border-spacing: Espaçamento das bordas;
+
+	empty-cells: Celulas vazias;
+		show: Mostra;
+		hide: Oculta;
+
+	:nth-child : Feito zebra para tag;
+		even = Preenche os elementos Pares
+
+
+*/
+
+table, td, th{
+	border: 1px solid #000;
+}			
+
+table{
+	width: 500px;
+	table-layout: fixed;
+	border-collapse: collapse;
+	/*border-spacing: 50px 10px;*/
+	/*empty-cells: hide;*/
+}
+
+td, th{
+	height: 30px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+th{
+	background-color: #8A8;
+	color: #FFF;
+	font-size: 20px;
+}
+
+.zebra{  /* Uma das formas de fazer linhas zebra, basta colocar a classe nos elemntos */
+	background: #DDD;
+}
+
+tr:nth-child(even){
+	background: #DDD
+}
+
+p:nth-child(even){
+	background: #FDD;
+}
+
+div{
+	display: table-cell; /* Posibilita transformar o testo em celula de tabela para receber suas formatações */ 
+	width: 300px;
+	height: 300px;
+	border: 1px solid #000;
+	vertical-align: middle;
+	text-align: center; 
+}

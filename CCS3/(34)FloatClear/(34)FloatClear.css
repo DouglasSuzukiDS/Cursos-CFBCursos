@@ -1,0 +1,27 @@
+/*
+	float: Indica se um elemento vai ser um elemento flutuante ou não;
+		left: Elemento na Esquerda;
+		right: Elemento na Direita;
+
+	clear: Cancela o float, limpa algum posicionamento;
+		left = Limpa a esquerda;
+		right = Limpa a direita; 
+		both = Limpa na esquerda e direita; 
+*/	
+
+img{
+	border: 1px solid #000;
+}
+
+#img1{
+	float: left;
+}
+
+#img2{
+	float: right;
+	height: 500px;
+}
+
+.fix{
+	clear: both;
+}

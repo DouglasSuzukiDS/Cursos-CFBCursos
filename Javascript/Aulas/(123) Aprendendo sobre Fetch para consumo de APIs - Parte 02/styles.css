@@ -1,0 +1,27 @@
+/* (123) Aprendendo sobre Fetch para consumo de APIs - Parte 02 */
+body {
+   background-color: #202225;
+}
+   
+* {
+   padding: 0;
+   margin: 0;
+   border: none;
+   box-sizing: border-box;
+}
+
+
+input {
+   border: 3px solid #AAA;
+   border-radius: 5px;
+   padding: 5px;
+   margin-bottom: 10px;
+}
+
+button {
+   padding: 5px 30px;
+   cursor: pointer;
+   border-radius: 5px;
+   background-color: #888;
+   color: #C1C7E0;
+}

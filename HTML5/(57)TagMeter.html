@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML5 57 - Tag Meter</title>
+		<style type="text/css">
+			meter{
+				width: 500px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--
+			<meter>: Basicamente representa uma medida;
+				Display: Inline;
+				Categoria: Fluxo e Fraseados;
+				Contido por: Fluxos;
+				Filhos: Fraseado;
+
+					value = Valor da meta;
+					Max = Valor Máximo;
+					Min = Valor Minimo;
+					high = Alerta máximo;
+					low = Alerta minimo;
+					optimum = Valor ideial;
+		-->
+		<h1>CFB Cursos</h1>
+		<p>www.youtube.com/cfbcursos</p>
+		<p>www.cfbcursos.com.br</p>
+		<p>www.github.com/cfbcursos</p>
+		<meter id="m1" value="5" max="10" min="0" high="8" low="2" optimum="5"></meter>
+
+		<script type="text/javascript">
+			var v1=document.getElementById("m1").value="10";
+		</script>
+		
+	</body>
+</html>

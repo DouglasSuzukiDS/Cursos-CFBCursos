@@ -1,0 +1,19 @@
+[
+    {
+        "id": "f7f7f0d4ae86d01e",
+        "type": "http in",
+        "z": "0284ef6bf3345299",
+        "name": "Agenda",
+        "url": "/contato",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "faaf7d744bb6c26e"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,61 @@
+﻿<html>
+	<head>
+		<title>Aula 6 - JavaScript</title>
+		<script language "javascript">
+
+			//Push = Insere no final
+			//Pop = Remove o ultimo elemento
+			//Unshift = Insere no começo
+			//Shift = Remove do inicio
+			//Length = Tamanho
+			//Sort = Ordena os elementos
+			
+			var coisas=new Array();
+			var num=new Array(7,3,5,1,9,2,0,4,6,8);
+			var i;
+
+			coisas[0]="Bola";
+			coisas[1]="Pente";
+			coisas[2]="Sapato";
+			coisas[3]="Avião";
+			coisas[4]="Mouse";
+			coisas[5]="Livro";
+			coisas[6]="Espada";
+
+			coisas.push("Carro");
+			coisas.push("TV");
+
+			coisas.pop();
+			coisas.pop();
+			coisas.pop();
+
+			coisas.unshift("Boneco");
+			coisas.unshift("Porta");
+
+			coisas.shift();
+			coisas.shift();
+			coisas.shift();
+			
+			
+
+			for(i=0; i<coisas.length; i++){
+				document.write(coisas[i]);
+				document.write("<br/>");
+			}
+
+			document.write("<hr/>");
+
+			num.sort();
+		
+			for(i=0; i<num.length; i++){
+				document.write(num[i]);
+				document.write("<br/>");
+			}
+
+		</script>
+	</head>
+	
+	<body>
+	
+	</body>
+</html>

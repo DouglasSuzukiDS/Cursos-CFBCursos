@@ -1,0 +1,30 @@
+/* (32) Metodo getElementByClassName - Manipulação de DOM - Parte 03 */
+
+.curso {
+   display: flex;
+   justify-content: center;
+   width: 200px;
+   border: 4px solid #888;
+   border-radius: 10px;
+   padding: 10px;
+   margin: 5px 0px;
+   cursor: pointer;
+}
+
+.curso:hover { border-color: #F00; }
+
+.c1 {
+   background-color: #CCC;
+   color: #444;
+}
+
+.c2 {
+   background-color: #444;
+   color: #CCC;
+}
+
+.destaque {
+   background-color: #800 !important;
+   color: #FCC;
+   border-color: #F00;
+}

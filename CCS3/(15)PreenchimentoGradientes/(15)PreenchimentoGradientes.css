@@ -1,0 +1,36 @@
+/* linear-gradient: Aquele que tem variação Linear em qualquer direção;
+   radial-gradient: Variação Circular ; */ 
+
+#dv1{
+	width: 600px;
+	height: 300px;
+	border: 1px solid #000;
+
+	/* background: linear-gradient(to top, #F00,#FF0); */ 
+	/* Uma direção, cor de inicio, cor final */
+
+	/* background: linear-gradient(180deg, #F00,#FF0,#00F); */
+	/* Numero de grau +deg, cor, ... , cor  */
+
+	/* background: linear-gradient(180deg, #F00 0%,#FF0 25%,#00F 50%); */
+	/* É possível controlar a posição das cores em Porcentagem */
+	
+	/* background: radial-gradient(#F00 0%, #FF0 50%); */
+
+	/* background: radial-gradient(circle, #F00 0%, #FF0 50%); */
+	/* Assim força a variação ser um circulo */ 
+
+	/* background: repeating-linear-gradient(90deg, #F00 0%, #FF0 20%); */
+	/* Assim o Gradiente se reperete até completar seu corpo */ 
+
+	/* background: repeating-radial-gradient(circle, #F00 0%, #FF0 20%); */
+	/* Repetição válida para radial também */ 
+}
+
+h1{ /* Texto Gradiente */
+	font-size: 100pt;
+	background: linear-gradient(90deg, #F00 0%, #FF0 75%);
+	-webkit-text-fill-color: transparent; /* Texto Transparente */
+	-webkit-background-clip: text;
+	/* Corte do gradiente, tornando o texto transparente visivel com o gradiente */ 
+}

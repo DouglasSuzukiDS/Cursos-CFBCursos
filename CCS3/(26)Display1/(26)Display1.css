@@ -1,0 +1,35 @@
+/*
+	Display: controla o posicionamento do elemento na tela;
+		none = Página não mostra o elemento
+		inline = Permite outros elementos na linha mas segue o tamanho do seu conteudo
+		block = Não aceita outros elementos na mesma linha
+		inline-block = 	Uni as duas propriedades possibilitando determinar o tamanho
+*/
+
+/* div = Tem display padrão Block || span = tem display padrão inline */
+
+div,span{
+	border: 1px solid #000;
+	margin: 10px;
+	width: 100px;
+	height: 100px;
+	/*display: none;*/
+}
+
+#d1{
+	/*visibility: hidden; // Oculta o elemento*/
+	display: inline: ;				
+}
+
+#s1{
+	display: inline-block;
+}
+
+#d2{
+	display:none;
+}
+							
+
+#s2{
+	display: inline-block;
+}

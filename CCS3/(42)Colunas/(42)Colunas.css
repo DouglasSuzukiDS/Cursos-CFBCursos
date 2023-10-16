@@ -1,0 +1,34 @@
+/*
+	columns: Numero de Colunas 
+	
+	column-gap: Distancia entre as colunas;
+
+	column-rule: Linah divisória entere as colunas;
+
+*/
+
+p{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 800px;
+	height: 500px;
+	border: 1px solid #000;
+	border-radius: 10px;
+	padding: 10px;
+	text-align: justify;
+
+	columns: 3; /* Numero de Colunas */
+	-webkit-columns: 3; /* Para IE, Opera */
+	-moz-columns: 3; /* Mozila */
+
+	column-gap: 50px;
+	-webkit-column-gap: 50px;
+	-moz-column-gap: 50px;
+
+	column-rule: 10px inset #F00;
+	-webkit-column-rule: 10px inset #F00;
+	-moz-column-rule: 10px inset #F00;
+
+
+}

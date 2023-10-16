@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFB Cursos - Javascript - Aula 105 - Objetos Litrerais</title>
+    <!--
+    <script>
+        
+        const Carro = {
+            marca: "VM",
+            modelo: "Golf",
+            info: function(){
+                console.log("Marca.: " + this.marca)
+                console.log("Modelo: " + this.modelo)
+            }
+        }
+
+        const c2 = Object.create(Carro)
+        const c3 = Object.create(Carro)
+
+        /*console.log(Carro.marca)
+        console.log(Carro.modelo)*/
+
+        /*Carro.marca = "Honda"
+        Carro.modelo = "HRV"
+        //Carro.info()*/
+
+        Carro["marca"] = "Ford"
+        Carro["modelo"] = "Ranger"
+        /*console.log(Carro["marca"])
+        console.log(Carro["modelo"])*/
+
+        c2.marca = "Honda"
+        c2.modelo = "HRV"
+
+        c3.marca = "Fiat"
+        c3.modelo = "Toro"
+
+        Carro.info()
+        c2.info()
+        c3.info()
+
+    </script> -->
+
+    <script>
+
+         /*const Veiculo = {
+            marca: "VM",
+            modelo: "Golf",
+            info: function(){
+                console.log("Marca.: " + this.marca)
+                console.log("Modelo: " + this.modelo)
+            }
+        }
+        const Caracteristicas = {
+            cor: "Cinza",
+            cambio: "Automatico"
+        }
+
+        //delete Caracteristicas.cor
+
+        const Carro = Object.assign(Veiculo, Caracteristicas) // Mescla Objs
+
+        console.log(Carro)*/
+
+        const Carro = {
+            marca: "VM",
+            modelo: "Golf",
+            cor: "Cinza",
+            cambio: "Automatico",
+            info: function(){
+                console.log("Marca.: " + this.marca)
+                console.log("Modelo: " + this.modelo)
+            }
+        }
+
+        let {marca, modelo} = Carro
+
+        marca = "Honda"
+        modelo = "HRV"
+
+        console.log(Carro)
+        console.log(marca)
+        console.log(modelo)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

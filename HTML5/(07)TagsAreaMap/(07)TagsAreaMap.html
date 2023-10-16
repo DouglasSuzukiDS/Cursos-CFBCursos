@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML5 07 - Tags Area e Map - Mapeando Links</title>
+
+	</head>
+
+	<body>
+
+		<!--
+			<area>
+				Display: None;
+				Categoria: Fluxo e Fraseado;
+				Contido por: <map>;
+				Filhos: None(vazio);
+				Interfaxe HTMLAreaElement: HTMLElement
+
+			<map> = Faz o mapeamento;
+				usemap = Diz que as configurações do map devem ser utilizadas ao elemento; 
+				<area> = Define uma area clicavel, atravez de alguma forma;
+					alt = Alternativo;
+					shape = Forma geometrica;
+					coords = Coordenadas (PAINT AJUDA NAS COORDS);
+		-->
+
+		<img src="mapa.png" usemap="#mapaBrasil">
+
+		<map name="mapaBrasil">
+			<area alt="Minas Gerais" shape="poly" href="http://www.google.com.br" target="_blank" coords="340,368, 351,347, 385,344, 396,300, 438,286, 492,313, 467,375, 447,399, 402,412, 387,370, 346,367">
+
+			<area alt="Tocantins" shape="poly" href="http://www.youtube.com/cfbcursos" target="_blank" coords="373,154, 389,160, 384,189, 398,196, 390,213, 403,229, 413,229, 402,245, 406,270, 373,273, 342,266, 350,213, 366,191, 362,181, 378, 164">
+
+			<area alt="Tocantins" shape="rect" href="http://www.youtube.com/cfbcursos" target="_blank" coords="198,140, 313,255">
+
+			<area alt="Tocantins" shape="circle" href="http://www.youtube.com/cfbcursos" target="_blank" coords="64,142,50">
+		</map>
+
+	</body>
+</html>

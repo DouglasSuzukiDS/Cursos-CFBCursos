@@ -1,0 +1,492 @@
+[
+    {
+        "id": "97bb67a9849dc028",
+        "type": "tab",
+        "label": "Estoque  - Produtos",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4c8d22e0631a702b",
+        "type": "http in",
+        "z": "97bb67a9849dc028",
+        "name": "",
+        "url": "/tiposprod",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 40,
+        "wires": [
+            [
+                "445cf384eef2aeb4"
+            ]
+        ]
+    },
+    {
+        "id": "7ba35ac4fb5f43db",
+        "type": "http response",
+        "z": "97bb67a9849dc028",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "fe48b820741c0254",
+        "type": "debug",
+        "z": "97bb67a9849dc028",
+        "name": "debug 34",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "445cf384eef2aeb4",
+        "type": "function",
+        "z": "97bb67a9849dc028",
+        "name": "function 24",
+        "func": "msg.topic = `SELECT * FROM tipoproduto`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 40,
+        "wires": [
+            [
+                "5f3e8baee599c315"
+            ]
+        ]
+    },
+    {
+        "id": "5f3e8baee599c315",
+        "type": "mysql",
+        "z": "97bb67a9849dc028",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 500,
+        "y": 40,
+        "wires": [
+            [
+                "7ba35ac4fb5f43db",
+                "fe48b820741c0254"
+            ]
+        ]
+    },
+    {
+        "id": "dec4417a720d6d20",
+        "type": "http in",
+        "z": "97bb67a9849dc028",
+        "name": "",
+        "url": "/fornprod",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 140,
+        "wires": [
+            [
+                "9aa74db0fe8bd132"
+            ]
+        ]
+    },
+    {
+        "id": "45c8b6d41314bc03",
+        "type": "http response",
+        "z": "97bb67a9849dc028",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "d933928b8992f0e2",
+        "type": "debug",
+        "z": "97bb67a9849dc028",
+        "name": "debug 35",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "9aa74db0fe8bd132",
+        "type": "function",
+        "z": "97bb67a9849dc028",
+        "name": "function 25",
+        "func": "msg.topic = `SELECT * FROM fornecedor WHERE c_status_fornecedor = 'A'`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 140,
+        "wires": [
+            [
+                "6fa4a5429acfcf97"
+            ]
+        ]
+    },
+    {
+        "id": "6fa4a5429acfcf97",
+        "type": "mysql",
+        "z": "97bb67a9849dc028",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 500,
+        "y": 140,
+        "wires": [
+            [
+                "45c8b6d41314bc03",
+                "d933928b8992f0e2"
+            ]
+        ]
+    },
+    {
+        "id": "1cb091997f2bd815",
+        "type": "http in",
+        "z": "97bb67a9849dc028",
+        "name": "",
+        "url": "/novoprod",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 240,
+        "wires": [
+            [
+                "2d1aa7789f2e8af8"
+            ]
+        ]
+    },
+    {
+        "id": "e7b6da886d545647",
+        "type": "http response",
+        "z": "97bb67a9849dc028",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "1fbaa8850552d374",
+        "type": "debug",
+        "z": "97bb67a9849dc028",
+        "name": "debug 36",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "2d1aa7789f2e8af8",
+        "type": "function",
+        "z": "97bb67a9849dc028",
+        "name": "function 26",
+        "func": "msg.payload = JSON.parse(msg.payload)\nconst n_cod_produto = msg.payload.n_cod_produto\nconst n_tipoProduto_tipoProduto = msg.payload.n_tipoProduto_tipoProduto\nconst s_desc_produto = msg.payload.s_desc_produto\nconst n_fornecedor_fornecedor = msg.payload.n_fornecedor_fornecedor\nconst n_qtde_produto = msg.payload.n_qtde_produto\nconst c_status_produto = msg.payload.c_status_produto\n\nconst query = `INSERT INTO produto (n_cod_produto, n_tipoProduto_tipoProduto, s_desc_produto, n_fornecedor_fornecedor, n_qtde_produto, c_status_produto) VALUES (${n_cod_produto}, ${n_tipoProduto_tipoProduto}, '${s_desc_produto}', ${n_fornecedor_fornecedor}, ${n_qtde_produto}, '${c_status_produto}')`\n\nmsg.topic = query\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 240,
+        "wires": [
+            [
+                "eb26fede668d4e36"
+            ]
+        ]
+    },
+    {
+        "id": "eb26fede668d4e36",
+        "type": "mysql",
+        "z": "97bb67a9849dc028",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 500,
+        "y": 240,
+        "wires": [
+            [
+                "e7b6da886d545647",
+                "1fbaa8850552d374"
+            ]
+        ]
+    },
+    {
+        "id": "e7b735e7b99938a9",
+        "type": "http in",
+        "z": "97bb67a9849dc028",
+        "name": "",
+        "url": "/todosprodutos",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "7638af567798ff43"
+            ]
+        ]
+    },
+    {
+        "id": "4e108192fbfc3218",
+        "type": "http response",
+        "z": "97bb67a9849dc028",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "e1626867294598a7",
+        "type": "debug",
+        "z": "97bb67a9849dc028",
+        "name": "debug 37",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "7638af567798ff43",
+        "type": "function",
+        "z": "97bb67a9849dc028",
+        "name": "function 27",
+        "func": "msg.topic = `SELECT * FROM produto`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 340,
+        "wires": [
+            [
+                "d8b2d3363f546996"
+            ]
+        ]
+    },
+    {
+        "id": "d8b2d3363f546996",
+        "type": "mysql",
+        "z": "97bb67a9849dc028",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 500,
+        "y": 340,
+        "wires": [
+            [
+                "4e108192fbfc3218",
+                "e1626867294598a7"
+            ]
+        ]
+    },
+    {
+        "id": "e88e0b34bf775860",
+        "type": "http in",
+        "z": "97bb67a9849dc028",
+        "name": "",
+        "url": "/mudarStatusProd/:id/:status",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 420,
+        "wires": [
+            [
+                "b4e363708fa2ac3c"
+            ]
+        ]
+    },
+    {
+        "id": "c033c3c4d79d991f",
+        "type": "http response",
+        "z": "97bb67a9849dc028",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "3a883b71c6c0b919",
+        "type": "debug",
+        "z": "97bb67a9849dc028",
+        "name": "debug 38",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "b4e363708fa2ac3c",
+        "type": "function",
+        "z": "97bb67a9849dc028",
+        "name": "function 28",
+        "func": "const n_cod_produto = msg.req.params.id\nconst c_status_produto = msg.req.params.status\n\nconst query = `UPDATE produto SET c_status_produto = '${c_status_produto}' WHERE n_cod_produto = ${n_cod_produto}`\n\nmsg.topic = query\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 460,
+        "wires": [
+            [
+                "2bda90d096369f95",
+                "3a883b71c6c0b919"
+            ]
+        ]
+    },
+    {
+        "id": "2bda90d096369f95",
+        "type": "mysql",
+        "z": "97bb67a9849dc028",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 500,
+        "y": 460,
+        "wires": [
+            [
+                "c033c3c4d79d991f"
+            ]
+        ]
+    },
+    {
+        "id": "eefc4c876a384168",
+        "type": "http in",
+        "z": "97bb67a9849dc028",
+        "name": "",
+        "url": "/dadosprod/:id",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 560,
+        "wires": [
+            [
+                "1bf28860224ae578"
+            ]
+        ]
+    },
+    {
+        "id": "de1a8a4cae773591",
+        "type": "http response",
+        "z": "97bb67a9849dc028",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "1bf28860224ae578",
+        "type": "function",
+        "z": "97bb67a9849dc028",
+        "name": "function 29",
+        "func": "const id = msg.req.params.id\n\nmsg.topic = `SELECT * FROM produto WHERE n_cod_produto = ${id}`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 560,
+        "wires": [
+            [
+                "e82b4414d1423a06",
+                "25666495698dd4b9"
+            ]
+        ]
+    },
+    {
+        "id": "25666495698dd4b9",
+        "type": "mysql",
+        "z": "97bb67a9849dc028",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 500,
+        "y": 560,
+        "wires": [
+            [
+                "de1a8a4cae773591",
+                "e82b4414d1423a06"
+            ]
+        ]
+    },
+    {
+        "id": "e82b4414d1423a06",
+        "type": "debug",
+        "z": "97bb67a9849dc028",
+        "name": "debug 39",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "8eb5ca5ddf10b0fd",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "estoque",
+        "tz": "",
+        "charset": "UTF8"
+    }
+]

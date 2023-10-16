@@ -1,0 +1,23 @@
+#d1,#d2,#d3,#pa1{
+	/* border: 10px solid #000;*/ /* Borda, solid = continua */ 
+	border: 15px dotted #000; /* dotted = Linha pontilhada */
+	/* padding: 50px;  Margem interna do elemento */
+	/* padding: 0px 100px 50px 10px; */
+	/* 1ºValor Topo | 2ºValor Direita | 3ºValor Baixo | 4ºValor Esquerda*/ 
+	padding: 50px;
+	/* background-color: #0F0;*/ /* Cor de fundo */
+	background-image: url(marcador.png);
+}
+#d1{
+	background-clip: border-box; /* Borda dentro */ 
+}
+#d2{
+	background-clip: padding-box; /* Borda antes */ 
+}
+#d3{
+	background-clip: content-box; /* Aplica a formatação onjde tiver conteudo no elemento */ 
+}
+
+#pa1{
+	background-clip: padding-box;
+}

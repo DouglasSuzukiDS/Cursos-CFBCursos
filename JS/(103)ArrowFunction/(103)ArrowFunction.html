@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFB Cursos - Javascript - Aula 103 - Arrow Function</title>
+    <script>
+
+        // Arrow Function = FFunção de Seta
+        const soma = (...num) => {
+            let r = 0
+            for(n of num)
+                r += n
+            return r
+        }
+
+        const par = num => {
+            if(num % 2 == 0)
+                return true
+            else
+                return false
+        }
+
+        console.log(soma(2, 3, 4, 5, 6))
+        console.log(par(2) ? "É par" : "Não é par")
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+.item{
+   margin: 5px;
+   padding: 5px;
+   background: #447;
+   text-align: center;
+   font-size: 1em;
+   color: #FFF;
+}
+
+.container{
+   max-width: 600px;
+   margin: 0 auto;
+   border: 1px solid #000;
+}
+
+.flexivel{
+   display: flex;
+}
+
+.horizontal{
+   flex-direction: row;
+}
+
+.vertical{
+   flex-direction: column;
+}
+
+.quebra{
+   flex-wrap: wrap;
+}
+
+.fluxo-horizontal-quebra{
+   /* flex-direction: row;
+   flex-wrap: wrap; */
+   flex-flow: row wrap;
+}
+
+.fluxo-horizontal-sem-quebra{
+   flex-flow: row nowrap;
+}
+
+body{
+   font-family: Arial;
+   color: #000;
+}
+
+
+/*
+   Flex Flow = Une as propriedades Flex Direction e Flex Wrap com seus vaslores
+
+*/

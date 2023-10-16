@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML 39 - Slider Automático</title>
+
+		<script>
+
+			function preload(){
+				imgs=Array('f1.jpg', 'f2.jpg', 'f3.jpg', 'f4.jpg', 'f5.jpg', 'f6.jpg');
+				imgQtde=imgs.length;
+				for(i=0; i<imgQtde; i++){
+					var preloading = new Image();
+					preloading.src=imgs[i];
+				}
+			}
+			
+			function iniciaSlider(){
+				preload();
+				max=6;
+				min=1;
+				fi=min;
+				tr=true;
+				carregaFoto("f1.jpg");
+				document.getElementById("moldura").addEventListener("transitionend", fimTr);
+				tmr=setInterval(trocaFoto,10000);
+			}
+
+			function trocaFoto(){
+				tr=false;
+					fi++;
+					if(fi>max){
+						fi=min;
+					}
+					carregaFoto("f"+fi+".jpg");
+			}
+
+			function fimTr(){
+				tr=true;
+			}
+
+			function carregaFoto(foto){
+				document.getElementById("moldura").style.backgroundImage="URL("+foto+")";
+			}
+
+			function troca(dr){
+				clearInterval(tmr);
+				if(tr){
+					tr=false;
+					fi+=dr;
+					if(fi>max){
+						fi=min;
+					}
+					if(fi<min){
+						fi=max;
+					}
+					carregaFoto("f"+fi+".jpg");		
+				}
+				tmr=setInterval(trocaFoto,10000);
+			}
+
+		</script>
+
+		<style>
+			#moldura{
+				width: 600px;
+				height: 450px;
+				background-color: #EEEEEE;
+				transition: background-image 2s;
+			}
+		</style>
+
+	</head>
+
+	<body onload="iniciaSlider()">
+
+		<div id="moldura"></div>
+
+		<input type="button" value="Anterior" onclick="troca(-1)">
+		<input type="button" value="Próximo" onclick="troca(1)">
+		
+	</body>
+</html>

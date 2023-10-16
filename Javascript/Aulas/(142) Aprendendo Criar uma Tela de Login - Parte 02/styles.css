@@ -1,0 +1,13 @@
+/* (142) Aprendendo Criar uma Tela de Login - Parte 02 */
+body {
+   background-color: #202225;
+}
+   
+* {
+   padding: 0;
+   margin: 0;
+   border: none;
+   box-sizing: border-box;
+}
+
+/* Formatação da Tela de Login */

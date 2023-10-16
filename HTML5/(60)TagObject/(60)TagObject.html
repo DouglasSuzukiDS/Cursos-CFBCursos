@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML5 60 - Tag Object</title>
+		<style>
+			object{ display: block; }
+		</style>
+	</head>
+
+	<body>
+		<!--
+			<object>: Usado pra inserir um arquivo externo do arquivo HTML;
+				Display: Inline;
+				Categoria: Fluxo, Fraseado, Incorporado;
+				Contido por: Onde o incorporado é esperado;
+				Filhos: <param>;
+					width/heigth = Largura/Altura, mantem a porpoção;
+					data = Nome do arquivo que sera aberto;
+
+				<param>: Usado para abrir os arquivos. Possivel organizar e manipular os parametros individualmente;
+					name = Com o src
+					value = Com o nome do arquivo;
+		-->
+
+		<object name="logo" width="300" height="">
+			<param name="src" value="map.jpg">
+		</object>
+
+		<object name="video" width="300" height="">
+			<param name="src" value="brahma.mp4">
+		</object>
+		
+	</body>
+</html>

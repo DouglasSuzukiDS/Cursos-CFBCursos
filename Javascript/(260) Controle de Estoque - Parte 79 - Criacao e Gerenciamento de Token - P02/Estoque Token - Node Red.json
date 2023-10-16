@@ -1,0 +1,117 @@
+[
+    {
+        "id": "e9865c20a12babec",
+        "type": "tab",
+        "label": "Estoque - Token",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ec944ac0450a8c69",
+        "type": "function",
+        "z": "e9865c20a12babec",
+        "name": "function 36",
+        "func": "const n_pessoa_pessoa = msg.payload[0].n_pessoa_pessoa\nconst t1 = Math.random().toString(16).substring(2)\nconst t2 = Math.random().toString(16).substring(2)\nconst t3 = Math.random().toString(16).substring(2)\nconst t4 = Math.random().toString(16).substring(2)\n// console.log(t1)\nconst s_token_token = t1 + t2 + t3 + t4\n\nconst ts = new Date().getTime() + (60000 * 5)\n// console.log(ts)\nconst data = new Date(ts)\nconst ano = data.getFullYear()\nconst mes = data.getMonth()\nconst dia = data.getDate()\nconst hora = data.getHours()\nconst minuto = data.getMinutes()\nconst segundo = data. getSeconds()\n// console.log(`${dia}/${mes}/${ano} - ${hora}:${minuto}:${segundo}`)\nconst s_validade_token = ts\nmsg.token = s_token_token\n\nmsg.topic = `INSERT INTO token (n_pessoa_pessoa, s_token_token, s_validade_token) VALUES (${n_pessoa_pessoa}, '${s_token_token}', '${s_validade_token}')`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 60,
+        "wires": [
+            [
+                "504e3dd05595fee6"
+            ]
+        ]
+    },
+    {
+        "id": "504e3dd05595fee6",
+        "type": "mysql",
+        "z": "e9865c20a12babec",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 480,
+        "y": 60,
+        "wires": [
+            [
+                "c2a15b3a67865c78"
+            ]
+        ]
+    },
+    {
+        "id": "0dd44b2b85012c84",
+        "type": "debug",
+        "z": "e9865c20a12babec",
+        "name": "debug 47",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "8e603a2c4d3547e7",
+        "type": "http response",
+        "z": "e9865c20a12babec",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 820,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "7fe6603056dd089e",
+        "type": "link in",
+        "z": "e9865c20a12babec",
+        "name": "Entrada Token",
+        "links": [
+            "ddea7722ac31ca1d"
+        ],
+        "x": 175,
+        "y": 60,
+        "wires": [
+            [
+                "ec944ac0450a8c69"
+            ]
+        ]
+    },
+    {
+        "id": "c2a15b3a67865c78",
+        "type": "function",
+        "z": "e9865c20a12babec",
+        "name": "function 37",
+        "func": "msg.payload.retorno = 200\nmsg.payload.token = msg.payload.token\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 60,
+        "wires": [
+            [
+                "0dd44b2b85012c84",
+                "8e603a2c4d3547e7"
+            ]
+        ]
+    },
+    {
+        "id": "8eb5ca5ddf10b0fd",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "estoque",
+        "tz": "",
+        "charset": "UTF8"
+    }
+]

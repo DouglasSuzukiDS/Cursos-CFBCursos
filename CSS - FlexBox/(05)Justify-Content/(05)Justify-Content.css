@@ -1,0 +1,51 @@
+.item{
+   margin: 5px;
+   padding: 5px;
+   background: #447;
+   text-align: center;
+   font-size: 1em;
+   color: #FFF;
+}
+
+.container{
+   max-width: 600px;
+   margin: 0 auto;
+   border: 1px solid #000;
+   justify-content: space-around;
+}
+
+.flexivel{
+   display: flex;
+}
+
+.horizontal{
+   flex-direction: row;
+}
+
+.vertical{
+   flex-direction: column;
+}
+
+.quebra{
+   flex-wrap: wrap;
+}
+
+body{
+   font-family: Arial;
+   color: #000;
+}
+
+
+/*
+   Justify-Content: Define o alinhamento dos itens de acordo com o Main Axis 
+      - flex-start: Se o Main Axis por padrão*, os elementos começam da Esquerda pra Direita (Padrão);
+
+      - flex-end: Se o Main Axis for padrão, os elementos comaçam da Direita pra Esquerda;
+
+      - center: Centraliza os elementos no Main Axis;
+
+      - space-between: Distribui os elemetos por epaçamentos iguais, com o 1 elemento no flex-start e o último elemento no flex-end;
+
+      -space-around: Distribui sos elementos por espaçamentos iguais, sendo que insere um espaço antes do primeiro elemento e depois do ultimo elemento;
+
+*/

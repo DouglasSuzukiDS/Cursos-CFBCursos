@@ -1,0 +1,91 @@
+	/*
+		text-align: left; Alinhamento do texto a esquerda 
+		text-align: right; /* Alinhamento do texto a direita 
+		text-align: center; /* Alinhamento do texto centralizado 
+		text-align: justify; /* Alinhamento do texto justificado 
+
+	*/
+
+	/*
+	   text-decoration: Faz a formatação visual do texto;
+		   none = Tira o sublinhado dos links 
+		   underline = Texto sublinhado
+		   overline = Linha em cima
+		   line-through = Texto Riscado 
+	*/
+
+	/* 
+		text-transform: Transforma o texto em maiusculo, minusculo
+			lowercase = Texto Minusculo;
+			uppercase = Texto Maiusculos;
+			capitalize = Somente as primeiras letras de cada palavra maiusculas;
+	*/
+
+	/*
+		white-space: Controla o quebramento do texto no container;
+			nowrap = Não faz o texto quebrar no container;
+			normal = Faz a quebra normalmente no container;
+	*/
+
+	/*
+		overflow:  Controle o conteudo "transbordando"
+			hidden = Oculta o conteudo excedente  
+			scroll = Cria as barras e faz o conteudo rolar
+			auto = Libera as Barras caso seja necessário
+	*/
+
+	/*
+		word-break: Controla a quebra da palavra 
+			normal = Não muda nada de quebra das palavras
+			break-all = Quebra quando for necessário
+
+	*/
+
+	/*
+		text-align-last: Configura como o alinhamento da ultima linha do paragrafo
+			left = Alinhamento padrão a esquerda
+			right = Alinha a direita
+			center = Centralizada
+	*/
+
+div{
+	width: 350px;
+	height: 150px;
+	border: 1px solid #000;
+	white-space: normal; 
+	overflow: auto;
+	word-break: break-all;
+} 
+
+p{
+	color: #000;
+	text-decoration: none;
+	text-transform: capitalize; 
+	text-align: justify; 
+	text-indent: 100px; /* Controla o Tamanho do Paragrafo */
+	letter-spacing: px; /* Controla o espaçamento das Letras */
+	line-height: 3; /* Espaçamento das Linhas */
+	direction: ltr; /* Direção do texto. RTL = Direita > Esq. LTR = Esq > Direita */ 
+	word-spacing: 5px; /* Espaçamento das Palavras */
+	text-align-last: center; 
+}
+
+.p1{
+	
+}
+
+.p2{
+
+}
+
+.p3{
+
+}
+
+.p4{
+
+}
+
+a{
+	text-decoration: none;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Teste</title>
+
+	<style>
+			.Tabela{
+				border: 1px solid #000;
+				text-align: center;
+				border-collapse: collapse;
+				font-size: 25px;
+				
+			}
+			.bt{
+				border: 1;
+				padding: 10px;
+				width: 100px;
+				height: 50px;
+				display: inline-block;
+				margin: 5px;
+				cursor: pointer;
+				border-radius: 4px;
+				text-align: center;
+			}
+
+			table{
+				border: 1px solid #000;
+			}
+
+			p{
+				font-family: Segoe UI;
+				color: #F00;
+			}
+
+			h3{
+				visibility: hidden;
+			}
+		
+	</style>
+
+	<script>
+
+
+	var Snipers=["AWM-Magma x2", "APR 338", "AWM-Zebra", "AWM-Caçador", "AWM-Crimson", "AWM-Ferrugem", "FR-F2 Ferrugem", "HK G28", "PSG-2", "SL8", "M700", "Steyr Elite", "SR99", "DSR-1", "Falcon OP99", "R93T2", "TRG-21", "WA2000", "Dragunov", "AWM"];
+
+	var Granadas=["Flashbang x5", "Granada x5", "Smoke x5", "Flashbang Fênix Dourado x5", "Granada Fênix Dourado", "Smoke Fênix Dourado", "Fumaça Prata", "Granada Neve x5", "Docinho x2"];
+
+	Snipers.sort(); Granadas.sort();
+
+	function mtSnipers(){
+		var tp="Snipers no Arsenal: "+ Snipers.length+"<br><br>";
+
+			document.write(tp);
+
+			for(var i=0; i<Snipers.length; i++){
+				document.write(Snipers[i]+"<br>");
+			}
+	}
+
+	function mtGranadas(){
+		var CriaTabela, CriaClasse, Escolha, TRTP, TR, TD ;
+		var tp="Granadas no Arsenal: "+ Granadas.length+ "<br><br>";
+
+			window.addEventListener("click",function(){
+
+			Escolha.getElementById(escolha);
+
+
+				//CriaTabela.innerHTML = TR.innerHTML = TD;
+				//var Tabela = innerHTML = CriaTabela;
+
+				for(var i=0; i<Escolha; i++){
+					CriaTabela = document.createElement("table").appendChild(table);
+						//CriaClasse = document.createElement("Tabela");
+					TRTP = document.createElement("tr").appendChild(tr);
+					TR = document.createElement("tr").appendChild(tr);
+					TD = document.createElement("td").appendChild(td);
+					Escolha.innerHTML = CriaTabela;
+							
+					for(var i=0; i<Granadas.length; i++){
+							//pegaTab(); 
+						document.write(TRTP.innerHTML(tp).getAttribute(tr)+"<br>"+Granadas[i].getAttribute(tr[i])+"<br>");
+					}
+				}
+			}
+	}
+
+	/*function pegaTab(){
+		window.addEventListener("click",function(){
+			var = CriaTabela, CriaClasse, Escolha, TRTP, TR, TD, ;
+
+			Escolha.getElementById(escolha);
+
+
+			//CriaTabela.innerHTML = TR.innerHTML = TD;
+			//var Tabela = innerHTML = CriaTabela;
+
+			for(var i=0; i<Escolha; i++){
+				CriaTabela = document.createElement("table").appendChild(table);
+				//CriaClasse = document.createElement("Tabela");
+				TRTP = document.createElement("tr").appendChild(tr);
+				TR = document.createElement("tr").appendChild(tr);
+				TD = document.createElement("td").appendChild(td);
+
+				document.write(
+					TRTP.innerHTML(tp)+"<br>"+
+
+				);
+
+			}*/
+
+
+				
+		 //Capta a Tabela*/
+	
+
+	</script>
+
+</head>
+<body>
+
+	<h3>
+		ID: Dispositivo: B42BEGE7-1207-4390-9953-93E59439080E
+		<br>ID PRODUTO: 00327-60000-00000-AA17<br>
+		SERIAL: 1A742NF62
+	</h3>
+
+	<p>
+		Tentando 123
+		Tentando 123
+		Tentando 123
+	</p>
+
+		<div align="right" id="escolha">
+		<div align="left" > <button id="btSnipers" class="bt" onclick="mtSnipers()">Snipers</button> </div>
+		<div align="left" > <button id="btSnipers" class="bt" onclick="mtGranadas()">Granadas</button> </div>
+
+	</div>
+
+	<!-- <table id="Tabela" class="Tabela" >  
+	
+		<th id="TH"></th>
+		 <tr>
+			 <td>
+				
+			</td>  
+		</tr> 
+
+	</table> -->
+
+</body>
+</html>

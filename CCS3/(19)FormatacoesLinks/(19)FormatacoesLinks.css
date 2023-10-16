@@ -1,0 +1,25 @@
+a:link{ /* Links não visitados*/
+
+}
+
+a:visited{ /* Links vizitados */ 
+
+}
+
+a:active{ /* Links que estão sendo vizitados */
+
+}
+
+a:hover{ /* Quando o mouse estiver sobre ele  */
+	background-color: #88F;
+}
+
+a{
+	text-decoration: none;
+	color: #FFF;
+	font-size: 20px;
+	background-color: #006;
+	padding: 20px;
+	display: table-cell; /* Apresentação do Conteudo, celula de tabela */
+
+}

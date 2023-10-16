@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - HTML 16 - Formulários</title>
+
+	</head>
+
+	<body>
+
+		<!--
+			method: Metodos de envio dos dados
+				GET = Envia explicidamente os dados pela URL
+				POST = Não faz o envia pela barra de endereço
+
+			action: Quem vai receber o Fomulario;
+
+			label: É como uma etiqueta
+
+			input: Caixa de entrada;
+				text = Texto;
+
+				size = Tamanho para os Caracteres
+				;
+				maxlenght = Númmero Máximo de Caracteres
+
+				password = Senha;
+
+				checkbox: Campo de Escolha com Opções de Marcação
+
+				value: Guarda o valor real do elemento;
+
+				radio = Campo de 1 escolha
+
+				select: Caixa de texto;
+					option = Opção
+
+				textarea: Caixa de texto grante
+					cols = Colunas;
+					rows = Linhas;
+
+				submit: Botão de enviar os dados do fomulario;
+
+				reset: Reseta as informações do formulário;
+
+		-->
+
+		<form name="F_Aula" method="POST" action="">
+
+			<label>Nome:</label><br>
+
+			<input type="text" name="F_nome" size="40" maxlength="30"><br><br>
+
+
+			<label>Senha:</label><br>
+
+			<input type="password" name="F_senha" size="40" maxlength="20"><br><br>
+
+
+			<label>Qual esporte pratica?</label><br>
+
+			<input type="checkbox" name="F_Futebol" value="Futebol"><label>Futebol</label><br>
+
+			<input type="checkbox" name="F_Natação" value="Natação"><label>Natação</label><br>
+
+			<input type="checkbox" name="F_Basket" value="Basket"><label>Basket</label><br><br>
+
+
+			<label>Possui veículo?</label><br>
+
+			<input type="radio" name="F_Veiculo" value="S"><label>SIM</label><br>
+			<input type="radio" name="F_Veiculo" value="N"><label>NÃO</label><br><br>
+
+			<label>Estado:</label><br>
+
+			<select name="F_Estado">
+				<option value="MG">Minas Gerais</option>
+				<option value="RJ">Rio De Janeiro</option>
+				<option value="SP">São Paulo</option>
+				<option value="ES">Espírito Santo</option>
+			</select><br><br>
+
+
+			<label>Comentário:</label><br>
+
+			<textarea name="F_Comentario" cols="45" rows="5"></textarea><br><br>
+
+			<input type="submit" value="Enviar">
+
+			<input type="reset" value="Limpar">
+			
+			<input type="button" value="Sem Ação">
+
+		</form>
+		
+	</body>
+</html>

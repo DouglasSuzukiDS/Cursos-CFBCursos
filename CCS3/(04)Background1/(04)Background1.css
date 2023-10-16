@@ -1,0 +1,21 @@
+body{
+	background-color: #bbb;
+	background-image: url(cfb.jpg), url(logo-css3.jpg);  /* Imagem de fundo */ 
+	background-size: 200px, 150px; /* Controla o tamanho da imagem, informando apenas 1 valor, ele não distorce a imagem */ 
+	background-repeat: no-repeat, repeat; /* Repetição da imagem */
+	/*	repeat = Repete a imagem 
+	    no-repeat = Não repete a imagem ||
+		repeat-x = Repete a imagem no eixo X, horizontal
+		repeat-y = Repete a imagem no eixo Y, vertical */
+	background-position: 200px 200px, 0px 0px; /* Posição */
+	/* Left = Horizontal || Top = Vertical  */
+}
+
+p{
+	font-size: 30pt;
+	color: #000;
+	background-color: #0F0;
+	background-image: url(marcador.png);
+	background-repeat: repeat-x;
+	background-position: 0px 10px;
+}

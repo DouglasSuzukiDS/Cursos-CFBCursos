@@ -1,0 +1,60 @@
+﻿<html>
+	<head>
+		<title>Aula 34 - Javascript aula 12 - Formatação Condional</title>
+		<script language="Javascript">
+
+			function formatar(){
+
+				var tabela=document.getElementById('tb_produtos');
+				var nlin=tabela.getElementsByTagName('tr');
+				
+				for(l=1; l<nlin.length; l++){
+					var ncol=nlin[l].getElementsByTagName('td');
+					if(ncol[1].firstChild.nodeValue <= 50){
+						nlin[l].style.backgroundColor="#ffaaaa";
+					}
+				}
+
+			}
+
+		</script>
+
+	</head>
+
+	<body onload="formatar()">
+		
+		<table width="450" border="1" cellspacing="0" id="tb_produtos">
+			<tr bgcolor="#CCCCCC id="cabecalho">
+				<td align="center"><strong>Produtor</strong></td>
+				<td align="center"><strong>Quantidades</strong></td>
+				<td align="center"><strong>Valor</strong></td>
+			</tr>
+
+			<tr id="linha1">
+				<td>Mouse</td>
+				<td>15</td>
+				<td>25,00</td>
+			</tr>
+
+			<tr id="linha2">
+				<td>Teclado</td>
+				<td>80</td>
+				<td>30,00</td>
+			</tr>
+
+			<tr id="linha3">
+				<td>Monitor</td>
+				<td>85</td>
+				<td>300,00</td>
+			</tr>
+
+			<tr id="linha4">
+				<td>CPU</td>
+				<td>95</td>
+				<td>450,00</td>
+			</tr>
+
+		</table>
+	
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>CFB Cursos - Javascript 74 - CreateAttribute - Configurando atributos tags HTML pelo JS</title>
+
+		<script>
+
+			// setAttributeNode = Define o valor do atributo;
+			// removeAttribute = Revome o atributo;
+
+			function inicia(){
+				document.getElementById("bntDestaque").addEventListener("click",function(){
+					var num=document.getElementById("fnum").value;
+					var p=document.getElementsByTagName("p");
+					for(var i=0;i<p.length;i++)
+						p[i].removeAttribute("style");
+					var at=document.createAttribute("style");
+					at.value="color:#f00;font-size:30px;";
+					//p[5].innerHTML="CFB Cursos"; //Muda o conteudo;
+					p[num].setAttributeNode(at); //Aplica os elementos;
+				});
+			}
+
+			window.addEventListener("load",inicia);
+			
+		</script>
+
+	</head>
+
+	<body>
+
+		<input type="text" id="fnum">
+		<button id="bntDestaque">Destacar</button><br><br>
+
+		<p>Curso de Javascript</p>
+		<p>Curso de HTML/HTML5</p>
+		<p>Curso de CSS3</p>
+		<p>Curso de PHP/MySQL</p>
+		<p>Curso de C++</p>
+		<p>Curso de Photoshop</p>
+		<p>Curso de Unity/C#</p>
+		<p>Curso de Flash</p>
+		
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>CFB Cursos - HTML5 96 e 97 - Seção de Guias/Tabs Partes 1 e 2</title>
+
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+	<nav class=" tabs">
+		<button data-btnTabs onclick="abrirTab(event,'C#')" id="primeiro">C#</button>
+
+		<button data-btnTabs onclick="abrirTab(event,'HTMLCompleto')" id="">HTML Completo e Profissional</button>
+
+		<button data-btnTabs onclick="abrirTab(event,'Arduino')" id="">Arduino</button>
+	</nav>
+
+	<article id="C#" class="conteudoTab">
+		<span class="fecharTab" onclick="this.parentElement.style.display='none'">X</span>
+		<h3>C#</h3>
+		<p>Curso de Programação Completo em C#</p>
+	</article>
+
+	<article id="HTMLCompleto" class="conteudoTab">
+		<span class="fecharTab" onclick="this.parentElement.style.display='none'">X</span>
+		<h3HTML Completo e Profissional></h3>
+		<p>Curso de Programação Completo e Profissional de HTML</p>
+	</article>
+
+	<article id="Arduino" class="conteudoTab">
+		<span class="fecharTab" onclick="this.parentElement.style.display='none'">X</span>
+		<h3>Arduino</h3>
+		<p>Curso Prático de Prototipgem em Arduíno</p>
+	</article>
+
+	<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>

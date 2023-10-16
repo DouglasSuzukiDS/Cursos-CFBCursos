@@ -1,0 +1,93 @@
+*{box-sizing: border-box;} /* Valor real do elemento */
+body{font-family: Arial; margin: 0px;}
+
+.slideshow-conteiner{
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+}
+
+.slide{
+	/*display: none;*/
+}
+
+.imgSlide{vertical-align: middle;}
+
+.btnAnterior, .btnProximo{
+	cursor: pointer;
+	position: absolute; /* Pode definir posição */
+	top: 50%;
+	width: auto;
+	padding: 15px;
+	margin-top: -22px;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 30px;
+	transition: 0.4s ease;
+	user-select: none;
+}
+
+.btnAnterior{
+	left: 0;
+	border-radius: 0 5px 5px 0;
+}
+
+.btnProximo{
+	right: 0;
+	border-radius: 5px 0 0 5px;
+}
+
+.btnAnterior:hover, .btnProximo:hover, .textoSlide:hover{
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.textoSlide{
+	color: #FFF;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+	transition: 0.4s ease
+}
+
+.numeroSlide{
+	color: #FFF;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0px;
+}
+
+.indicador{
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 2px;
+	background-color: #BBB;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.5s ease;
+}
+
+.ativo, .indicador:hover{
+	background-color: #777;
+}
+
+.fade{
+	animation-name: fade; /* Aparecer e sumir suavimente */
+	animation-duration: 1.3s;
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.3s;
+}
+
+@-webkit-keyframes fade{
+	from{opacity: .4}
+	to{opacity: 1}
+}
+
+@keyframes fade{
+	from{opacity: .4}
+	to{opacity: 1}
+}

@@ -1,0 +1,45 @@
+/*	display:table = Transforma o elemento em tabela
+		table-cell = Transforma em Celula de Tabela <td>
+		table-row = Transforma a linha
+
+	vertical-align: Alinhamento Vertical;
+		middle = Centro;
+		bottom = Baixo
+
+*/
+
+div{
+	border: 1px solid #000;
+	background-color: tomato;
+	width: 200px;
+	height: 200px;
+	display: table-cell;
+	text-align: center;
+	/*line-height: 200px; /* Configurado com a altura do elemento, fica no meio */
+	vertical-align: middle;	
+}
+
+ol, ul, li{
+	border: 1px solid #000;
+	margin: 0px;
+	padding: 0px;
+}
+
+ol{ /* Lista Ordenada */
+	margin-top: 10px;
+	display: table;
+	width: 300px;
+}
+
+ul{ /* Linhas */
+	display: table-row;
+}
+
+li{ /* Celula de tabela */
+	display: table-cell;
+	text-align: center;
+}
+
+.titulo{
+	background-color: turquoise;
+}

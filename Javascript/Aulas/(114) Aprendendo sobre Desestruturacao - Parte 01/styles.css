@@ -1,0 +1,12 @@
+/* // (114) Aprendendo sobre Desestruturação - Parte 01 */
+body {
+   background-color: #202225;
+}
+   
+* {
+   padding: 0;
+   margin: 0;
+   border: none;
+   box-sizing: border-box;
+}
+

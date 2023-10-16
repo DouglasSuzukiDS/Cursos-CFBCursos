@@ -1,0 +1,52 @@
+/* (143) Aprendendo Criar uma Tela de Login - Parte 03 */
+body {
+   background-color: #202225;
+}
+   
+* {
+   padding: 0;
+   margin: 0;
+   border: none;
+   box-sizing: border-box;
+}
+
+/* Formatação da Tela de Login */
+.fundoLogin {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100vh;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   background-color: rgba(0, 0, 0, 0.75);
+}
+
+.baseLogin {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 50%;
+}
+
+.elementosLogin {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   flex-direction: column;
+   width: 50%;
+   background-color: #EEE;
+}
+
+.logoLogin {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 50%;
+   background-color: #BBB;
+}
+
+.logoLogin img {
+   width: 90%;
+}

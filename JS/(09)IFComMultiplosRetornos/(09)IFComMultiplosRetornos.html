@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+
+		<title>CFB Cursos - Javascript 09 - IF com Multiplos Retornos</title>
+		<meta charset="UTF-8">
+
+		<script>
+
+			var nota=18;
+			var res;
+			// Aprovado com Louvor    >95
+			// Aprovado               >= 60
+			// Recuperação            >=40 && <60
+			// Reprovado              <40 
+			// Reprovado com Louvor   <20
+
+			if(nota>=95){
+				res="Aprovado com louvor";
+			}else if(nota >= 60){
+				res="Aprovado";
+			}
+			else if (nota >=40) /*((nota >=40)&&(nota <60))*/ {
+				res="Recuperação";
+
+			}else if(nota >=20){
+				res="Reprovado";
+			}else{
+				res="Reprovado  com Louvor";
+			}
+
+			document.write(res);
+			
+		</script>
+
+
+	</head>
+
+	<body>
+	
+	</body>
+</html>

@@ -1,0 +1,60 @@
+/* (110)FiltrosEmImagens */
+
+img{
+	width: 500px;
+}
+
+.filtro1{
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%); /* Escala de cinza */
+}
+
+.filtro2{
+	-webkit-filter: blur(5px);
+	filter: blur(5px); /* Embaçamento */
+}
+
+.filtro3{
+	-webkit-filter: brightness(300%);
+	filter: brightness(300%); /* Brilho */
+}
+
+.filtro4{
+	-webkit-filter: contrast(300%);
+	filter: contrast(300%); /* Contraste */
+}
+
+.filtro5{
+	-webkit-filter: drop-shadow(10px 10px 5px gray);
+	filter: drop-shadow(10px 10px 5px gray); /* Sombra Projetada */
+}
+
+.filtro6{
+	-webkit-filter: hue-rotate(180deg);
+	filter: hue-rotate(180deg); /* Gira o Arco da Matiz */
+}
+
+.filtro7{
+	-webkit-filter: invert(100%);
+	filter: invert(100%); /* Inverte as cores */
+}
+
+.filtro8{
+	-webkit-filter: opacity(50%);
+	filter: opacity(50%); /* Transparencia */
+}
+
+.filtro9{
+	-webkit-filter: saturate(50%);
+	filter: saturate(50%); /* Saturação, +Saturaração = Cores mais intensas */
+}
+
+.filtro10{
+	-webkit-filter: sepia(100%);
+	filter: sepia(100%); /* Envelhecimento */
+}
+
+.filtro11{
+	-webkit-filter: contrast(200%) brightness(150%)grayscale(50%) blur(1px);
+	filter: contrast(200%) brightness(150%) grayscale(50%) blur(1px); /* Vários Filtros */
+}

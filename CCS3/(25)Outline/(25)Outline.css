@@ -1,0 +1,40 @@
+/*
+	outline = Linha externa que não oculpa espaço de bordas ou margin
+		color = Cor;
+		style = Estilo solid/dotted ..
+		width = Largura;
+		offset = Distancia da linha outline para o elemento
+
+*/
+
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+div{
+	float: left;
+	width: 200px;
+	height: 200px;
+	background-color: #DDD;
+	outline: #000 solid 10px;
+	outline-offset: 40px;
+	border: #F00 solid 1px;
+}
+
+/*#d1{
+	border: 1px solid #000; 
+	margin-right: 0px;
+	/* outline-color: #F00;
+	outline-style: solid;
+	outline-width: 40px; 
+
+}*/
+
+/*#d2{
+	width: 400px;
+	height: 400px;
+	outline: #F00 solid 10px;
+	border: 20px solid #000;
+	margin: 0px 20px;
+}*/

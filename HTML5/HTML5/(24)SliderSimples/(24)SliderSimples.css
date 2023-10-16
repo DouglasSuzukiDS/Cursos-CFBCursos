@@ -1,0 +1,188 @@
+.fixFloat{
+	clear: both;
+}
+
+body{
+	margin: auto;
+	width: 960px;
+	background-color: #DDD;
+	padding: 0px;
+	background: url(fundo.gif) repeat-x;
+	overflow-y: scroll;
+}
+
+#cab img{
+	float: left;
+}
+
+#social{
+	float: right;
+	margin-top: 40px;
+}
+
+#social img{
+	width: 32px;
+	height: 32px;
+}
+
+#menu{
+	float: left;
+	margin-top: 93px;
+	width: 453px;
+}
+
+#menu ul{
+	list-style: none; /* Tira o estilo de UL */
+	padding: 0px;
+	margin: 0px;
+	background: linear-gradient(to bottom, #DDD, #666);
+}
+
+#menu li{
+	height: 57px;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	width: 150px;
+	border-right: 1px solid #062;
+}
+
+#menu ul li a{
+	text-decoration: none;
+	font-size: 20px;
+	color: #FFF;
+}
+
+#banner{
+	width: 960px;
+	height: 384px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+#banner img{
+	width: 960px;
+	height: 384px;
+}
+
+#b1{
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+
+#b2{
+	position: relative;
+	left: 0px;
+	top: -388px;
+}
+
+#b3{
+	position: relative;
+	left: 0px;
+	top: -776px;
+}
+
+#lateral{
+	float: right;
+	background-color: #DDD;
+	width: 190px;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+#lateral h1{
+	font-size: 15px;
+	text-align: center;
+	border-bottom: #000 solid 1px;
+	margin-top: -5px;
+}
+
+#lateral h2{
+	font-size: 15px;
+}
+
+#lateral p{
+	text-align: justify;
+}
+
+#main{
+	background-color: #EEE;
+	width: 730px;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+#main h1{
+	font-size: 20pt;
+	border-bottom: #000 solid 1px;
+}
+
+#main h2{
+	font-size: 15px;
+}
+
+#main p{
+	text-align: justify;
+}
+
+footer{
+	color: #888;
+	border: 1px solid #000;
+}
+
+footer p{
+	display: inline-block;
+	width: 316px;
+	text-align: center;
+}
+
+/* Formatações Aula 10 */
+
+details{
+	margin-top: 30px;
+	cursor: pointer;
+}
+
+details p{
+	font-size: 20px;
+}
+
+summary{
+	height: 30px;
+	background: linear-gradient(to bottom, #EEE, #999);
+	font: 12pt Arial;
+	font-weight: bold;
+	padding: 10px 0px 0px 10px;
+}
+
+details[open] summary{
+	color: #FFF;
+	background: linear-gradient(to bottom, #E00, #900);
+}
+
+details[open]{
+	background: #EEE;
+}
+
+/* Formatações Aula 11 */
+
+#contato label{
+	font-size: 15pt;
+	font-weight: bold;
+	font-style: italic;
+	font-family: Arial;
+	color: #888;
+	display: block;
+	margin-top: 20px;
+}
+
+#contato input[type="submit"], #contato input[type="reset"]{
+	border: 0px;
+	width: 120px;
+	height: 50px;
+	color: #FFF;
+	background: #060;
+	border-radius: 10px;
+	cursor: pointer;
+}

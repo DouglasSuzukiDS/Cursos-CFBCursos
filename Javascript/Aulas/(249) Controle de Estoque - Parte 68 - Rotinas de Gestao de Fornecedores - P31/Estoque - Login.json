@@ -1,0 +1,98 @@
+[
+    {
+        "id": "c39ccf3d7a689f68",
+        "type": "tab",
+        "label": "Estoque - Login",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4084edd57de44ce4",
+        "type": "http in",
+        "z": "c39ccf3d7a689f68",
+        "name": "",
+        "url": "/login/:email/:senha",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 40,
+        "wires": [
+            [
+                "fe17e5c6b66f21f2"
+            ]
+        ]
+    },
+    {
+        "id": "ea966a84ba61040e",
+        "type": "http response",
+        "z": "c39ccf3d7a689f68",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "eb80004b787147de",
+        "type": "debug",
+        "z": "c39ccf3d7a689f68",
+        "name": "debug 43",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "fe17e5c6b66f21f2",
+        "type": "function",
+        "z": "c39ccf3d7a689f68",
+        "name": "function 33",
+        "func": "const email = msg.req.params.email\nconst senha = msg.req.params.senha\n\nmsg.topic = `SELECT n_pessoa_pessoa, s_email_pessoa FROM pessoa WHERE s_email_pessoa = '${email}'`\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 80,
+        "wires": [
+            [
+                "ef5aba6b0102703c"
+            ]
+        ]
+    },
+    {
+        "id": "ef5aba6b0102703c",
+        "type": "mysql",
+        "z": "c39ccf3d7a689f68",
+        "mydb": "8eb5ca5ddf10b0fd",
+        "name": "",
+        "x": 500,
+        "y": 80,
+        "wires": [
+            [
+                "ea966a84ba61040e",
+                "eb80004b787147de"
+            ]
+        ]
+    },
+    {
+        "id": "8eb5ca5ddf10b0fd",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "estoque",
+        "tz": "",
+        "charset": "UTF8"
+    }
+]

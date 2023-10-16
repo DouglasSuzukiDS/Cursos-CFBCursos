@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<title>CFB Cursos - Javascript 11 - Switch Case </title>
+		<meta charset="UTF-8">
+
+		<script> 
+
+			var pos,msg,pontos;
+
+			pontos=200;
+
+			if(pontos >= 1000){
+				pos=1;
+			}else if(pontos >= 800){
+				pos=2;
+			}else if(pontos >= 600){
+				pos=3;
+			}else{
+				pos=0;
+			}
+
+			//pos=1;
+
+			switch(pos){
+				case 1:
+					msg="Primeiro Lugar <br> Metalha de Ouro";
+						break;
+				case 2:
+					msg="Segundo Lugar <br> Metalha de Prata";
+						break;
+				case 3:
+					msg="Terceiro Lugar <br> Metalha de Bronze";
+						break;
+				default:
+					msg="Não foi ao pódio <br> Não Obteve Metalha";
+						break;
+			}
+
+			switch(pos){
+				case 1:
+				case 2:
+				case 3:
+					msg+="<br>Subiu ao pódio";
+						break;
+				default:
+					msg+="<br> Não Obteve Colocação";
+			}
+
+			document.write(msg);
+
+		</script>
+
+	</head>
+
+	<body>
+	
+	</body>
+</html>
