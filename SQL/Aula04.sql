@@ -1,3 +1,5 @@
+-- SQL Comandos DROP e ALTER / DDL - Curso de SQL - Aula 04
+
 DROP SCHEMA cfbcursos;
 
 CREATE SCHEMA cfbcursos;

@@ -1,3 +1,5 @@
+-- Inner Join, mais de uma tabela na consulta - Curso de SQL - Aula 19
+
 SELECT * FROM cliente;
 SELECT * FROM tipoCliente;
 

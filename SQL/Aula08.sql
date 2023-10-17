@@ -1,3 +1,5 @@
+-- SQL Insert / DML / Inserindo registro nas tabelas do banco de dados - Curso de SQL - Aula 08
+
 /* Tabelas Aula 05 */
 /* DML - INSERT */
 

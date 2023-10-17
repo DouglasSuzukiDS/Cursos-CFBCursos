@@ -1,3 +1,5 @@
+-- Criando e usando View em SQL - Curso de SQL - Aula 17
+
 -- VIEW => Tabela virtual para visualizar dados
 CREATE VIEW cpfCliente AS
    SELECT i_cliente_cliente, s_cpf_cliente

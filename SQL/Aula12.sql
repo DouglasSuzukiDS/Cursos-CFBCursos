@@ -1,3 +1,5 @@
+-- SQL SELECT - Introdução ao comando Select - Curso de SQL - Aula 12
+
 SELECT * FROM cliente;
 
 -- UPPER => Deixa em Uppercase

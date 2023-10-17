@@ -1,3 +1,5 @@
+-- DISTINCT - Curso de SQL - Aula 14
+
 SELECT 
    tbc.i_cliente_cliente as idCliente,
    UPPER(tbc.s_nome_cliente) as nomeCliente, 

@@ -1,3 +1,5 @@
+-- Comando CREATE, criando banco de dados (schema) e tabelas (table) / DDL - Curso de SQL - Aula 03
+
 CREATE DATABASE cfbcursos;
 
 CREATE TABLE cliente(

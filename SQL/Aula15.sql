@@ -1,3 +1,5 @@
+-- SubSelect, criando incremento para campo chave - Curso de SQL - Aula 15
+
 -- MAX => Retorna o maior valor
 
 INSERT INTO cliente VALUES (

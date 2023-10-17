@@ -1,3 +1,5 @@
+-- SQL Comandos DROP e ALTER / DDL - Curso de SQL - Aula 04
+
 USE cfbcursos;
 
 CREATE TABLE cliente(

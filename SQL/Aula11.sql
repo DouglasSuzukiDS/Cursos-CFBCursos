@@ -1,3 +1,5 @@
+-- Como usar o comando DELETE em SQL / DML / Alterando registros nas tabelas - Curso de SQL - Aula 11
+
 DELETE from cliente WHERE i_cliente_cliente > 0;
 
 INSERT into cliente SELECT * from cliente_aux;

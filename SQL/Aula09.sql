@@ -1,3 +1,5 @@
+-- SQL Insert com Select/ DML / Inserindo multiplos registros nas tabelas - Curso de SQL - Aula 09
+
 SELECT * FROM cliente;
 
 CREATE TABLE cliente_aux(

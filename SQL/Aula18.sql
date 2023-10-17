@@ -1,3 +1,5 @@
+-- Como usar a cláusula WHERE - Curso de SQL - Aula 18
+
 SELECT * FROM cliente WHERE 
    s_cpf_cliente = '00000000000' OR
    s_cpf_cliente = '00000000002';

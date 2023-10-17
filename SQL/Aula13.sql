@@ -1,3 +1,5 @@
+-- ALIAS, adicionando apelido às colunas - Curso de SQL - Aula 13
+
 -- Alias => 'Apelido'
 SELECT 
    i_cliente_cliente as idCliente,

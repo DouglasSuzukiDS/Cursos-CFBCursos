@@ -1,3 +1,5 @@
+-- SQL - Tipos de Dados mais comuns - Curso de SQL - Aula 06
+
 -- Dados de Texto
 /*Tipo de Text | Maximo de bites
 Tinytext   => 255
