@@ -3,7 +3,7 @@
 
 <br>
 
-Atraves desse repositório compartilho os arquivos das aulas/cursos que realizo/realizei pelo [**CFB Cursos**](https://www.youtube.com/@cfbcursos) ministrado por [**Bruno Campos**](https://www.instagram.com/cfbcursos/) 👨‍🏫, onde aqui deixo meu agradecimento à ele, onde o Bruno propoe um ensino de alta qualidade de forma gratuíta pelo seu [**Canal no Youtube**](https://www.youtube.com/@cfbcursos). 
+Atraves desse repositório compartilho os arquivos das aulas/cursos que realizo/realizei pelo [**CFB Cursos**](https://www.youtube.com/@cfbcursos) ministrado por [**Bruno Campos**](https://www.instagram.com/brunopinhocampos/) 👨‍🏫, onde aqui deixo meu agradecimento à ele, onde o Bruno propoe um ensino de alta qualidade de forma gratuíta pelo seu [**Canal no Youtube**](https://www.youtube.com/@cfbcursos). 
 
 
 ## Lembrete
@@ -13,7 +13,7 @@ Todo conteudo aqui presente nesse repositório tem **carater educativo/estudos**
 - ### [**CFB Cursos no Youtube**](https://www.youtube.com/@cfbcursos)
 - ### [**CFB Cursos no Instagram**](https://www.instagram.com/cfbcursos/)
 - ### [**Canal CFBDrone**](https://www.youtube.com/@cfbdrone)
-- ### [**Instagram de Bruno Campos**](https://www.instagram.com/cfbcursos/)
+- ### [**Instagram de Bruno Campos**](https://www.instagram.com/brunopinhocampos/)
 - ### [**Linkedin de Bruno Campos**](https://br.linkedin.com/in/bruno-campos-191a1a41/)
 
 ## Playlists / Cursos presentes no Repositório
