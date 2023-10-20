@@ -1,0 +1,1 @@
+-- Você precisa aprender sobre CASE..WHEN - Curso de SQL - Aula 35

@@ -35,4 +35,4 @@ Todo conteudo aqui presente nesse repositório tem **carater educativo/estudos**
 - [**React**](https://www.youtube.com/playlist?list=PLx4x_zx8csUh752BVDGZkxYpY9lS40fyC)
 - [**React Native**](https://www.youtube.com/playlist?list=PLx4x_zx8csUgyDN7j9L7gykBjxByM_etD)
 - [**SQL (em andamento 🧙‍♂️)**](https://www.youtube.com/playlist?list=PLx4x_zx8csUgQUjExcssR3utb3JIX6Kra)
-- [**Typescript (em andamento 🧙‍♂️)**](https://www.youtube.com/playlist?list=PLx4x_zx8csUhtPMrkiGvFJVE5LX8Qat5s)
+- [**Typescript**](https://www.youtube.com/playlist?list=PLx4x_zx8csUhtPMrkiGvFJVE5LX8Qat5s)
