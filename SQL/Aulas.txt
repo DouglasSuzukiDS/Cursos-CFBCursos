@@ -1,0 +1,79 @@
+- (03) Comando CREATE, criando banco de dados (schema) e tabelas (table) / DDL
+
+- (04) SQL Comandos DROP e ALTER / DDL 
+
+- (05) SQL Foreign Key (Chave estrangeira)
+
+- (06) SQL - Tipos de Dados mais comuns
+
+- (07) Modelo/Diagrama Entidade relacionamento
+
+- (08) SQL Insert / DML / Inserindo registro nas tabelas do banco de dados
+
+- (09) SQL Insert com Select/ DML / Inserindo multiplos registros nas tabelas
+
+- (10) SQL UPDATE / DML / Alterando registros nas tabelas
+
+- (11) Como usar o comando DELETE em SQL / DML / Alterando registros nas tabelas
+
+- (12) SQL SELECT - Introdução ao comando Select
+
+- (13) ALIAS, adicionando apelido às colunas
+
+- (14) Distinct
+
+- (15) SubSelect, criando incremento para campo chave 
+
+- (16) Como usar a Cláusula FROM
+
+- (17) Como usar a Cláusula FROM
+
+- (18) Como usar a cláusula WHERE
+
+- (19) Inner Join, mais de uma tabela na consulta
+
+- (20) Group By, agrupando colunas na consulta SQL 
+
+- (21) Having, filtrando registros agrupados
+
+- (22) Order By, ordenando os registros
+
+- (23) Order By, ordenando os registros
+
+- (24) Operadores AND, OR e NOT
+
+- (25) TOP vs LIMIT
+
+- (26) Funções MAX e MIN
+
+- (27) Funções ROUND, COUNT, SUM e AVG
+
+- (28) Operador LIKE 
+
+- (29) Operador IN
+
+- (30) Como usar o Operador BETWEEN
+
+- (31) Tipos de JOIN do SQL
+
+- (32) Ligando uma tabela a ela mesma (Self Join)
+
+- (33) Como usar o operador UNION 
+
+- (34) Como usar o operador EXISTS
+
+- (35) Você precisa aprender sobre CASE..WHEN
+
+- (36) Como usar as funções IFNULL, ISNULL e NVL
+
+- (37) Vamos aprender sobre Stored Procedures #P1
+
+- (38) Como usar parâmetros de entrada, saída e o comando IF em Stored Procedures
+
+- (39) Como criar Loops em Stored Procedures
+
+- (40) Como usar CURSOR em Stored Procedures
+
+- (41) SQL Injection
+
+- (42) Conheça algumas funções de SQL
