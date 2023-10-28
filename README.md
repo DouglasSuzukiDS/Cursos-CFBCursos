@@ -33,6 +33,7 @@ Todo conteudo aqui presente nesse repositório tem **carater educativo/estudos**
 - [**PHP5**](https://www.youtube.com/playlist?list=PLx4x_zx8csUgB4R1dDXke4uKMq-IrSr4B)
 - [**Python**](https://www.youtube.com/playlist?list=PLx4x_zx8csUhuVgWfy7keQQAy7t1J35TR)
 - [**React**](https://www.youtube.com/playlist?list=PLx4x_zx8csUh752BVDGZkxYpY9lS40fyC)
+- [**React / Next (em andamento 🧙‍♂️)**](https://www.youtube.com/playlist?list=PLx4x_zx8csUhxQHo-w0xAIMrmt8WgAowL)
 - [**React Native**](https://www.youtube.com/playlist?list=PLx4x_zx8csUgyDN7j9L7gykBjxByM_etD)
-- [**SQL (em andamento 🧙‍♂️)**](https://www.youtube.com/playlist?list=PLx4x_zx8csUgQUjExcssR3utb3JIX6Kra)
+- [**SQL**](https://www.youtube.com/playlist?list=PLx4x_zx8csUgQUjExcssR3utb3JIX6Kra)
 - [**Typescript**](https://www.youtube.com/playlist?list=PLx4x_zx8csUhtPMrkiGvFJVE5LX8Qat5s)
