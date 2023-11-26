@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'topo.css';
+
+:root {
+ 
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background-color: #202225;
+}
+
+.btnPadrao {
+  display: flex;
+  background-color: #DDD;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.campoForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.campoForm label {
+  font-size: larger;
+}
+
+.campoForm input {
+  border: 1px solid #888;
+  padding: 3px;
+  border-radius: 3px;
+}
