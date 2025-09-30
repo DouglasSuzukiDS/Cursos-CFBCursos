@@ -1,22 +1,21 @@
-package Aula15.veiculos;
-// Aula 15 - Protected
+// Aula 15 - Entendendo Super
+package Aula15;
 
 public class Veiculo {
-   protected String nome;
-   protected int tipo;
-   // Protected: Permite acesso as instancias e a arquivos que estão no mesmo pacote
+   private String nome;
+   private int tipo;
 
    public Veiculo(String nome, int tipo) {
       this.nome = nome;
       this.tipo = tipo;
    }
 
-   public String getNome() {
-      return this.nome;
-   }
-
    public void info() {
       System.out.printf("Nome ........: %s%n", this.nome);
       System.out.printf("Tipo ........: %d%n", this.tipo);
+   }
+
+   public String getNome() {
+      return this.nome;
    }
 }

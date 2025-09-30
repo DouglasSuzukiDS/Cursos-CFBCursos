@@ -1,7 +1,7 @@
-// Aula 15 - Entendendo Super
-package Aula15;
+package Aula16;
 
-public class Aula15 {
+// Aula 16 - Protected
+public class Aula16 {
    public static void main(String[] args) {
       Aviao v1 = new Aviao("Voador", 1);
 
