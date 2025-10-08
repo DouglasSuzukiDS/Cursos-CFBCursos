@@ -1,3 +1,4 @@
+package Aulas;
 // Aula 02 - Comandos de impressao e primeira pratica com variavei
 public class Aula02 {
    public static void main(String[] args) {

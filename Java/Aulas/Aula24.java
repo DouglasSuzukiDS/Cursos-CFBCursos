@@ -1,3 +1,4 @@
+package Aulas;
 // Aula 24 - Como criar e manipular Array
 public class Aula24 {
    public static void main(String[] args) {

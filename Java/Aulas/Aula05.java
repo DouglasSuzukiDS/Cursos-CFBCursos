@@ -1,3 +1,4 @@
+package Aulas;
 
 // Aula 05 - Tipos de Loops em Java - For, While e Do While
 import java.util.Scanner;

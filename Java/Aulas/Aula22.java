@@ -1,3 +1,4 @@
+package Aulas;
 // Aula 22 - Switch Case
 public class Aula22 {
    public static void main(String[] args) {

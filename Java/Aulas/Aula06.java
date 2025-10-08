@@ -1,3 +1,4 @@
+package Aulas;
 
 // Aula 06 - Como criar Array/Vetor em Java
 import java.util.Scanner;

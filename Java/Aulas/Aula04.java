@@ -1,3 +1,4 @@
+package Aulas;
 // Aula 04 - Obtendo dados do teclado com um objeto da classe Scanner
 import java.util.Scanner;
 
