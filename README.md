@@ -25,7 +25,7 @@ Todo conteudo aqui presente nesse repositório tem **carater educativo/estudos**
 - [**CSS - FlexBox**](https://www.youtube.com/playlist?list=PLx4x_zx8csUhDWtEa-AtDAgSSmLObBVaz)
 - [**CSS - Grid**](https://www.youtube.com/playlist?list=PLx4x_zx8csUjBWkYq0VZBENH2K1siCmN6)
 - [**HTML5**](https://www.youtube.com/playlist?list=PLx4x_zx8csUiVHRDO_7qhOaeNrrQ5uU8c)
-- [**Java (em andamento 🧙‍♂️)**](https://www.youtube.com/playlist?list=PLx4x_zx8csUjFC5WWjoNUL7LOOD7LCKRW)
+- [**Java**](https://www.youtube.com/playlist?list=PLx4x_zx8csUjFC5WWjoNUL7LOOD7LCKRW)
 - [**Javascript (playlist antiga)**](https://www.youtube.com/playlist?list=PLx4x_zx8csUj3IbPQ4_X5jis_SkCol3eC)
 - [**Javascript (playlist nova 😎)**](https://www.youtube.com/playlist?list=PLx4x_zx8csUg_AxxbVWHEyAJ6cBdsYc0T)
 - [**jQuery**](https://www.youtube.com/playlist?list=PLx4x_zx8csUiOBWiybY2cIjhNLIUn4JCn)
